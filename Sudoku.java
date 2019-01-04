@@ -6,5 +6,6 @@ public abstract class Sudoku{
   public int RandInt(){
     return 0;
   }
+  public abstract void toString();
 
 }
