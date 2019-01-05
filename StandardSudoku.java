@@ -31,6 +31,9 @@ public class StandardSudoku extends Sudoku{
     for(int i = 0; i < size; i++){
       for(int j = 0; j < size; j++){
         result += puzzle[i][j];
+        if((j+1) % 3 == 0){
+          result += "|";
+        }
       }
     }
     return result;
