@@ -26,6 +26,11 @@ public class CustomSudoku extends Sudoku{
 
   public String toString(){
     String result = "";
+    for(int i = 0; i < width; i++){
+      for(int j = 0; j < length; j++){
+        result += puzzle[i][j];
+      }
+    }
     return result;
   }
 
