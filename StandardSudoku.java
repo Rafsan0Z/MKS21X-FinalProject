@@ -24,6 +24,11 @@ public class StandardSudoku extends Sudoku{
 
   public String toString(){
     String result = "";
+    for(int i = 0; i < size; i++){
+      for(int j = 0; j < size; j++){
+        result += puzzle[i][j];
+      }
+    }
     return result;
   }
 
