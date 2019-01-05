@@ -3,8 +3,11 @@ public class StandardSudoku extends Sudoku{
   private int size;
   private String[][] puzzle;
 
-  public StandardSudoku(){
-
+  public StandardSudoku(int num){
+    size = num;
+    puzzle = new String[size][size];
+    createpuzzle();
+    InputNums();
   }
 
   public void createpuzzle(){
@@ -16,7 +19,7 @@ public class StandardSudoku extends Sudoku{
   }
 
   public void answer(){
-    
+
   }
 
 }
