@@ -4,7 +4,8 @@ public abstract class Sudoku{
   public abstract void InputNums();
   public abstract void answer();
   public int RandInt(){
-    return 0;
+    Random randgen = new Random();
+    return Math.abs(randgen.nextInt()) % 9;
   }
   public abstract void toString();
 
