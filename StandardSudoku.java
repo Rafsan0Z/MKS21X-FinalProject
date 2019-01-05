@@ -22,4 +22,9 @@ public class StandardSudoku extends Sudoku{
 
   }
 
+  public String toString(){
+    String result = "";
+    return result;
+  }
+
 }
