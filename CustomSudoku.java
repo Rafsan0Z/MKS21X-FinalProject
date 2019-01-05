@@ -24,4 +24,9 @@ public class CustomSudoku extends Sudoku{
 
   }
 
+  public String toString(){
+    String result = "";
+    return result;
+  }
+
 }
