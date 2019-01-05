@@ -4,8 +4,12 @@ public class CustomSudoku extends Sudoku{
   private int width;
   private String[][] puzzle;
 
-  public CustomSudoku(){
-
+  public CustomSudoku(int num, int num2){
+    length = num;
+    width = num2;
+    puzzle = new String[length][width];
+    createpuzzle();
+    InputNums();
   }
 
   public void createpuzzle(){
