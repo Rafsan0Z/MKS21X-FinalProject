@@ -25,6 +25,15 @@ public class CustomSudoku extends Sudoku{
 
   }
 
+  public void Partitions(){
+    if(length == width){
+
+    }
+    else{
+      
+    }
+  }
+
   public void answer(){
     for(int i = 0; i < width; i++){
       for(int j = 0; j < length; j++){
