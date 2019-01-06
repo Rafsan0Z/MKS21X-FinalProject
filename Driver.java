@@ -1,5 +1,8 @@
 public class Driver{
 
+  private String[][] puzzle;
+  private int[] dimensions = new int[2];
+
   public boolean checkAnswer(){
     return true;
   }
