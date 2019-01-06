@@ -42,6 +42,12 @@ public class Driver{
     return true;
   }
 
+  public int levelcounter(String stage){
+    if(stage == "E"){return 21;}
+    if(stage == "M"){return 19;}
+    if(stage == "H"){return 17;}
+  }
+
   public static void main(String[] args){
     Scanner input = new Scanner(System.in);
     System.out.println("Welcome to Sudoku!")
