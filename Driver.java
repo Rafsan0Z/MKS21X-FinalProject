@@ -5,6 +5,11 @@ public class Driver{
   private int[] dim = new int[2];
 
   public boolean checkAnswer(){
+    for(int i = 0; i < dim[0]; i++){
+      for(int j = 0; j < dim[1]; j++){
+        if(!Mistake(i,j)){return false;}
+      }
+    }
     return true;
   }
 
