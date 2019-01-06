@@ -1,12 +1,14 @@
 public class StandardSudoku extends Sudoku{
 
   private String[][] puzzle;
+  private int count;
 
-  public StandardSudoku(){
+  public StandardSudoku(int dif){
     int size = 9;
     puzzle = new String[size][size];
     createpuzzle();
     InputNums();
+    count = dif;
   }
 
   public void createpuzzle(){
