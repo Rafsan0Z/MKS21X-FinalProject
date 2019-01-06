@@ -38,6 +38,7 @@ public class Driver{
   }
 
   public boolean remove(int row, int col){
+    puzzle[row][col] = "__";
     return true;
   }
 
