@@ -1,5 +1,6 @@
 public class CustomSudoku extends Sudoku{
 
+  private ArrayList<Integer> break = new ArrayList<Integer>();
   private int length;
   private int width;
   private String[][] puzzle;
