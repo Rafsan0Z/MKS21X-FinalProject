@@ -2,6 +2,7 @@ import java.util.ArrayList;
 public class Driver{
 
   private String[][] puzzle;
+  private ArrayList<Integer> mistakes = ArrayList<Integer>();
   private int[] dim = new int[2];
 
   public boolean checkAnswer(){
