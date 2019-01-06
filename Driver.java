@@ -29,6 +29,10 @@ public class Driver{
     return true;
   }
 
+  public boolean remove(int row, int col){
+    return true;
+  }
+
   public static void main(String[] args){
     Scanner input = new Scanner(System.in);
     System.out.println("Welcome to Sudoku!")
