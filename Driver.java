@@ -33,6 +33,7 @@ public class Driver{
   }
 
   public boolean add(int row, int col, int num){
+    puzzle[row][col] = " " + num;
     return true;
   }
 
