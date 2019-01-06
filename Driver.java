@@ -14,6 +14,7 @@ public class Driver{
   }
 
   public boolean Mistake(int row, int col){
+    if(puzzle[row][col] == "__"){return false;}
     int num = Integer.parseInt(puzzle[row][col]);
     for(int i = 0; i < dim[0]; i++){
       ArrayList<Integer> row = new ArrayList<Integer>();
