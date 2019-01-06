@@ -45,6 +45,8 @@ public class Driver{
   public static void main(String[] args){
     Scanner input = new Scanner(System.in);
     System.out.println("Welcome to Sudoku!")
+    System.out.println("Choose the difficulity: E for Easy, M for Medium and H for Hard");
+    String level = input.nextLine();
     input.close();
   }
 
