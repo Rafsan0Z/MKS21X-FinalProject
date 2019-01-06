@@ -18,9 +18,14 @@ public class StandardSudoku extends Sudoku{
   }
 
   public void InputNums(){
+    int count = 17;
     for(int i = 0; i < 9; i++){
       for(int j = 0; j < 9; j++){
-        puzzle[i][j] = " " + 0;
+        if(count == 0){break;}
+        else{
+          puzzle[i][j] = " " + 0;
+          count--;
+        }
       }
     }
   }
