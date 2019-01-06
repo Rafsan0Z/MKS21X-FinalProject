@@ -53,6 +53,7 @@ public class Driver{
     System.out.println("Welcome to Sudoku!")
     System.out.println("Choose the difficulity: E for Easy, M for Medium and H for Hard");
     String level = input.nextLine();
+    int count = levelcounter(level);
     input.close();
   }
 
