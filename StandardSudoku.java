@@ -18,7 +18,11 @@ public class StandardSudoku extends Sudoku{
   }
 
   public void InputNums(){
-
+    for(int i = 0; i < 9; i++){
+      for(int j = 0; j < 9; j++){
+        puzzle[i][j] = " " + 0;
+      }
+    }
   }
 
   public void answer(){
