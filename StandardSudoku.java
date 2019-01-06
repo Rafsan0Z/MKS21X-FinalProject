@@ -27,12 +27,16 @@ public class StandardSudoku extends Sudoku{
   }
 
   public String toString(){
-    String result = "";
+    String result = "--------------------" + "\n";
     for(int i = 0; i < size; i++){
+      result += "|";
       for(int j = 0; j < size; j++){
         result += puzzle[i][j];
         if((j+1) % 3 == 0){
           result += "|";
+        }
+        if(j == size - 1){
+          result += "\n";
         }
       }
     }
