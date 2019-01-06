@@ -25,7 +25,11 @@ public class CustomSudoku extends Sudoku{
   }
 
   public void answer(){
-
+    for(int i = 0; i < width; i++){
+      for(int j = 0; j < length; j++){
+        if(puzzle[i][j] != "__"){puzzle[i][j] = " " + randInt();}
+      }
+    }
   }
 
   public String toString(){
