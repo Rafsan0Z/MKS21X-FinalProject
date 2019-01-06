@@ -20,7 +20,6 @@ public class StandardSudoku extends Sudoku{
   }
 
   public void InputNums(){
-    int count = 17;
     for(int i = 0; i < 9; i++){
       for(int j = 0; j < 9; j++){
         if(count == 0){break;}
