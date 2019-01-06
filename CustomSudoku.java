@@ -29,10 +29,12 @@ public class CustomSudoku extends Sudoku{
   }
 
   public String toString(){
-    String result = "";
+    String result = "-------------------" + "\n";
     for(int i = 0; i < width; i++){
+      result += "|";
       for(int j = 0; j < length; j++){
         result += puzzle[i][j];
+        if(j == length - 1){result += "\n";}
       }
     }
     return result;
