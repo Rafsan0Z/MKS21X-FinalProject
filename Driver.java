@@ -25,6 +25,10 @@ public class Driver{
     return true;
   }
 
+  public boolean add(int row, int col, int num){
+    return true;
+  }
+
   public static void main(String[] args){
     Scanner input = new Scanner(System.in);
     System.out.println("Welcome to Sudoku!")
