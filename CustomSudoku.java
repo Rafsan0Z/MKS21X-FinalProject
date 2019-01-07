@@ -27,10 +27,17 @@ public class CustomSudoku extends Sudoku{
 
   public void Partitions(){
     if(length == width){
-
+      double counter = (double)length;
+      int second = 1;
+      while(counter % 2 == 0.0){
+        second = second*2;
+        counter = counter / 2;
+      }
+      break.add(second);
+      break.add((int)counter);
     }
     else{
-      
+
     }
   }
 
