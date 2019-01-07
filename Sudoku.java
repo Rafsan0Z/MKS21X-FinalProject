@@ -8,6 +8,6 @@ public abstract class Sudoku{
     Random randgen = new Random();
     return Math.abs(randgen.nextInt()) % 9;
   }
-  public abstract void toString();
+  public abstract void PrintPuzzle();
 
 }

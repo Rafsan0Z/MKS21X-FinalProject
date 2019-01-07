@@ -49,7 +49,7 @@ public class CustomSudoku extends Sudoku{
     }
   }
 
-  public String toString(){
+  public String PrintPuzzle(){
     String result = "-------------------" + "\n";
     for(int i = 0; i < width; i++){
       result += "|";

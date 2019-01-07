@@ -47,7 +47,7 @@ public class StandardSudoku extends Sudoku{
     }
   }
 
-  public String toString(){
+  public String PrintPuzzle(){
     String result = "--------------------" + "\n";
     for(int i = 0; i < 9; i++){
       result += "|";
