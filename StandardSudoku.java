@@ -24,11 +24,11 @@ public class StandardSudoku extends Sudoku{
     for(int i = 0; i < 9; i++){
       ArrayList<Integer> rowInts = new ArrayList<Integer>();
       for(int j = 0; j < 9; j++){
-        int num = randInt();
+        int num = RandInt();
         ArrayList<Integer> colInts = new ArrayList<Integer>();
         if(count == 0){break;}
         else if(!rowInts.contains(num) && !colInts.contains(num)) {
-          puzzle[i][j] = " " + randInt();
+          puzzle[i][j] = " " + RandInt();
           colInts.add(num);
           rowInts.add(num);
           count--;
@@ -41,7 +41,7 @@ public class StandardSudoku extends Sudoku{
     for(int i = 0; i < 9; i++){
       for(int j = 0; j < 9; j++){
           if(puzzle[i][j] != "__"){
-              puzzle[i][j] = " " + randInt();
+              puzzle[i][j] = " " + RandInt();
           }
       }
     }
