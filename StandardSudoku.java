@@ -39,7 +39,12 @@ public class StandardSudoku extends Sudoku{
   }
 
   public void InputNums(){
-  
+    for(int i = 0; i < 9; i++){
+      for(int j = 0; j < 9; j++){
+        ArrayList<Integer> down = rowdir(i);
+        ArrayList<Integer> up = coldir(j);
+      }
+    }
   }
 
   public void answer(){
