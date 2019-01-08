@@ -39,20 +39,7 @@ public class StandardSudoku extends Sudoku{
   }
 
   public void InputNums(){
-    for(int i = 0; i < 9; i++){
-      ArrayList<Integer> rowInts = new ArrayList<Integer>();
-      for(int j = 0; j < 9; j++){
-        int num = RandInt();
-        ArrayList<Integer> colInts = new ArrayList<Integer>();
-        if(count == 0){break;}
-        else if(!rowInts.contains(num) && !colInts.contains(num)) {
-          puzzle[i][j] = " " + num;
-          colInts.add(num);
-          rowInts.add(num);
-          count--;
-        }
-      }
-    }
+  
   }
 
   public void answer(){
