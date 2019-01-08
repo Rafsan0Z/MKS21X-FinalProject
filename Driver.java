@@ -2,7 +2,7 @@ import java.util.ArrayList;
 public class Driver{
 
   private String[][] puzzle;
-  private ArrayList<Integer> mistakes = ArrayList<Integer>();
+  private ArrayList<Integer> mistakes = new ArrayList<Integer>();
   private int[] dim = new int[2];
 
   public boolean checkAnswer(){
@@ -19,10 +19,10 @@ public class Driver{
     if(Integer.parseInt(puzzle[row][col]) > 9 || Integer.parseInt(puzzle[row][col]) < 0){return false;}
     int num = Integer.parseInt(puzzle[row][col]);
     for(int i = 0; i < dim[0]; i++){
-      ArrayList<Integer> row = new ArrayList<Integer>();
+      ArrayList<Integer> rows = new ArrayList<Integer>();
       for(int j = 0; j < dim[1]; j++){
-        if(i != row && j != col && puzzle[i][j] != "__"){row.add(Integer.parseInt(puzzle[i][j]));}
-        if(row.contains(num)){
+        if(i != row && j != col && !puzzle[i][j].equals("__")){rows.add(Integer.parseInt(puzzle[i][j]));}
+        if(rows.contains(num)){
           mistakes.add(row);
           mistakes.add(col);
           return false;
@@ -46,6 +46,7 @@ public class Driver{
     if(stage == "E"){return 21;}
     if(stage == "M"){return 19;}
     if(stage == "H"){return 17;}
+    return 0;
   }
 
   public static void main(String[] args){
@@ -56,6 +57,8 @@ public class Driver{
     int count = levelcounter(level);
     input.close();
     */
+    StandardSudoku question = new StandardSudoku(17);
+    System.out.println(question.PrintPuzzle());
   }
 
 }
