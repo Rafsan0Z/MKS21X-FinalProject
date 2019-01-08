@@ -6,7 +6,7 @@ public abstract class Sudoku{
   public abstract void answer();
   public int RandInt(){
     Random randgen = new Random();
-    return Math.abs(randgen.nextInt()) % 9;
+    return Math.abs(randgen.nextInt()) % 9 + 1;
   }
   public abstract String PrintPuzzle();
 
