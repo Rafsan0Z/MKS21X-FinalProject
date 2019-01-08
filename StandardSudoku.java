@@ -22,6 +22,10 @@ public class StandardSudoku extends Sudoku{
 
   public ArrayList<Integer> rowdir(int row){
     ArrayList<Integer> dir = new ArrayList<Integer>();
+    for(int i = 0; i < 9; i++){
+      int num = Integer.parseInt(puzzle[row][i]);
+      dir.add(num);
+    }
     return dir;
   }
 
