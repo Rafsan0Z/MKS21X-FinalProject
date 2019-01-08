@@ -20,6 +20,16 @@ public class StandardSudoku extends Sudoku{
     }
   }
 
+  public ArrayList<Integer> rowdir(int row){
+    ArrayList<Integer> dir = new ArrayList<Integer>();
+    return dir;
+  }
+
+  public ArrayList<Integer> coldir(int col){
+    ArrayList<Integer> dir = new ArrayList<Integer>();
+    return dir;
+  }
+
   public void InputNums(){
     for(int i = 0; i < 9; i++){
       ArrayList<Integer> rowInts = new ArrayList<Integer>();
