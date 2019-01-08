@@ -28,7 +28,7 @@ public class StandardSudoku extends Sudoku{
         ArrayList<Integer> colInts = new ArrayList<Integer>();
         if(count == 0){break;}
         else if(!rowInts.contains(num) && !colInts.contains(num)) {
-          puzzle[i][j] = " " + RandInt();
+          puzzle[i][j] = " " + num;
           colInts.add(num);
           rowInts.add(num);
           count--;
