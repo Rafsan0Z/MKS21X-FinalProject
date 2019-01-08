@@ -31,6 +31,10 @@ public class StandardSudoku extends Sudoku{
 
   public ArrayList<Integer> coldir(int col){
     ArrayList<Integer> dir = new ArrayList<Integer>();
+    for(int i = 0; i < 9; i++){
+      int num = Integer.parseInt(puzzle[i][col]);
+      dir.add(num);
+    }
     return dir;
   }
 
