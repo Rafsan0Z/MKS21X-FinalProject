@@ -15,7 +15,7 @@ extends Sudoku. Constructors and abstract class were added for each subclass but
 
 01/07/19: InputNums in StandardSudoku implemented, but only works on even dimensions. Driver is updated to test both CustomSudoku and StandardSudoku. Small mistakes in all the files corrected and toString method changed to PrintPuzzle.
 
-01/08/19: Write InputNums for CustomSudoku. I also wrote code in Driver to test PrintPuzzle and InputNums method of both StandardSudoku and CustomSudoku. 
+01/08/19: Write InputNums for CustomSudoku. I also wrote code in Driver to test PrintPuzzle and InputNums method of both StandardSudoku and CustomSudoku. InputNums for StandardSudoku needs to be fixed and more helper methods and private field added.
 
 01/09/19:
 
