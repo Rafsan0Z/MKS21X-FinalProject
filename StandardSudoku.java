@@ -9,7 +9,7 @@ public class StandardSudoku extends Sudoku{
     puzzle = new String[size][size];
     createpuzzle();
     InputNums();
-    answer();
+  //  answer();
     count = dif;
   }
 
@@ -40,16 +40,19 @@ public class StandardSudoku extends Sudoku{
   }
 
   public void InputNums(){
-    for(int i = 0; i < 9 && count != 0; i++){
+    for(int i = 0; i < 9; i++){
       for(int j = 0; j < 9; j++){
         int num = RandInt();
 //        ArrayList<Integer> down = rowdir(i);
 //        ArrayList<Integer> up = coldir(j);
+        if(RandInt() < 5) {
           puzzle[i][j] = " " + num;
           count--;
+        }
+          if(count == 0){break;}
       }
     }
-    puzzle[2][2] = " " + RandInt();
+    puzzle[2][2] = " " + count;
   }
 
   public void answer(){
