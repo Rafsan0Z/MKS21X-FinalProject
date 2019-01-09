@@ -24,8 +24,10 @@ public class StandardSudoku extends Sudoku{
   public ArrayList<Integer> rowdir(int row){
     ArrayList<Integer> dir = new ArrayList<Integer>();
     for(int i = 0; i < 9; i++){
-      int num = Integer.parseInt(puzzle[row][i]);
+      if(puzzle[row][i] != "__"){
+      int num = Integer.parseInt(puzzle[row][i].substring(1));
       dir.add(num);
+    }
     }
     return dir;
   }
@@ -33,8 +35,10 @@ public class StandardSudoku extends Sudoku{
   public ArrayList<Integer> coldir(int col){
     ArrayList<Integer> dir = new ArrayList<Integer>();
     for(int i = 0; i < 9; i++){
-      int num = Integer.parseInt(puzzle[i][col]);
+      if(puzzle[i][col] != "__"){
+      int num = Integer.parseInt(puzzle[i][col].substring(1));
       dir.add(num);
+    }
     }
     return dir;
   }
@@ -43,9 +47,9 @@ public class StandardSudoku extends Sudoku{
     for(int i = 0; i < 9; i++){
       for(int j = 0; j < 9; j++){
         int num = RandInt();
-//        ArrayList<Integer> down = rowdir(i);
-//        ArrayList<Integer> up = coldir(j);
-        if(RandInt() < 5) {
+        ArrayList<Integer> down = rowdir(i);
+        ArrayList<Integer> up = coldir(j);
+        if(RandInt() < 5 && !down.contains(num) && !up.contains(num)) {
           puzzle[i][j] = " " + num;
           count--;
         }
