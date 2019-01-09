@@ -48,6 +48,26 @@ public class Driver{
     return 0;
   }
 
+  public static String StandardPrint(String[][] puzzle){
+    String result = "";
+    for(int i = 0; i < 9; i++){
+      if((i+3) % 3 == 0){
+        result += "-----------------------" + "\n";
+      }
+      result += "|";
+      for(int j = 0; j < 9; j++){
+        result += puzzle[i][j];
+        if((j+1) % 3 == 0){
+          result += "|";
+        }
+        if(j == 8){
+          result += "\n";
+        }
+      }
+    }
+    return result;
+  }
+
   public static void main(String[] args){
 /*    Scanner input = new Scanner(System.in);
     System.out.println("Welcome to Sudoku!")
@@ -60,7 +80,7 @@ public class Driver{
     StandardSudoku question = new StandardSudoku(17);
     puzzle = new String[9][9];
     puzzle = question.getPuzzle();
-    System.out.println(puzzle);
+    System.out.println(StandardPrint(puzzle));
   }
 
 }
