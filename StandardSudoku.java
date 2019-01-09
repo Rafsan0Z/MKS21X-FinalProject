@@ -43,6 +43,10 @@ public class StandardSudoku extends Sudoku{
     return dir;
   }
 
+  public ArrayList<Integer> groupdir(){
+    
+  }
+
   public void InputNums(){ // puts a chosen number of integers from 1 to 9 (inclusive) in the puzzle in random order
     for(int i = 0; i < 9; i++){
       for(int j = 0; j < 9; j++){
