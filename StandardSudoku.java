@@ -52,7 +52,6 @@ public class StandardSudoku extends Sudoku{
           if(count == 0){break;}
       }
     }
-    puzzle[2][2] = " " + count;
   }
 
   public void answer(){
