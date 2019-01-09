@@ -44,7 +44,8 @@ public class StandardSudoku extends Sudoku{
   }
 
   public ArrayList<Integer> groupdir(){
-    
+    ArrayList<Integer> dir = new ArrayList<Integer>();
+    return dir;
   }
 
   public void InputNums(){ // puts a chosen number of integers from 1 to 9 (inclusive) in the puzzle in random order
@@ -73,8 +74,11 @@ public class StandardSudoku extends Sudoku{
   }
 
   public String PrintPuzzle(){
-    String result = "--------------------" + "\n";
+    String result = "";
     for(int i = 0; i < 9; i++){
+      if((i+3) % 3 == 0){
+        result += "-----------------------" + "\n";
+      }
       result += "|";
       for(int j = 0; j < 9; j++){
         result += puzzle[i][j];
