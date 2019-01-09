@@ -21,6 +21,10 @@ public class StandardSudoku extends Sudoku{
     }
   }
 
+  public String[][] getPuzzle(){
+    return puzzle;
+  }
+
   public boolean add(int row, int col, int num){
     puzzle[row][col] = " " + num;
     return true;
