@@ -25,11 +25,6 @@ public class StandardSudoku extends Sudoku{
     return puzzle;
   }
 
-  public boolean add(int row, int col, int num){
-    puzzle[row][col] = " " + num;
-    return true;
-  }
-
   public ArrayList<Integer> rowdir(int row){
     ArrayList<Integer> dir = new ArrayList<Integer>();
     for(int i = 0; i < 9; i++){

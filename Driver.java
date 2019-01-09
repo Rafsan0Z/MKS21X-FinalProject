@@ -1,20 +1,19 @@
 import java.util.ArrayList;
 public class Driver{
 
-  private String[][] puzzle;
   private ArrayList<Integer> mistakes = new ArrayList<Integer>();
   private int[] dim = new int[2];
 
-  public boolean checkAnswer(){
+  public boolean checkAnswer(String[][] puzzle){
     for(int i = 0; i < dim[0]; i++){
       for(int j = 0; j < dim[1]; j++){
-        if(!Mistake(i,j)){return false;}
+        if(!Mistake(i,j,puzzle)){return false;}
       }
     }
     return true;
   }
 
-  public boolean Mistake(int row, int col){
+  public boolean Mistake(int row, int col, String[][] puzzle){
     if(puzzle[row][col] == "__"){return false;}
     if(Integer.parseInt(puzzle[row][col]) > 9 || Integer.parseInt(puzzle[row][col]) < 0){return false;}
     int num = Integer.parseInt(puzzle[row][col]);
@@ -32,7 +31,12 @@ public class Driver{
     return true;
   }
 
-  public boolean remove(int row, int col){
+  public boolean add(int row, int col, int num, String[][] puzzle){
+    puzzle[row][col] = " " + num;
+    return true;
+  }
+
+  public boolean remove(int row, int col, String[][] puzzle){
     puzzle[row][col] = "__";
     return true;
   }
@@ -52,9 +56,11 @@ public class Driver{
     int count = levelcounter(level);
     input.close();
     */
+    String[][] puzzle;
     StandardSudoku question = new StandardSudoku(17);
-    question.add(1,5,0);
-    System.out.println(question.PrintPuzzle());
+    puzzle = new String[9][9];
+    puzzle = question.getPuzzle();
+    System.out.println(puzzle);
   }
 
 }
