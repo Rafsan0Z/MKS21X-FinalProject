@@ -11,7 +11,12 @@ public class CustomSudoku extends Sudoku{
     width = num2;
     puzzle = new String[length][width];
     createpuzzle();
+    countfinder(length,width);
     InputNums();
+  }
+
+  public int countfinder(int num, int num2){
+    return 0;
   }
 
   public void createpuzzle(){
