@@ -22,7 +22,11 @@ public class CustomSudoku extends Sudoku{
   }
 
   public void InputNums(){
-
+    for(int i = 0; i < width; i++){
+      for(int j = 0; j < length; j++){
+        
+      }
+    }
   }
 
   public void Partitions(){
@@ -44,7 +48,7 @@ public class CustomSudoku extends Sudoku{
   public void answer(){
     for(int i = 0; i < width; i++){
       for(int j = 0; j < length; j++){
-        if(puzzle[i][j] != "__"){puzzle[i][j] = " " + randInt();}
+        if(puzzle[i][j] != "__"){puzzle[i][j] = " " + RandInt();}
       }
     }
   }
