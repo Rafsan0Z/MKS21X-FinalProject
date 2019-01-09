@@ -4,7 +4,7 @@ public class StandardSudoku extends Sudoku{
   private String[][] puzzle;
   private int count;
 
-  public StandardSudoku(int dif){
+  public StandardSudoku(int dif){ // The constructor creates a 9 by 9 puzzle and Puts initial numbers to it based on difficulity
     int size = 9;
     puzzle = new String[size][size];
     createpuzzle();
