@@ -42,14 +42,13 @@ public class StandardSudoku extends Sudoku{
     for(int i = 0; i < 9 && count != 0; i++){
       for(int j = 0; j < 9; j++){
         int num = RandInt();
-        ArrayList<Integer> down = rowdir(i);
-        ArrayList<Integer> up = coldir(j);
-        if(RandInt() < 3 && !down.contains(num) && !up.contains(num)){
+//        ArrayList<Integer> down = rowdir(i);
+//        ArrayList<Integer> up = coldir(j);
           puzzle[i][j] = " " + num;
           count--;
-        }
       }
     }
+    puzzle[2][2] = " " + RandInt();
   }
 
   public void answer(){
