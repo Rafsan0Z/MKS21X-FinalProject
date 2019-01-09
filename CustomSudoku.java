@@ -3,6 +3,7 @@ public class CustomSudoku extends Sudoku{
   private ArrayList<Integer> break = new ArrayList<Integer>();
   private int length;
   private int width;
+  private int count;
   private String[][] puzzle;
 
   public CustomSudoku(int num, int num2){
@@ -24,7 +25,7 @@ public class CustomSudoku extends Sudoku{
   public void InputNums(){
     for(int i = 0; i < width; i++){
       for(int j = 0; j < length; j++){
-        
+
       }
     }
   }
