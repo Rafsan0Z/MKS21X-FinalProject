@@ -32,11 +32,6 @@ public class Driver{
     return true;
   }
 
-  public boolean add(int row, int col, int num){
-    puzzle[row][col] = " " + num;
-    return true;
-  }
-
   public boolean remove(int row, int col){
     puzzle[row][col] = "__";
     return true;
@@ -58,6 +53,7 @@ public class Driver{
     input.close();
     */
     StandardSudoku question = new StandardSudoku(17);
+    question.add(1,5,0);
     System.out.println(question.PrintPuzzle());
   }
 
