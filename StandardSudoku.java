@@ -77,24 +77,4 @@ public class StandardSudoku extends Sudoku{
     }
   }
 
-  public String PrintPuzzle(){
-    String result = "";
-    for(int i = 0; i < 9; i++){
-      if((i+3) % 3 == 0){
-        result += "-----------------------" + "\n";
-      }
-      result += "|";
-      for(int j = 0; j < 9; j++){
-        result += puzzle[i][j];
-        if((j+1) % 3 == 0){
-          result += "|";
-        }
-        if(j == 8){
-          result += "\n";
-        }
-      }
-    }
-    return result;
-  }
-
 }

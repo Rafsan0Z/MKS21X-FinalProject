@@ -68,6 +68,18 @@ public class Driver{
     return result;
   }
 
+  public static String CustomPrint(String[][] puzzle){
+    String result = "-------------------" + "\n";
+    for(int i = 0; i < width; i++){
+      result += "|";
+      for(int j = 0; j < length; j++){
+        result += puzzle[i][j];
+        if(j == length - 1){result += "\n";}
+      }
+    }
+    return result;
+  }
+
   public static void main(String[] args){
 /*    Scanner input = new Scanner(System.in);
     System.out.println("Welcome to Sudoku!")
