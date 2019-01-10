@@ -10,5 +10,6 @@ public abstract class Sudoku{
   }
   public abstract void add(int row, int col, int num);
   public abstract void remove(int row, int col);
-
+  public abstract boolean checkAnswer();
+  public abstract boolean Mistake(int row, int col);
 }
