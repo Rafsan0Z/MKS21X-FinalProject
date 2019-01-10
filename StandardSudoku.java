@@ -83,8 +83,13 @@ public class StandardSudoku extends Sudoku{
     return dir;
   }
 
-  public ArrayList<Integer> groupdir(){
+  public ArrayList<Integer> groupdir(int groupnum){
     ArrayList<Integer> dir = new ArrayList<Integer>();
+    for(int i = 0; i < 3; i++){
+      for(int j = 0; j < 3; j++){
+        dir.add(Integer.parseInt(puzzle[i][j].substring(1)));
+      }
+    }
     return dir;
   }
 
