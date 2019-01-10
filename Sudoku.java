@@ -12,4 +12,5 @@ public abstract class Sudoku{
   public abstract void remove(int row, int col);
   public abstract boolean checkAnswer();
   public abstract boolean Mistake(int row, int col);
+  public abstract int groupNum(int row, int col);
 }
