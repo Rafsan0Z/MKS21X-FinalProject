@@ -21,6 +21,14 @@ public class StandardSudoku extends Sudoku{
     }
   }
 
+  public void add(int row, int col, int num){
+    puzzle[row][col] = " " + num;
+  }
+
+  public void remove(int row, int col){
+    puzzle[row][col] = "__";
+  }
+
   public boolean checkAnswer(){
     for(int i = 0; i < 9; i++){
       for(int j = 0; j < 9; j++){
