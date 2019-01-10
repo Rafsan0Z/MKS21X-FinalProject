@@ -36,7 +36,7 @@ public class Driver{
     puzzle[row][col] = " " + num;
   }
 
-  public boolean remove(int row, int col, String[][] puzzle){
+  public static void remove(int row, int col, String[][] puzzle){
     puzzle[row][col] = "__";
     return true;
   }
