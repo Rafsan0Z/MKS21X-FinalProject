@@ -92,6 +92,12 @@ public class Driver{
     StandardSudoku question = new StandardSudoku(17);
     puzzle = new String[9][9];
     puzzle = question.getPuzzle();
+    Scanner input = new Scanner(System.in);
+    System.out.println("Provide input coordinates and num");
+    int row = Integer.parseInt(input.nextInt());
+    int col = Integer.parseInt(input.nextInt());
+    int num = Integer.parseInt(input.nextInt());
+    puzzle.add(row,col,num,puzzle);
     System.out.println(StandardPrint(puzzle));
   }
 
