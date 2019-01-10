@@ -94,7 +94,21 @@ public class StandardSudoku extends Sudoku{
   }
 
   public int groupNum(int row, int col){
-    return 0;
+    if(row >= 0 && row <= 2){
+      if(col >= 0 && col < =2){return 1;}
+      if(col >= 3 && col <= 5){return 2;}
+      else{return 3;}
+    }
+    else if(row >= 3 && row <= 5){
+      if(col >= 0 && col < =2){return 4;}
+      if(col >= 3 && col <= 5){return 5;}
+      else{return 6;}
+    }
+    else{
+      if(col >= 0 && col < =2){return 7;}
+      if(col >= 3 && col <= 5){return 8;}
+      else{return 9;}
+    }
   }
 
   public void InputNums(){ // puts a chosen number of integers from 1 to 9 (inclusive) in the puzzle in random order
