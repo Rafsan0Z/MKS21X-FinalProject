@@ -21,6 +21,34 @@ public class StandardSudoku extends Sudoku{
     }
   }
 
+  public boolean checkAnswer(){
+    for(int i = 0; i < 9; i++){
+      for(int j = 0; j < 9; j++){
+        if(!Mistake(i,j)){return false;}
+      }
+    }
+    return true;
+  }
+
+  public boolean Mistake(int row, int col){
+    ArrayList<Integer> mistakes = new ArrayList<Integer>();
+    if(puzzle[row][col] == "__"){return false;}
+    if(Integer.parseInt(puzzle[row][col]) > 9 || Integer.parseInt(puzzle[row][col]) < 0){return false;}
+    int num = Integer.parseInt(puzzle[row][col]);
+    for(int i = 0; i < 9; i++){
+      ArrayList<Integer> rows = new ArrayList<Integer>();
+      for(int j = 0; j < 9; j++){
+        if(i != row && j != col && !puzzle[i][j].equals("__")){rows.add(Integer.parseInt(puzzle[i][j]));}
+        if(rows.contains(num)){
+          mistakes.add(row);
+          mistakes.add(col);
+          return false;
+        }
+      }
+    }
+    return true;
+  }
+
   public String[][] getPuzzle(){
     return puzzle;
   }
