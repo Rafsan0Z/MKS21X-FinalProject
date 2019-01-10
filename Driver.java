@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Scanner;
 public class Driver{
 
   private ArrayList<Integer> mistakes = new ArrayList<Integer>();
@@ -31,9 +32,8 @@ public class Driver{
     return true;
   }
 
-  public boolean add(int row, int col, int num, String[][] puzzle){
+  public static void add(int row, int col, int num, String[][] puzzle){
     puzzle[row][col] = " " + num;
-    return true;
   }
 
   public boolean remove(int row, int col, String[][] puzzle){
@@ -68,7 +68,7 @@ public class Driver{
     return result;
   }
 
-  public static String CustomPrint(String[][] puzzle){
+  public static String CustomPrint(int length, int width, String[][] puzzle){
     String result = "-------------------" + "\n";
     for(int i = 0; i < width; i++){
       result += "|";
@@ -94,10 +94,10 @@ public class Driver{
     puzzle = question.getPuzzle();
     Scanner input = new Scanner(System.in);
     System.out.println("Provide input coordinates and num");
-    int row = Integer.parseInt(input.nextInt());
-    int col = Integer.parseInt(input.nextInt());
-    int num = Integer.parseInt(input.nextInt());
-    puzzle.add(row,col,num,puzzle);
+    int row = input.nextInt();
+    int col = input.nextInt();
+    int num = input.nextInt();
+    add(row,col,num,puzzle);
     System.out.println(StandardPrint(puzzle));
   }
 
