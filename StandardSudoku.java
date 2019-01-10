@@ -85,11 +85,13 @@ public class StandardSudoku extends Sudoku{
 
   public ArrayList<Integer> groupdir(int groupnum){
     ArrayList<Integer> dir = new ArrayList<Integer>();
+    if(groupnum = 1){
     for(int i = 0; i < 3; i++){
       for(int j = 0; j < 3; j++){
         dir.add(Integer.parseInt(puzzle[i][j].substring(1)));
       }
     }
+  }
     return dir;
   }
 
@@ -115,9 +117,11 @@ public class StandardSudoku extends Sudoku{
     for(int i = 0; i < 9; i++){
       for(int j = 0; j < 9; j++){
         int num = RandInt();
+        int location = groupNum(i,j);
         ArrayList<Integer> down = rowdir(i);
         ArrayList<Integer> up = coldir(j);
-        if(RandInt() < 5 && !down.contains(num) && !up.contains(num)) {
+        ArrayList<Integer> group = groupdir(location);
+        if(RandInt() < 5 && !down.contains(num) && !up.contains(num) !groupdir.contains(num)) {
           puzzle[i][j] = " " + num;
           count--;
         }
