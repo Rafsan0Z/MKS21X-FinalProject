@@ -41,12 +41,12 @@ public class StandardSudoku extends Sudoku{
   public boolean Mistake(int row, int col){
     ArrayList<Integer> mistakes = new ArrayList<Integer>();
     if(puzzle[row][col] == "__"){return false;}
-    if(Integer.parseInt(puzzle[row][col]) > 9 || Integer.parseInt(puzzle[row][col]) < 0){return false;}
-    int num = Integer.parseInt(puzzle[row][col]);
+    if(Integer.parseInt(puzzle[row][col].substring(1)) > 9 || Integer.parseInt(puzzle[row][col].substring(1)) < 0){return false;}
+    int num = Integer.parseInt(puzzle[row][col].substring(1));
     for(int i = 0; i < 9; i++){
       ArrayList<Integer> rows = new ArrayList<Integer>();
       for(int j = 0; j < 9; j++){
-        if(i != row && j != col && !puzzle[i][j].equals("__")){rows.add(Integer.parseInt(puzzle[i][j]));}
+        if(i != row && j != col && !puzzle[i][j].equals("__")){rows.add(Integer.parseInt(puzzle[i][j].substring(1)));}
         if(rows.contains(num)){
           mistakes.add(row);
           mistakes.add(col);
