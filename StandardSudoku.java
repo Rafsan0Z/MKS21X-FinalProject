@@ -2,6 +2,7 @@ import java.util.ArrayList;
 public class StandardSudoku extends Sudoku{
 
   private String[][] puzzle;
+  private String[][] answer;
   private int count;
 
   public StandardSudoku(int dif){ // The constructor creates a 9 by 9 puzzle and Puts initial numbers to it based on difficulity
@@ -9,7 +10,6 @@ public class StandardSudoku extends Sudoku{
     puzzle = new String[size][size];
     createpuzzle();
     InputNums();
-  //  answer();
     count = dif;
   }
 
