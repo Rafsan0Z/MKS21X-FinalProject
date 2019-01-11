@@ -35,6 +35,10 @@ public class CustomSudoku extends Sudoku{
     }
   }
 
+  public boolean checkAnswer(){
+    return true;
+  }
+
   public void Partitions(){
     if(length == width){
       double counter = (double)length;
