@@ -58,10 +58,14 @@ public class StandardSudoku extends Sudoku{
           answer[i][j] = Integer.parseInt(puzzle[i][j].substring(1));
         }
         else{
-          answer[i][j] = Markint();
+          answer[i][j] = Markint(int row, int col);
         }
       }
     }
+  }
+(
+  public int Markint(int row, int col){
+    ArrayList<Integer> rowInts = rowdir(row);
   }
 
   public String[][] getPuzzle(){
