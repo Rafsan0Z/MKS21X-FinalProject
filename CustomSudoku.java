@@ -59,6 +59,20 @@ public class CustomSudoku extends Sudoku{
     }
   }
 
+  public void Markup(){
+    String[][] answer = new String[width][length];
+    for(int i = 0; i < width; i++){
+      for(int j = 0; j < length; j++){
+        if(puzzle[i][j] != "__"){
+          answer[i][j] = puzzle[i][j].substring(1);
+        }
+        else{
+          answer[i][j] = Markint(i,j);
+        }
+      }
+    }
+  }
+
   public int groupNum(int row, int col){
     return 0;
   }
