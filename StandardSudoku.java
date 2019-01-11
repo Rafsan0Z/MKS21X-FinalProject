@@ -66,6 +66,8 @@ public class StandardSudoku extends Sudoku{
 (
   public int Markint(int row, int col){
     ArrayList<Integer> rowInts = rowdir(row);
+    ArrayList<Integer> colInts = coldir(col);
+    ArrayList<Integer> groupInts = groupdir(groupNum(row,int));
   }
 
   public String[][] getPuzzle(){
