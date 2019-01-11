@@ -73,6 +73,11 @@ public class CustomSudoku extends Sudoku{
     return dir;
   }
 
+  public ArrayList<Integer> groupdir(int groupnum){
+    ArrayList<Integer> dir = new ArrayList<Integer>();
+    return dir;
+  }
+
   public void answer(){
     for(int i = 0; i < width; i++){
       for(int j = 0; j < length; j++){
