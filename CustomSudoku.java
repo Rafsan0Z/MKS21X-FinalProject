@@ -73,6 +73,19 @@ public class CustomSudoku extends Sudoku{
     }
   }
 
+  public String Markint(int row, int col){
+    String result = "";
+    ArrayList<Integer> rowInts = rowdir(row);
+    ArrayList<Integer> colInts = coldir(col);
+    ArrayList<Integer> groupInts = groupdir(groupNum(row,col));
+    for(int i = 1; i <= 9; i++){
+      if(!rowInts.contains(i) && !colInts.contains(i) && !groupInts.contains(i)){
+        result += "" + i;
+      }
+    }
+    return result;
+  }
+
   public int groupNum(int row, int col){
     return 0;
   }
