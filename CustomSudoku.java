@@ -39,6 +39,10 @@ public class CustomSudoku extends Sudoku{
     return true;
   }
 
+  public boolean Mistake(int row, int col){
+    return true;
+  }
+
   public void Partitions(){
     if(length == width){
       double counter = (double)length;
