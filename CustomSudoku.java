@@ -59,6 +59,10 @@ public class CustomSudoku extends Sudoku{
     }
   }
 
+  public int groupNum(int row, int col){
+    return 0;
+  }
+
   public ArrayList<Integer> rowdir(int row){
     ArrayList<Integer> dir = new ArrayList<Integer>();
     return dir;
