@@ -58,7 +58,7 @@ public class StandardSudoku extends Sudoku{
           answer[i][j] = puzzle[i][j].substring(1);
         }
         else{
-          answer[i][j] = Markint(int row, int col);
+          answer[i][j] = Markint(i,j);
         }
       }
     }
@@ -68,7 +68,7 @@ public class StandardSudoku extends Sudoku{
     String result = "";
     ArrayList<Integer> rowInts = rowdir(row);
     ArrayList<Integer> colInts = coldir(col);
-    ArrayList<Integer> groupInts = groupdir(groupNum(row,int));
+    ArrayList<Integer> groupInts = groupdir(groupNum(row,col));
     for(int i = 1; i <= 9; i++){
       if(!rowInts.contains(i) && !colInts.contains(i) && !groupInts.contains(i)){
         result += "" + i;
