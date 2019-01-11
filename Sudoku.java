@@ -21,4 +21,6 @@ public abstract class Sudoku{
   public abstract ArrayList<Integer> rowdir(int row);
   public abstract ArrayList<Integer> coldir(int col);
   public abstract ArrayList<Integer> groupdir(int groupnum);
+  public abstract String Markint(int row, int col);
+  public abstract void Markup();
 }
