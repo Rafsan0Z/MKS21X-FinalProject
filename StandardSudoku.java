@@ -51,11 +51,11 @@ public class StandardSudoku extends Sudoku{
   }
 
   public void Markup(){
-    int[][] answer = new int[9][9];
+    String[][] answer = new String[9][9];
     for(int i = 0; i < 9; i++){
       for(int j = 0; j < 9; j++){
         if(puzzle[i][j] != "__"){
-          answer[i][j] = Integer.parseInt(puzzle[i][j].substring(1));
+          answer[i][j] = puzzle[i][j].substring(1);
         }
         else{
           answer[i][j] = Markint(int row, int col);
