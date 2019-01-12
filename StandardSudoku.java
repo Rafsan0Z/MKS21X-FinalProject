@@ -63,7 +63,6 @@ public class StandardSudoku extends Sudoku{
       }
     }
   }
-(
   public String Markint(int row, int col){
     String result = "";
     ArrayList<Integer> rowInts = rowdir(row);
@@ -105,7 +104,7 @@ public class StandardSudoku extends Sudoku{
 
   public ArrayList<Integer> groupdir(int groupnum){
     ArrayList<Integer> dir = new ArrayList<Integer>();
-    if(groupnum = 1){
+    if(groupnum == 1){
     for(int i = 0; i < 3; i++){
       for(int j = 0; j < 3; j++){
         dir.add(Integer.parseInt(puzzle[i][j].substring(1)));
@@ -117,17 +116,17 @@ public class StandardSudoku extends Sudoku{
 
   public int groupNum(int row, int col){
     if(row >= 0 && row <= 2){
-      if(col >= 0 && col < =2){return 1;}
+      if(col >= 0 && col <= 2){return 1;}
       if(col >= 3 && col <= 5){return 2;}
       else{return 3;}
     }
     else if(row >= 3 && row <= 5){
-      if(col >= 0 && col < =2){return 4;}
+      if(col >= 0 && col <= 2){return 4;}
       if(col >= 3 && col <= 5){return 5;}
       else{return 6;}
     }
     else{
-      if(col >= 0 && col < =2){return 7;}
+      if(col >= 0 && col <= 2){return 7;}
       if(col >= 3 && col <= 5){return 8;}
       else{return 9;}
     }
@@ -141,7 +140,7 @@ public class StandardSudoku extends Sudoku{
         ArrayList<Integer> down = rowdir(i);
         ArrayList<Integer> up = coldir(j);
         ArrayList<Integer> group = groupdir(location);
-        if(RandInt() < 5 && !down.contains(num) && !up.contains(num) !groupdir.contains(num)) {
+        if(RandInt() < 5 && !down.contains(num) && !up.contains(num) && !group.contains(num)) {
           puzzle[i][j] = " " + num;
           count--;
         }
