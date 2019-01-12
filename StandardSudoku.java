@@ -14,7 +14,7 @@ public class StandardSudoku extends Sudoku{
   }
 
   public void add(int row, int col, int num){
-    if(puzzle[i][j] != "__"){
+    if(puzzle[row][col] != "__"){
       System.out.println("Error! A number exists! Please Remove first!");
     }
     else{
@@ -23,7 +23,7 @@ public class StandardSudoku extends Sudoku{
   }
 
   public void remove(int row, int col){
-    if(puzzle[row][col == "__"]){
+    if(puzzle[row][col] == "__"){
       System.out.println("Error! There are no numbers there!");
     }
     else{
@@ -128,22 +128,58 @@ public class StandardSudoku extends Sudoku{
       for(int j = 0; j < 3; j++){
         dir.add(Integer.parseInt(puzzle[i][j].substring(1)));
       }
-      return dir;
     }
     if(groupnum == 2){
     for(int j = 3; j < 6; j++){
       dir.add(Integer.parseInt(puzzle[i][j].substring(1)));
     }
-    return dir;
   }
   if(groupnum == 3){
   for(int j = 6; j < 9; j++){
     dir.add(Integer.parseInt(puzzle[i][j].substring(1)));
   }
-  return dir;
 }
     }
   }
+  else if(groupnum >= 4 && groupnum <= 6){
+  for(int i = 3; i < 6; i++){
+    if(groupnum == 4){
+    for(int j = 0; j < 3; j++){
+      dir.add(Integer.parseInt(puzzle[i][j].substring(1)));
+    }
+  }
+  if(groupnum == 5){
+  for(int j = 3; j < 6; j++){
+    dir.add(Integer.parseInt(puzzle[i][j].substring(1)));
+  }
+}
+if(groupnum == 6){
+for(int j = 6; j < 9; j++){
+  dir.add(Integer.parseInt(puzzle[i][j].substring(1)));
+}
+}
+  }
+}
+else{
+  for(int i = 6; i < 9; i++){
+    if(groupnum == 7){
+    for(int j = 0; j < 3; j++){
+      dir.add(Integer.parseInt(puzzle[i][j].substring(1)));
+    }
+  }
+  if(groupnum == 8){
+  for(int j = 3; j < 6; j++){
+    dir.add(Integer.parseInt(puzzle[i][j].substring(1)));
+  }
+}
+if(groupnum == 9){
+for(int j = 6; j < 9; j++){
+  dir.add(Integer.parseInt(puzzle[i][j].substring(1)));
+}
+}
+  }
+}
+return dir;
   }
 
   public int groupNum(int row, int col){
