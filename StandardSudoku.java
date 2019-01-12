@@ -122,14 +122,28 @@ public class StandardSudoku extends Sudoku{
 
   public ArrayList<Integer> groupdir(int groupnum){
     ArrayList<Integer> dir = new ArrayList<Integer>();
-    if(groupnum == 1){
+    if(groupnum >= 1 && groupnum <= 3){
     for(int i = 0; i < 3; i++){
+      if(groupnum == 1){
       for(int j = 0; j < 3; j++){
         dir.add(Integer.parseInt(puzzle[i][j].substring(1)));
       }
+      return dir;
+    }
+    if(groupnum == 2){
+    for(int j = 3; j < 6; j++){
+      dir.add(Integer.parseInt(puzzle[i][j].substring(1)));
+    }
+    return dir;
+  }
+  if(groupnum == 3){
+  for(int j = 6; j < 9; j++){
+    dir.add(Integer.parseInt(puzzle[i][j].substring(1)));
+  }
+  return dir;
+}
     }
   }
-    return dir;
   }
 
   public int groupNum(int row, int col){
