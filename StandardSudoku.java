@@ -14,7 +14,12 @@ public class StandardSudoku extends Sudoku{
   }
 
   public void add(int row, int col, int num){
+    if(puzzle[i][j] != "__"){
+      System.out.println("Error! A number exists! Please Remove first!");
+    }
+    else{
     puzzle[row][col] = " " + num;
+  }
   }
 
   public void remove(int row, int col){
