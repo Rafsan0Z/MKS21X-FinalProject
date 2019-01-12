@@ -18,7 +18,12 @@ public class StandardSudoku extends Sudoku{
   }
 
   public void remove(int row, int col){
+    if(puzzle[row][col == "__"]){
+      System.out.println("Error! There are no numbers there!");
+    }
+    else{
     puzzle[row][col] = "__";
+  }
   }
 
   public void createpuzzle(){ // Puts blank spaces in place of the numbers
