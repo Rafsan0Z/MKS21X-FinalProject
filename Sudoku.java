@@ -9,13 +9,8 @@ public abstract class Sudoku{
     Random randgen = new Random();
     return Math.abs(randgen.nextInt()) % 9 + 1;
   }
-  public void add(int row, int col, int num){
-    puzzle[row][col] = " " + num;
-  }
-
-  public void remove(int row, int col){
-    puzzle[row][col] = "__";
-  }
+  public abstract void add(int row, int col, int num);
+  public abstract void remove(int row, int col);
   public abstract boolean checkAnswer();
   public abstract boolean Mistake(int row, int col);
   public abstract int groupNum(int row, int col);
