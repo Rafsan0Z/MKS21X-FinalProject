@@ -180,15 +180,10 @@ public class TerminalDemo {
 						boolean yes = false;
 						if(key.getKind() == Key.Kind.Insert){yes=true;}
 						while(yes){
-							if(Character.isDigit(key.getCharacter())){
-								int row = Character.getNumericValue(key.getCharacter());
-								int col = Character.getNumericValue(key.getCharacter());
-								int num = Character.getNumericValue(key.getCharacter());
-								question.add(row,col,num);
-								yes = false;
-							}
+								Scanner in = new Scanner(System.in);
 								terminal.moveCursor(x,y);
 								x++;
+								yes = false;
 							}
 						}
 				}
