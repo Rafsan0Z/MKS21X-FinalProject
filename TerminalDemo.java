@@ -161,14 +161,6 @@ public class TerminalDemo {
 	        currentTime = System.currentTimeMillis();
 	        timer += (currentTime -lastTime);//add the amount of time since the last frame.
 	        //DO GAME STUFF HERE
-					if(key != null){
-						if(key.getKind() == Key.Kind.Insert){
-//							putString(x,y,terminal,""+ 1,Terminal.Color.WHITE,Terminal.Color.WHITE);
-								terminal.moveCursor(x,y);
-								terminal.putCharacter('3');
-								x++;
-							}
-					}
 	        putString(1,3,terminal, "Welcome to Sudoku",Terminal.Color.WHITE,Terminal.Color.GREEN);
 	        putString(3,5,terminal, "Time: "+timer,Terminal.Color.WHITE,Terminal.Color.RED);
 
@@ -182,7 +174,14 @@ public class TerminalDemo {
 					terminal.applySGR(Terminal.SGR.ENTER_BOLD,Terminal.SGR.ENTER_BLINK);
 	        putPuzzle(terminal,StandardPrint(puzzle),Terminal.Color.WHITE,Terminal.Color.WHITE);
 	        terminal.applySGR(Terminal.SGR.RESET_ALL);
-	//				setCursorVisible(true);
+					if(key != null){
+						if(key.getKind() == Key.Kind.Insert){
+//							putString(x,y,terminal,""+ 1,Terminal.Color.WHITE,Terminal.Color.WHITE);
+								terminal.moveCursor(x,y);
+								terminal.putCharacter('3');
+								x++;
+							}
+						}
 				}
 
 	    }
