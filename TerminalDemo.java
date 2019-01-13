@@ -107,6 +107,30 @@ public class TerminalDemo {
 	      if (key != null)
 	      {
 
+					if (key.getKind() == Key.Kind.ArrowLeft) {
+						terminal.moveCursor(x,y);
+						terminal.putCharacter(' ');
+						x--;
+					}
+
+					if (key.getKind() == Key.Kind.ArrowRight) {
+						terminal.moveCursor(x,y);
+						terminal.putCharacter(' ');
+						x++;
+					}
+
+					if (key.getKind() == Key.Kind.ArrowUp) {
+						terminal.moveCursor(x,y);
+						terminal.putCharacter(' ');
+						y--;
+					}
+
+					if (key.getKind() == Key.Kind.ArrowDown) {
+						terminal.moveCursor(x,y);
+						terminal.putCharacter(' ');
+						y++;
+					}
+
 	        //YOU CAN PUT DIFFERENT SETS OF BUTTONS FOR DIFFERENT MODES!!!
 					if(mode == 2){
 						if(key.getCharacter() == 's'){
