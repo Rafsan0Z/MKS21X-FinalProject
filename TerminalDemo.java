@@ -184,9 +184,9 @@ public class TerminalDemo {
 								int row = Character.getNumericValue(key.getCharacter());
 								int col = Character.getNumericValue(key.getCharacter());
 								int num = Character.getNumericValue(key.getCharacter());
+								question.add(row,col,num);
 							}
 								terminal.moveCursor(x,y);
-								question.add(row,col,num);
 								x++;
 								yes = false;
 							}
