@@ -132,11 +132,9 @@ public class TerminalDemo {
 					}
 
 	        //YOU CAN PUT DIFFERENT SETS OF BUTTONS FOR DIFFERENT MODES!!!
-					if(mode == 2){
 						if(key.getCharacter() == 'a'){
 								putString(x,y,terminal,""+ 1,Terminal.Color.WHITE,Terminal.Color.WHITE);
 						}
-					}
 
 	        //only for the game mode.
 	        if(mode == 0){
