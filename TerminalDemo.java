@@ -60,7 +60,7 @@ public class TerminalDemo {
 
 		public static void putPuzzle(Terminal t,
 				 String puzzle, Terminal.Color forg, Terminal.Color back ){
-		 t.moveCursor(100,25);
+		 t.moveCursor(1500,25);
 		 t.applyBackgroundColor(forg);
 		 t.applyForegroundColor(Terminal.Color.BLACK);
 
@@ -140,7 +140,7 @@ public class TerminalDemo {
 					terminal.applySGR(Terminal.SGR.ENTER_BOLD,Terminal.SGR.ENTER_BLINK);
 	        putPuzzle(terminal,StandardPrint(puzzle),Terminal.Color.WHITE,Terminal.Color.WHITE);
 	        terminal.applySGR(Terminal.SGR.RESET_ALL);
-					setCursorVisible(true);
+	//				setCursorVisible(true);
 				}
 
 	    }
