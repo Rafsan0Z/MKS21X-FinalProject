@@ -109,7 +109,7 @@ public class TerminalDemo {
 
 					if (key.getKind() == Key.Kind.ArrowLeft) {
 						terminal.moveCursor(x,y);
-						terminal.putCharacter(' ');
+						terminal.putCharacter('3');
 						x--;
 					}
 
