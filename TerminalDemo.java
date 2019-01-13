@@ -57,6 +57,19 @@ public class TerminalDemo {
 	    t.applyBackgroundColor(Terminal.Color.DEFAULT);
 	    t.applyForegroundColor(Terminal.Color.DEFAULT);
 	  }
+
+		public static void putPuzzle(Terminal t,
+				 String puzzle, Terminal.Color forg, Terminal.Color back ){
+		 t.moveCursor(100,25);
+		 t.applyBackgroundColor(forg);
+		 t.applyForegroundColor(Terminal.Color.BLACK);
+
+		 for(int i = 0; i < puzzle.length();i++){
+			 t.putCharacter(puzzle.charAt(i));
+		 }
+		 t.applyBackgroundColor(Terminal.Color.DEFAULT);
+		 t.applyForegroundColor(Terminal.Color.DEFAULT);
+	 }
 	  public static void main(String[] args) {
 
 	    Terminal terminal = TerminalFacade.createTextTerminal();
@@ -125,8 +138,9 @@ public class TerminalDemo {
 
 	      }else if(mode == 2){
 					terminal.applySGR(Terminal.SGR.ENTER_BOLD,Terminal.SGR.ENTER_BLINK);
-	        putString(1,3,terminal,StandardPrint(puzzle),Terminal.Color.WHITE,Terminal.Color.WHITE);
+	        putPuzzle(terminal,StandardPrint(puzzle),Terminal.Color.WHITE,Terminal.Color.WHITE);
 	        terminal.applySGR(Terminal.SGR.RESET_ALL);
+					setCursorVisible(true);
 				}
 
 	    }
