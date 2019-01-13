@@ -133,8 +133,8 @@ public class TerminalDemo {
 
 	        //YOU CAN PUT DIFFERENT SETS OF BUTTONS FOR DIFFERENT MODES!!!
 					if(mode == 2){
-						if(key.getCharacter() == 's'){
-							terminal.clearScreen();
+						if(key.getCharacter() == 'a'){
+								putString(x,y,terminal,""+ 1,Terminal.Color.WHITE,Terminal.Color.WHITE);
 						}
 					}
 
@@ -179,9 +179,6 @@ public class TerminalDemo {
 					terminal.applySGR(Terminal.SGR.ENTER_BOLD,Terminal.SGR.ENTER_BLINK);
 	        putPuzzle(terminal,StandardPrint(puzzle),Terminal.Color.WHITE,Terminal.Color.WHITE);
 	        terminal.applySGR(Terminal.SGR.RESET_ALL);
-					if(key.getCharacter() == 'a'){
-						putString(x,y,terminal,""+ 1,Terminal.Color.WHITE,Terminal.Color.WHITE);
-					}
 	//				setCursorVisible(true);
 				}
 
