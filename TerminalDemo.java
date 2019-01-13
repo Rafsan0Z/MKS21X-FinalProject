@@ -176,9 +176,10 @@ public class TerminalDemo {
 	        terminal.applySGR(Terminal.SGR.RESET_ALL);
 					if(key != null){
 						if(key.getKind() == Key.Kind.Insert){
-//							putString(x,y,terminal,""+ 1,Terminal.Color.WHITE,Terminal.Color.WHITE);
+							putString(1500,25,terminal,"Input a num!",Terminal.Color.WHITE,Terminal.Color.WHITE);
+								char num = terminal.getCharacter();
 								terminal.moveCursor(x,y);
-								terminal.putCharacter('3');
+								terminal.putCharacter(num);
 								x++;
 							}
 						}
