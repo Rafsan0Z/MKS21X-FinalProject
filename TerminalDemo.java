@@ -38,143 +38,88 @@ public class TerminalDemo {
 		return result;
 	}
 
-	private static String[][] what = {{"what", "how"}};
-
 	public static void putString(int r, int c,Terminal t, String s){
-		t.moveCursor(r,c);
-		for(int i = 0; i < s.length();i++){
-			t.putCharacter(s.charAt(i));
-		}
-	}
-	public static void print(Terminal t, String word){
-		t.moveCursor(100,25);
-		for(int i = 0; i < word.length(); i++){
-			t.putCharacter(word.charAt(i));
-	}
-}
+	    t.moveCursor(r,c);
+	    for(int i = 0; i < s.length();i++){
+	      t.putCharacter(s.charAt(i));
+	    }
+	  }
 
-	public static void button(Terminal t, String word){
-		t.moveCursor(110,35);
-		for(int i = 0; i < word.length(); i++){
-			t.putCharacter(word.charAt(i));
-		}
-	}
+	  public static void putString(int r, int c,Terminal t,
+	        String s, Terminal.Color forg, Terminal.Color back ){
+	    t.moveCursor(r,c);
+	    t.applyBackgroundColor(forg);
+	    t.applyForegroundColor(Terminal.Color.BLACK);
 
-	public static void main(String[] args) {
+	    for(int i = 0; i < s.length();i++){
+	      t.putCharacter(s.charAt(i));
+	    }
+	    t.applyBackgroundColor(Terminal.Color.DEFAULT);
+	    t.applyForegroundColor(Terminal.Color.DEFAULT);
+	  }
+	  public static void main(String[] args) {
 
-		StandardSudoku question = new StandardSudoku(17);
-		String[][] puzzle = question.getPuzzle();
-		String data = StandardPrint(puzzle);
+	    Terminal terminal = TerminalFacade.createTextTerminal();
+	    terminal.enterPrivateMode();
 
-		int x = 10;
-		int y = 10;
+	    TerminalSize size = terminal.getTerminalSize();
+	    terminal.setCursorVisible(false);
 
-		Terminal terminal = TerminalFacade.createTextTerminal();
-		terminal.enterPrivateMode();
-
-		print(terminal, data);
-
-		TerminalSize size = terminal.getTerminalSize();
-		terminal.setCursorVisible(false);
-
-		boolean running = true;
-
-		long tStart = System.currentTimeMillis();
-		long lastSecond = 0;
-
-		while(running){
-
-			print(terminal,data);
-
-			terminal.moveCursor(x,y);
-			terminal.applyBackgroundColor(Terminal.Color.WHITE);
-			terminal.applyForegroundColor(Terminal.Color.BLACK);
-			//applySGR(a,b) for multiple modifiers (bold,blink) etc.
-			terminal.applySGR(Terminal.SGR.ENTER_UNDERLINE);
-			terminal.putCharacter('\u00a4');
-			//terminal.putCharacter(' ');
-			terminal.applyBackgroundColor(Terminal.Color.DEFAULT);
-			terminal.applyForegroundColor(Terminal.Color.DEFAULT);
-			terminal.applySGR(Terminal.SGR.RESET_ALL);
+	    boolean running = true;
+	    int mode = 0;
+	    long lastTime =  System.currentTimeMillis();
+	    long currentTime = lastTime;
+	    long timer = 0;
 
 
-			terminal.moveCursor(size.getColumns()-5,5);
-			terminal.applyBackgroundColor(Terminal.Color.RED);
-			terminal.applyForegroundColor(Terminal.Color.YELLOW);
-			terminal.applySGR(Terminal.SGR.ENTER_BOLD);
-			terminal.putCharacter(' ');
-			terminal.putCharacter(' ');
-			terminal.putCharacter('\u262d');
-			terminal.putCharacter(' ');
-			terminal.moveCursor(size.getColumns()-5,6);
-			terminal.putCharacter(' ');
-			terminal.putCharacter(' ');
-			terminal.putCharacter(' ');
-			terminal.putCharacter(' ');
-			terminal.applyBackgroundColor(Terminal.Color.DEFAULT);
-			terminal.applyForegroundColor(Terminal.Color.DEFAULT);
+	    while(running){
+	      Key key = terminal.readInput();
+	      if (key != null)
+	      {
 
-			Key key = terminal.readInput();
+	        //YOU CAN PUT DIFFERENT SETS OF BUTTONS FOR DIFFERENT MODES!!!
 
-			if (key != null)
-			{
+	        //only for the game mode.
+	        if(mode == 0){
+	          if (key.getKind() == Key.Kind.Escape) {
+	            terminal.exitPrivateMode();
+	            running = false;
+	          }
+	        }
 
-				if (key.getKind() == Key.Kind.Escape) {
+	        //for all modes
+	        if (key.getCharacter() == ' ') {
+	          mode++;
+	          mode%=2;//2 modes
+	          terminal.clearScreen();
+	          lastTime = System.currentTimeMillis();
+	          currentTime = System.currentTimeMillis();
+	        }
+	      }
 
-					terminal.exitPrivateMode();
-					running = false;
-				}
-
-				if (key.getKind() == Key.Kind.ArrowLeft) {
-					terminal.moveCursor(x,y);
-					terminal.putCharacter(' ');
-					x--;
-				}
-
-				if (key.getKind() == Key.Kind.ArrowRight) {
-					terminal.moveCursor(x,y);
-					terminal.putCharacter(' ');
-					x++;
-				}
-
-				if (key.getKind() == Key.Kind.ArrowUp) {
-					terminal.moveCursor(x,y);
-					terminal.putCharacter(' ');
-					y--;
-				}
-
-				if (key.getKind() == Key.Kind.ArrowDown) {
-					terminal.moveCursor(x,y);
-					terminal.putCharacter(' ');
-					y++;
-				}
-				//space moves it diagonally
-				if (key.getCharacter() == ' ') {
-					terminal.moveCursor(x,y);
-					terminal.putCharacter(' ');
-					y++;
-					x++;
-				}
-				if(key.getCharacter() == 'a'){
-					terminal.moveCursor(x,y);
-				}
-				putString(1,4,terminal,"["+key.getCharacter() +"]");
-				putString(1,1,terminal,key+"        ");//to clear leftover letters pad withspaces
-
-			}
-
-			//DO EVEN WHEN NO KEY PRESSED:
-			long tEnd = System.currentTimeMillis();
-			long millis = tEnd - tStart;
-			putString(1,2,terminal,"x: "+x);
-			if(millis/1000 > lastSecond){
-				lastSecond = millis / 1000;
-				//one second has passed.
-				putString(1,3,terminal,"y: "+x);
-
-			}
+	      terminal.applySGR(Terminal.SGR.ENTER_BOLD);
+	      putString(1,1,terminal, "This is mode "+mode,Terminal.Color.WHITE,Terminal.Color.RED);
+	      terminal.applySGR(Terminal.SGR.RESET_ALL);
 
 
-		}
-	}
+	      if(mode==0){
+	        lastTime = currentTime;
+	        currentTime = System.currentTimeMillis();
+	        timer += (currentTime -lastTime);//add the amount of time since the last frame.
+	        //DO GAME STUFF HERE
+	        putString(1,3,terminal, "Game here...",Terminal.Color.WHITE,Terminal.Color.RED);
+	        putString(3,5,terminal, "Time: "+timer,Terminal.Color.WHITE,Terminal.Color.RED);
+
+	      }else{
+
+	        terminal.applySGR(Terminal.SGR.ENTER_BOLD,Terminal.SGR.ENTER_BLINK);
+	        putString(1,3,terminal, "Not game, just a pause!",Terminal.Color.RED,Terminal.Color.WHITE);
+	        terminal.applySGR(Terminal.SGR.RESET_ALL);
+
+	      }
+
+	    }
+
+
+	  }
 }
