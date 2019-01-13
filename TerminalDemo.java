@@ -180,9 +180,11 @@ public class TerminalDemo {
 						boolean yes = false;
 						if(key.getKind() == Key.Kind.Insert){yes=true;}
 						while(yes){
+							if(Character.isDigit(key.getCharacter())){
 								int row = Character.getNumericValue(key.getCharacter());
 								int col = Character.getNumericValue(key.getCharacter());
 								int num = Character.getNumericValue(key.getCharacter());
+							}
 								terminal.moveCursor(x,y);
 								question.add(row,col,num);
 								x++;
