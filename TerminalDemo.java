@@ -72,6 +72,9 @@ public class TerminalDemo {
 	 }
 	  public static void main(String[] args) {
 
+			int x = 10;
+			int y = 10;
+
 	    Terminal terminal = TerminalFacade.createTextTerminal();
 	    terminal.enterPrivateMode();
 
@@ -88,6 +91,18 @@ public class TerminalDemo {
 			String[][] puzzle = question.getPuzzle();
 
 	    while(running){
+
+				terminal.moveCursor(x,y);
+				terminal.applyBackgroundColor(Terminal.Color.WHITE);
+				terminal.applyForegroundColor(Terminal.Color.BLACK);
+				//applySGR(a,b) for multiple modifiers (bold,blink) etc.
+				terminal.applySGR(Terminal.SGR.ENTER_UNDERLINE);
+				terminal.putCharacter('\u00a4');
+				//terminal.putCharacter(' ');
+				terminal.applyBackgroundColor(Terminal.Color.DEFAULT);
+				terminal.applyForegroundColor(Terminal.Color.DEFAULT);
+				terminal.applySGR(Terminal.SGR.RESET_ALL);
+
 	      Key key = terminal.readInput();
 	      if (key != null)
 	      {
