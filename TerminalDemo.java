@@ -177,7 +177,7 @@ public class TerminalDemo {
 					if(key != null){
 						if(key.getKind() == Key.Kind.Insert){
 							putString(1500,25,terminal,"Input a num!",Terminal.Color.WHITE,Terminal.Color.WHITE);
-								char num = terminal.getCharacter();
+								char num = key.getCharacter();
 								terminal.moveCursor(x,y);
 								terminal.putCharacter(num);
 								x++;
