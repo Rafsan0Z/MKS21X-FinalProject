@@ -79,6 +79,7 @@ public class TerminalDemo {
 	    terminal.enterPrivateMode();
 
 	    TerminalSize size = terminal.getTerminalSize();
+			size = 12;
 	    terminal.setCursorVisible(false);
 
 	    boolean running = true;
