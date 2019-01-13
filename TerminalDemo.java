@@ -132,7 +132,7 @@ public class TerminalDemo {
 					}
 
 	        //YOU CAN PUT DIFFERENT SETS OF BUTTONS FOR DIFFERENT MODES!!!
-						if(key.getCharacter() == 'a'){
+						if(key.getKind() == Key.Kind.Insert){
 								putString(x,y,terminal,""+ 1,Terminal.Color.WHITE,Terminal.Color.WHITE);
 						}
 
