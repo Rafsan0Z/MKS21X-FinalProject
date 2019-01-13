@@ -157,10 +157,8 @@ public class TerminalDemo {
 				}
 				if(key.getCharacter() == 'a'){
 					terminal.moveCursor(x,y);
-					Scanner in = new Scanner(System.in);
-					int num = in.nextInt();
-					in.close();
-					terminal.putCharacter((char)num);
+					char num = key.getCharacter();
+					terminal.putCharacter(num);
 				}
 				putString(1,4,terminal,"["+key.getCharacter() +"]");
 				putString(1,1,terminal,key+"        ");//to clear leftover letters pad withspaces
