@@ -185,10 +185,10 @@ public class TerminalDemo {
 								int col = Character.getNumericValue(key.getCharacter());
 								int num = Character.getNumericValue(key.getCharacter());
 								question.add(row,col,num);
+								yes = false;
 							}
 								terminal.moveCursor(x,y);
 								x++;
-								yes = false;
 							}
 						}
 				}
