@@ -177,11 +177,14 @@ public class TerminalDemo {
 					putString(1,3,terminal, "x position:" +x,Terminal.Color.WHITE,Terminal.Color.GREEN);
 				  putString(3,5,terminal, "y position: "+y,Terminal.Color.WHITE,Terminal.Color.RED);
 					if(key != null){
-						if(key.getKind() == Key.Kind.Insert){
+						if(x == 21){
+						if(key.getCharacter() == 'a'){
 								terminal.moveCursor(x,y);
-								question.add(0,0,9);
+								char num = key.getCharacter();
+								question.add(0,0,num);
 								x++;
 							}
+						}
 						}
 				}
 
