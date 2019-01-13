@@ -16,13 +16,29 @@ import com.googlecode.lanterna.input.Key;
 import com.googlecode.lanterna.input.KeyMappingProfile;
 
 
-public class TerminalDemo extends Driver {
+public class TerminalDemo {
 
-
+	public static String StandardPrint(String[][] puzzle){
+		String result = "-----------------------" + "\n";
+		for(int i = 0; i < 9; i++){
+			if((i+3) % 3 == 0){
+				result += "-----------------------" + "\n";
+			}
+			result += "|";
+			for(int j = 0; j < 9; j++){
+				result += puzzle[i][j];
+				if((j+1) % 3 == 0){
+					result += "|";
+				}
+				if(j == 8){
+					result += "\n";
+				}
+			}
+		}
+		return result;
+	}
 
 	private static String[][] what = {{"what", "how"}};
-
-	private static String data;
 
 	public static void putString(int r, int c,Terminal t, String s){
 		t.moveCursor(r,c);
@@ -35,8 +51,20 @@ public class TerminalDemo extends Driver {
 		for(int i = 0; i < word.length(); i++){
 			t.putCharacter(word.charAt(i));
 	}
+}
+
+	public static void button(Terminal t, String word){
+		t.moveCursor(110,35);
+		for(int i = 0; i < word.length(); i++){
+			t.putCharacter(word.charAt(i));
+		}
+	}
+
 	public static void main(String[] args) {
 
+		StandardSudoku question = new StandardSudoku(17);
+		String[][] puzzle = question.getPuzzle();
+		String data = StandardPrint(puzzle);
 
 		int x = 10;
 		int y = 10;
@@ -45,6 +73,7 @@ public class TerminalDemo extends Driver {
 		terminal.enterPrivateMode();
 
 		print(terminal, data);
+		button(terminal, "ADD");
 
 		TerminalSize size = terminal.getTerminalSize();
 		terminal.setCursorVisible(false);
