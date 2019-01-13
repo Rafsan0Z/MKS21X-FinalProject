@@ -166,7 +166,7 @@ public class TerminalDemo {
 	        currentTime = System.currentTimeMillis();
 	        timer += (currentTime -lastTime);//add the amount of time since the last frame.
 	        //DO GAME STUFF HERE
-	        putString(1,3,terminal, "Game here...",Terminal.Color.WHITE,Terminal.Color.RED);
+	        putString(1,3,terminal, "Welcome to Sudoku",Terminal.Color.WHITE,Terminal.Color.GREEN);
 	        putString(3,5,terminal, "Time: "+timer,Terminal.Color.WHITE,Terminal.Color.RED);
 
 	      }else if (mode == 1){
@@ -179,6 +179,9 @@ public class TerminalDemo {
 					terminal.applySGR(Terminal.SGR.ENTER_BOLD,Terminal.SGR.ENTER_BLINK);
 	        putPuzzle(terminal,StandardPrint(puzzle),Terminal.Color.WHITE,Terminal.Color.WHITE);
 	        terminal.applySGR(Terminal.SGR.RESET_ALL);
+					if(key.getCharacter() == 'a'){
+						putString(x,y,terminal,""+ 1,Terminal.Color.WHITE,Terminal.Color.WHITE);
+					}
 	//				setCursorVisible(true);
 				}
 
