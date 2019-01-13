@@ -175,15 +175,10 @@ public class TerminalDemo {
 	        putPuzzle(terminal,StandardPrint(puzzle),Terminal.Color.WHITE,Terminal.Color.WHITE);
 	        terminal.applySGR(Terminal.SGR.RESET_ALL);
 					if(key != null){
-						while(key.getKind() == Key.Kind.Shift){
-							putString(1500,25,terminal,"Input a num!",Terminal.Color.WHITE,Terminal.Color.WHITE);
-								char num = key.getCharacter();
-							}
-							if(key.getKind() == Key.Kind.Insert){
+						if(key.getKind() == Key.Kind.Insert){
 								terminal.moveCursor(x,y);
-								terminal.putCharacter(num);
+								question.add(0,0,9);
 								x++;
-							}
 							}
 						}
 				}
@@ -192,3 +187,4 @@ public class TerminalDemo {
 
 
 	  }
+}
