@@ -132,10 +132,6 @@ public class TerminalDemo {
 					}
 
 	        //YOU CAN PUT DIFFERENT SETS OF BUTTONS FOR DIFFERENT MODES!!!
-						if(key.getKind() == Key.Kind.Insert){
-	//							putString(x,y,terminal,""+ 1,Terminal.Color.WHITE,Terminal.Color.WHITE);
-									terminal.putCharacter('3');
-						}
 
 	        //only for the game mode.
 	        if(mode == 0){
@@ -165,6 +161,10 @@ public class TerminalDemo {
 	        currentTime = System.currentTimeMillis();
 	        timer += (currentTime -lastTime);//add the amount of time since the last frame.
 	        //DO GAME STUFF HERE
+					if(key.getKind() == Key.Kind.Insert && key != null){
+//							putString(x,y,terminal,""+ 1,Terminal.Color.WHITE,Terminal.Color.WHITE);
+								terminal.putCharacter('3');
+					}
 	        putString(1,3,terminal, "Welcome to Sudoku",Terminal.Color.WHITE,Terminal.Color.GREEN);
 	        putString(3,5,terminal, "Time: "+timer,Terminal.Color.WHITE,Terminal.Color.RED);
 
