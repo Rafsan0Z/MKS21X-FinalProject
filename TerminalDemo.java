@@ -180,9 +180,9 @@ public class TerminalDemo {
 						boolean yes = false;
 						if(key.getKind() == Key.Kind.Insert){yes=true;}
 						while(yes){
-								char row = Key.getCharacter();
-								char col = Key.getCharacter();
-								char num = Key.getCharacter();
+								char row = key.getCharacter();
+								char col = key.getCharacter();
+								char num = key.getCharacter();
 								terminal.moveCursor(x,y);
 								question.add(0,0,9);
 								x++;
