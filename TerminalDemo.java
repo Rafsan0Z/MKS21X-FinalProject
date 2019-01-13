@@ -79,7 +79,6 @@ public class TerminalDemo {
 	    terminal.enterPrivateMode();
 
 	    TerminalSize size = terminal.getTerminalSize();
-			size = 12;
 	    terminal.setCursorVisible(false);
 
 	    boolean running = true;
@@ -175,6 +174,8 @@ public class TerminalDemo {
 					terminal.applySGR(Terminal.SGR.ENTER_BOLD,Terminal.SGR.ENTER_BLINK);
 	        putPuzzle(terminal,StandardPrint(puzzle),Terminal.Color.WHITE,Terminal.Color.WHITE);
 	        terminal.applySGR(Terminal.SGR.RESET_ALL);
+					putString(1,3,terminal, "x position:" +x,Terminal.Color.WHITE,Terminal.Color.GREEN);
+				  putString(3,5,terminal, "y position: "+y,Terminal.Color.WHITE,Terminal.Color.RED);
 					if(key != null){
 						if(key.getKind() == Key.Kind.Insert){
 								terminal.moveCursor(x,y);
