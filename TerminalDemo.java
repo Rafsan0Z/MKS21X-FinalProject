@@ -109,7 +109,7 @@ public class TerminalDemo {
 
 					if (key.getKind() == Key.Kind.ArrowLeft) {
 						terminal.moveCursor(x,y);
-						terminal.putCharacter('3');
+						terminal.putCharacter(' ');
 						x--;
 					}
 
@@ -164,7 +164,9 @@ public class TerminalDemo {
 					if(key != null){
 						if(key.getKind() == Key.Kind.Insert){
 //							putString(x,y,terminal,""+ 1,Terminal.Color.WHITE,Terminal.Color.WHITE);
+								terminal.moveCursor(x,y);
 								terminal.putCharacter('3');
+								x++;
 							}
 					}
 	        putString(1,3,terminal, "Welcome to Sudoku",Terminal.Color.WHITE,Terminal.Color.GREEN);
