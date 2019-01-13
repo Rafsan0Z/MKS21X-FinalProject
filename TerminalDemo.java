@@ -14,7 +14,7 @@ import com.googlecode.lanterna.input.InputDecoder;
 import com.googlecode.lanterna.input.InputProvider;
 import com.googlecode.lanterna.input.Key;
 import com.googlecode.lanterna.input.KeyMappingProfile;
-
+import java.util.Scanner;
 
 public class TerminalDemo {
 
@@ -73,7 +73,6 @@ public class TerminalDemo {
 		terminal.enterPrivateMode();
 
 		print(terminal, data);
-		button(terminal, "ADD");
 
 		TerminalSize size = terminal.getTerminalSize();
 		terminal.setCursorVisible(false);
@@ -155,6 +154,13 @@ public class TerminalDemo {
 					terminal.putCharacter(' ');
 					y++;
 					x++;
+				}
+				if(key.getCharacter() == 'a'){
+					terminal.moveCursor(x,y);
+					Scanner in = new Scanner(System.in);
+					int num = in.nextInt();
+					in.close();
+					terminal.putCharacter((char)num);
 				}
 				putString(1,4,terminal,"["+key.getCharacter() +"]");
 				putString(1,1,terminal,key+"        ");//to clear leftover letters pad withspaces
