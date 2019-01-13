@@ -19,7 +19,7 @@ import java.util.Scanner;
 public class TerminalDemo {
 
 	public static String StandardPrint(String[][] puzzle){
-		String result = "-----------------------" + "\n";
+		String result = "";
 		for(int i = 0; i < 9; i++){
 			if((i+3) % 3 == 0){
 				result += "-----------------------" + "\n";
@@ -71,6 +71,8 @@ public class TerminalDemo {
 	    long currentTime = lastTime;
 	    long timer = 0;
 
+			StandardSudoku question = new StandardSudoku(17);
+			String[][] puzzle = question.getPuzzle();
 
 	    while(running){
 	      Key key = terminal.readInput();
@@ -78,6 +80,11 @@ public class TerminalDemo {
 	      {
 
 	        //YOU CAN PUT DIFFERENT SETS OF BUTTONS FOR DIFFERENT MODES!!!
+					if(mode == 2){
+						if(key.getCharacter() == 's'){
+							terminal.clearScreen();
+						}
+					}
 
 	        //only for the game mode.
 	        if(mode == 0){
@@ -90,7 +97,7 @@ public class TerminalDemo {
 	        //for all modes
 	        if (key.getCharacter() == ' ') {
 	          mode++;
-	          mode%=2;//2 modes
+	          mode%=3;//2 modes
 	          terminal.clearScreen();
 	          lastTime = System.currentTimeMillis();
 	          currentTime = System.currentTimeMillis();
@@ -110,13 +117,17 @@ public class TerminalDemo {
 	        putString(1,3,terminal, "Game here...",Terminal.Color.WHITE,Terminal.Color.RED);
 	        putString(3,5,terminal, "Time: "+timer,Terminal.Color.WHITE,Terminal.Color.RED);
 
-	      }else{
+	      }else if (mode == 1){
 
 	        terminal.applySGR(Terminal.SGR.ENTER_BOLD,Terminal.SGR.ENTER_BLINK);
 	        putString(1,3,terminal, "Not game, just a pause!",Terminal.Color.RED,Terminal.Color.WHITE);
 	        terminal.applySGR(Terminal.SGR.RESET_ALL);
 
-	      }
+	      }else if(mode == 2){
+					terminal.applySGR(Terminal.SGR.ENTER_BOLD,Terminal.SGR.ENTER_BLINK);
+	        putString(1,3,terminal,StandardPrint(puzzle),Terminal.Color.WHITE,Terminal.Color.WHITE);
+	        terminal.applySGR(Terminal.SGR.RESET_ALL);
+				}
 
 	    }
 
