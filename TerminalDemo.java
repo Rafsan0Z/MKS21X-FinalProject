@@ -181,8 +181,9 @@ public class TerminalDemo {
 						if(key.getKind() == Key.Kind.Insert){yes=true;}
 						while(yes){
 								Scanner in = new Scanner(System.in);
-								int num = Integer.parseInt(in.nextInt());
+								int num = in.nextInt();
 								terminal.moveCursor(x,y);
+								terminal.putCharacter((char)num);
 								x++;
 								yes = false;
 							}
