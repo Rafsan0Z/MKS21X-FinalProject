@@ -162,7 +162,7 @@ public class TerminalDemo {
 	        timer += (currentTime -lastTime);//add the amount of time since the last frame.
 	        //DO GAME STUFF HERE
 					if(key != null){
-						if(key.getKind() = Key.Kind.Insert){
+						if(key.getKind() == Key.Kind.Insert){
 //							putString(x,y,terminal,""+ 1,Terminal.Color.WHITE,Terminal.Color.WHITE);
 								terminal.putCharacter('3');
 							}
