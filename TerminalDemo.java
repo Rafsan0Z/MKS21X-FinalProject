@@ -157,8 +157,9 @@ public class TerminalDemo {
 				}
 				if(key.getCharacter() == 'a'){
 					terminal.moveCursor(x,y);
-					char num = key.getCharacter();
-					terminal.putCharacter(num);
+		//			char num = key.getCharacter();
+		//			String pass = Character.toString(char);
+		//			putString(x,y,pass);
 				}
 				putString(1,4,terminal,"["+key.getCharacter() +"]");
 				putString(1,1,terminal,key+"        ");//to clear leftover letters pad withspaces
@@ -168,11 +169,11 @@ public class TerminalDemo {
 			//DO EVEN WHEN NO KEY PRESSED:
 			long tEnd = System.currentTimeMillis();
 			long millis = tEnd - tStart;
-			putString(1,2,terminal,"Milliseconds since start of program: "+millis);
+			putString(1,2,terminal,"x: "+x);
 			if(millis/1000 > lastSecond){
 				lastSecond = millis / 1000;
 				//one second has passed.
-				putString(1,3,terminal,"Seconds since start of program: "+lastSecond);
+				putString(1,3,terminal,"y: "+x);
 
 			}
 
