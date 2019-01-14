@@ -190,8 +190,10 @@ public class TerminalDemo {
 							if(key.getCharacter() == 'n'){
 								num = key.getCharacter();
 							}
+							if(key.getCharacter() == 'f'){
+								question.add(Character.getNumericValue(row),Character.getNumericValue(col),Character.getNumericValue(num));
+							}
 						}
-					question.add(Character.getNumericValue(row),Character.getNumericValue(col),Character.getNumericValue(num) );
 				}
 
 	    }
