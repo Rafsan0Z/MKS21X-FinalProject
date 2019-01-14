@@ -178,9 +178,9 @@ public class TerminalDemo {
 					putString(1,3,terminal, "x position:" +x,Terminal.Color.WHITE,Terminal.Color.GREEN);
 				  putString(3,5,terminal, "y position: "+y,Terminal.Color.WHITE,Terminal.Color.RED);
 					while(key != null){
-						char row;
-						char col;
-						char num;
+						char row = '';
+						char col = '';
+						char num = '';
 							if(key.getCharacter() == 'r'){
 								row = key.getCharacter();
 							}
