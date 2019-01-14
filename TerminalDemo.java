@@ -177,9 +177,9 @@ public class TerminalDemo {
 	        terminal.applySGR(Terminal.SGR.RESET_ALL);
 					putString(1,3,terminal, "x position:" +x,Terminal.Color.WHITE,Terminal.Color.GREEN);
 				  putString(3,5,terminal, "y position: "+y,Terminal.Color.WHITE,Terminal.Color.RED);
-					char row = '';
-					char col = '';
-					char num = '';
+					char row = 'w';
+					char col = 'w';
+					char num = 'w';
 					while(key != null){
 							if(key.getCharacter() == 'r'){
 								row = key.getCharacter();
