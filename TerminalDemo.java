@@ -135,35 +135,11 @@ public class TerminalDemo {
 					}
 
 	        //YOU CAN PUT DIFFERENT SETS OF BUTTONS FOR DIFFERENT MODES!!!
-
-					if(mode == 2){
-						if(key.getCharacter() == ' '){
-							mode++;
-						}
-					}
-
-					if(mode == 3){
-						row = key.getCharacter();
-						if(row != 'w'){
-						mode++;
-					}
-					}
-
-					if(mode == 4){
-						col = key.getCharacter();
-						if(col != 'w'){
-						mode++;
-					}
-					}
-
-					if(mode == 5){
-						num = key.getCharacter();
-						if(row != 'w'){
-						question.add(Character.getNumericValue(row),Character.getNumericValue(col),Character.getNumericValue(num));
-						mode = 2;
-					}
-					}
-
+			
+		if(mode == 2){
+				
+		}	
+					
 	        //only for the game mode.
 	        if(mode == 0){
 	          if (key.getKind() == Key.Kind.Escape) {
@@ -173,9 +149,9 @@ public class TerminalDemo {
 	        }
 
 	        //for all modes
-	        if (key.getCharacter() == ' ' && mode <= 2) {
+	        if (key.getCharacter() == ' ') {
 	          mode++;
-	          mode%=6;//2 modes
+	          mode%=3;//2 modes
 	          terminal.clearScreen();
 	          lastTime = System.currentTimeMillis();
 	          currentTime = System.currentTimeMillis();
@@ -202,7 +178,7 @@ public class TerminalDemo {
 					putString(1,5,terminal, "1. Standard 9 by 9 puzzle. Press Space to play",Terminal.Color.RED,Terminal.Color.WHITE);
 	        terminal.applySGR(Terminal.SGR.RESET_ALL);
 
-	      }else if(mode >= 2){
+	      }else if(mode == 2){
 					terminal.applySGR(Terminal.SGR.ENTER_BOLD,Terminal.SGR.ENTER_BLINK);
 	        putPuzzle(terminal,StandardPrint(puzzle),Terminal.Color.WHITE,Terminal.Color.WHITE);
 	        terminal.applySGR(Terminal.SGR.RESET_ALL);
