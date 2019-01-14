@@ -103,9 +103,9 @@ public class TerminalDemo {
 				terminal.applyForegroundColor(Terminal.Color.DEFAULT);
 				terminal.applySGR(Terminal.SGR.RESET_ALL);
 
-				char row = '1';
-				char col = '1';
-				char num = '1';
+				char row = 'w';
+				char col = 'w';
+				char num = 'w';
 	      Key key = terminal.readInput();
 	      if (key != null)
 	      {
@@ -144,18 +144,24 @@ public class TerminalDemo {
 
 					if(mode == 3){
 						row = key.getCharacter();
+						if(row != 'w'){
 						mode++;
+					}
 					}
 
 					if(mode == 4){
 						col = key.getCharacter();
+						if(col != 'w'){
 						mode++;
+					}
 					}
 
 					if(mode == 5){
 						num = key.getCharacter();
+						if(row != 'w'){
 						question.add(Character.getNumericValue(row),Character.getNumericValue(col),Character.getNumericValue(num));
 						mode = 2;
+					}
 					}
 
 	        //only for the game mode.
