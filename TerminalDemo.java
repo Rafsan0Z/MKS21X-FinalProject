@@ -177,18 +177,21 @@ public class TerminalDemo {
 	        terminal.applySGR(Terminal.SGR.RESET_ALL);
 					putString(1,3,terminal, "x position:" +x,Terminal.Color.WHITE,Terminal.Color.GREEN);
 				  putString(3,5,terminal, "y position: "+y,Terminal.Color.WHITE,Terminal.Color.RED);
-					if(key != null){
-						boolean yes = false;
-						if(key.getKind() == Key.Kind.Insert){yes=true;}
-						while(yes){
-								Scanner in = new Scanner(System.in);
-								int num = in.nextInt();
-								terminal.moveCursor(x,y);
-								terminal.putCharacter((char)num);
-								x++;
-								yes = false;
+					char row;
+					char col;
+					char num;
+					while(key != null){
+							if(key.getCharacter() == 'r'){
+								row = key.getCharacter();
+							}
+							if(key.getCharacter() == 'c'){
+								col = key.getCharacter();
+							}
+							if(key.getCharacter() == 'n'){
+								num = key.getCharacter();
 							}
 						}
+					question.add(Character.getNumericValue(row),Character.getNumericValue(col),Character.getNumericValue(num) );	
 				}
 
 	    }
