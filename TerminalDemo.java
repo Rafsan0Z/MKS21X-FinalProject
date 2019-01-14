@@ -137,7 +137,7 @@ public class TerminalDemo {
 	        //YOU CAN PUT DIFFERENT SETS OF BUTTONS FOR DIFFERENT MODES!!!
 
 					if(mode == 2){
-						if(key.getKind() == Key.Kind.Enter){
+						if(key.getCharacter() == ' '){
 							mode++;
 						}
 					}
