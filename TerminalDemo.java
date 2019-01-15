@@ -122,6 +122,15 @@ public class TerminalDemo {
 					question.add(row,col,num);
 					in.close();
 					inputmode = 0;
+					continue;
+				}
+				if(inputmode == 2){
+					Scanner in = new Scanner(System.in);
+					int row = in.nextInt();
+					int col = in.nextInt();
+					question.remove(row,col);
+					in.close();
+					inputmode = 0;
 				}
 				terminal.moveCursor(x,y);
 				terminal.applyBackgroundColor(Terminal.Color.WHITE);
@@ -178,7 +187,11 @@ public class TerminalDemo {
 						if(key.getCharacter() == 'a'){
 							inputmode = 1;
 						}
+						if(key.getCharacter() == 'r'){
+							inputmode = 2;
+						}
 					}
+
 
 	        //for all modes
 	        if (key.getCharacter() == ' ') {
