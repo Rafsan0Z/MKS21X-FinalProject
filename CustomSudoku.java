@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 public class CustomSudoku extends Sudoku{
 
   private ArrayList<Integer> break = new ArrayList<Integer>();
