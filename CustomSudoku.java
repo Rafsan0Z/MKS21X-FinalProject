@@ -36,7 +36,16 @@ public class CustomSudoku extends Sudoku{
   public void InputNums(){
     for(int i = 0; i < size; i++){
       for(int j = 0; j < size; j++){
-
+          int num = RandInt();
+          int location = groupNum(i,j);
+          ArrayList<Integer> down = rowdir(i);
+          ArrayList<Integer> up = coldir(j);
+          ArrayList<Integer> group = groupdir(location);
+          if(RandInt() < 5 && !down.contains(num) && !up.contains(num) && !group.contains(num)) {
+            puzzle[i][j] = " " + num;
+            count--;
+          }
+          if(count == 0){break;}
       }
     }
   }
