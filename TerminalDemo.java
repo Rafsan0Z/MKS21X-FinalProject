@@ -117,7 +117,7 @@ public class TerminalDemo {
 				while(inputmode == 1){
 					System.out.println("It works!");
 					inputmode = 0;
-				} 
+				}
 				terminal.moveCursor(x,y);
 				terminal.applyBackgroundColor(Terminal.Color.WHITE);
 				terminal.applyForegroundColor(Terminal.Color.BLACK);
@@ -214,7 +214,7 @@ public class TerminalDemo {
 	        putPuzzle(terminal,StandardPrint(puzzle),Terminal.Color.WHITE,Terminal.Color.WHITE);
 	        terminal.applySGR(Terminal.SGR.RESET_ALL);
 					putString(1,3,terminal, "x position:" +x,Terminal.Color.WHITE,Terminal.Color.GREEN);
-				  putString(3,5,terminal, "mode "+mode,Terminal.Color.WHITE,Terminal.Color.RED);
+				  putString(3,5,terminal, "inputmode "+inputmode,Terminal.Color.WHITE,Terminal.Color.RED);
 				}else if(mode == 3){
 
 				}else if(mode == 4){
@@ -222,7 +222,7 @@ public class TerminalDemo {
 	        putPuzzle(terminal,TwelvePrint(Puzzle),Terminal.Color.WHITE,Terminal.Color.WHITE);
 	        terminal.applySGR(Terminal.SGR.RESET_ALL);
 					putString(1,3,terminal, "x position:" +x,Terminal.Color.WHITE,Terminal.Color.GREEN);
-				  putString(3,5,terminal, "mode "+mode,Terminal.Color.WHITE,Terminal.Color.RED);
+				  putString(3,5,terminal, "inputmode "+inputmode,Terminal.Color.WHITE,Terminal.Color.RED);
 				}
 
 	    }
