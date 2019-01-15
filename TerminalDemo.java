@@ -115,7 +115,9 @@ public class TerminalDemo {
 	    while(running){
 
 				while(inputmode == 1){
-					System.out.println("It works!");
+					Scanner in = new Scanner(System.in);
+					int row = in.nextInt();
+					in.close();
 					inputmode = 0;
 				}
 				terminal.moveCursor(x,y);
