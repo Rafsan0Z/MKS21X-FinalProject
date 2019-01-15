@@ -11,7 +11,7 @@ public class CustomSudoku extends Sudoku{
     division = new ArrayList<Integer>();
     puzzle = new String[length][width];
     createpuzzle();
-    countfinder(length,width);
+    countfinder(size);
     InputNums();
   }
 
@@ -24,16 +24,16 @@ public class CustomSudoku extends Sudoku{
   }
 
   public void createpuzzle(){
-    for(int i = 0; i < width; i++){
-      for(int j = 0; j < length; j++){
+    for(int i = 0; i < size; i++){
+      for(int j = 0; j < size; j++){
         puzzle[i][j] = "__";
       }
     }
   }
 
   public void InputNums(){
-    for(int i = 0; i < width; i++){
-      for(int j = 0; j < length; j++){
+    for(int i = 0; i < size; i++){
+      for(int j = 0; j < size; j++){
 
       }
     }
@@ -68,9 +68,9 @@ public class CustomSudoku extends Sudoku{
   }
 
   public void Markup(){
-    String[][] answer = new String[width][length];
-    for(int i = 0; i < width; i++){
-      for(int j = 0; j < length; j++){
+    String[][] answer = new String[size][size];
+    for(int i = 0; i < size; i++){
+      for(int j = 0; j < size; j++){
         if(puzzle[i][j] != "__"){
           answer[i][j] = puzzle[i][j].substring(1);
         }
@@ -86,7 +86,7 @@ public class CustomSudoku extends Sudoku{
     ArrayList<Integer> rowInts = rowdir(row);
     ArrayList<Integer> colInts = coldir(col);
     ArrayList<Integer> groupInts = groupdir(groupNum(row,col));
-    for(int i = 1; i <= 9; i++){
+    for(int i = 1; i <= size; i++){
       if(!rowInts.contains(i) && !colInts.contains(i) && !groupInts.contains(i)){
         result += "" + i;
       }
@@ -114,8 +114,8 @@ public class CustomSudoku extends Sudoku{
   }
 
   public void answer(){
-    for(int i = 0; i < width; i++){
-      for(int j = 0; j < length; j++){
+    for(int i = 0; i < size; i++){
+      for(int j = 0; j < size; j++){
         if(puzzle[i][j] != "__"){puzzle[i][j] = " " + RandInt();}
       }
     }
