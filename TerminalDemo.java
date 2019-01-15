@@ -123,7 +123,7 @@ public class TerminalDemo {
 					in.close();
 					inputmode = 0;
 				}
-				if(inputmode == 2){
+				else if(inputmode == 2){
 					Scanner in = new Scanner(System.in);
 					int row = in.nextInt();
 					int col = in.nextInt();
@@ -131,14 +131,7 @@ public class TerminalDemo {
 					in.close();
 					inputmode = 0;
 				}
-				int x = 10;
-				int y = 10;
-
-				Terminal terminal = TerminalFacade.createTextTerminal();
-				terminal.enterPrivateMode();
-
-				TerminalSize size = terminal.getTerminalSize();
-				terminal.setCursorVisible(false);
+				else{
 				terminal.moveCursor(x,y);
 				terminal.applyBackgroundColor(Terminal.Color.WHITE);
 				terminal.applyForegroundColor(Terminal.Color.BLACK);
@@ -252,7 +245,7 @@ public class TerminalDemo {
 				}
 
 	    }
-
+		}
 
 	  }
 }
