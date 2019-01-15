@@ -108,6 +108,9 @@ public class TerminalDemo {
 			StandardSudoku question = new StandardSudoku(17);
 			String[][] puzzle = question.getPuzzle();
 
+			CustomSudoku newQues = new CustomSudoku(12,12);
+			String[][] Puzzle = newQues.getpuzzle();
+
 	    while(running){
 
 				terminal.moveCursor(x,y);

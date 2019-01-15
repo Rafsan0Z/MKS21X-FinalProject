@@ -15,6 +15,10 @@ public class CustomSudoku extends Sudoku{
     InputNums();
   }
 
+  public String[][] getPuzzle(){
+    return puzzle;
+  }
+
   public int countfinder(int num, int num2){
     return 0;
   }
