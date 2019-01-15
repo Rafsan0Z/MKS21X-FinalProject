@@ -122,7 +122,7 @@ public class TerminalDemo {
 					in.close();
 					inputmode = 0;
 				}
-
+				while(inputmode == 0){
 				terminal.moveCursor(x,y);
 				terminal.applyBackgroundColor(Terminal.Color.WHITE);
 				terminal.applyForegroundColor(Terminal.Color.BLACK);
@@ -234,4 +234,5 @@ public class TerminalDemo {
 
 
 	  }
+}
 }
