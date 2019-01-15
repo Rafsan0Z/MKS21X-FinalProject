@@ -175,7 +175,7 @@ public class TerminalDemo {
 	        }
 
 					if(mode >= 2){
-						if(key.getKind() == Key.Kind.Enter){
+						if(key.getCharacter() == 'a'){
 							inputmode = 1;
 						}
 					}
