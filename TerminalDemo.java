@@ -87,9 +87,6 @@ public class TerminalDemo {
 	    long currentTime = lastTime;
 	    long timer = 0;
 
-			StandardSudoku question = new StandardSudoku(17);
-			String[][] puzzle = question.getPuzzle();
-
 	    while(running){
 
 				terminal.moveCursor(x,y);
@@ -181,6 +178,8 @@ public class TerminalDemo {
 	        terminal.applySGR(Terminal.SGR.RESET_ALL);
 
 	      }else if(mode == 2){
+					StandardSudoku question = new StandardSudoku(17);
+					String[][] puzzle = question.getPuzzle();
 					terminal.applySGR(Terminal.SGR.ENTER_BOLD,Terminal.SGR.ENTER_BLINK);
 	        putPuzzle(terminal,StandardPrint(puzzle),Terminal.Color.WHITE,Terminal.Color.WHITE);
 	        terminal.applySGR(Terminal.SGR.RESET_ALL);
