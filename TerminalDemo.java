@@ -101,6 +101,7 @@ public class TerminalDemo {
 
 	    boolean running = true;
 	    int mode = 0;
+			int inputmode = 0;
 	    long lastTime =  System.currentTimeMillis();
 	    long currentTime = lastTime;
 	    long timer = 0;
@@ -124,9 +125,14 @@ public class TerminalDemo {
 				terminal.applyForegroundColor(Terminal.Color.DEFAULT);
 				terminal.applySGR(Terminal.SGR.RESET_ALL);
 
-				char row = 'w';
-				char col = 'w';
-				char num = 'w';
+				while(inputmode == 1){
+					Scanner in = new Scanner(System.in);
+					int row = in.nextInt();
+					int col = in.nextInt();
+					int num = in.nextInt();
+					inputmode = 0;
+				}
+
 	      Key key = terminal.readInput();
 	      if (key != null)
 	      {
@@ -166,6 +172,12 @@ public class TerminalDemo {
 	            running = false;
 	          }
 	        }
+
+					if(mode >= 2){
+						if(key.getKind() == Key.Kind.Enter){
+							inputmode = 1;
+						}
+					}
 
 	        //for all modes
 	        if (key.getCharacter() == ' ') {
