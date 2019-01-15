@@ -130,6 +130,7 @@ public class TerminalDemo {
 					int row = in.nextInt();
 					int col = in.nextInt();
 					int num = in.nextInt();
+					in.close();
 					inputmode = 0;
 				}
 
