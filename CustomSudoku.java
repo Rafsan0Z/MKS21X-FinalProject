@@ -63,7 +63,6 @@ public class CustomSudoku extends Sudoku{
   }
 
   public void Partitions(){
-    if(size == size){
       double counter = (double)size;
       int second = 1;
       while(counter % 2 == 0.0){
@@ -72,10 +71,6 @@ public class CustomSudoku extends Sudoku{
       }
       division.add(second);
       division.add((int)counter);
-    }
-    else{
-
-    }
   }
 
   public void Markup(){
