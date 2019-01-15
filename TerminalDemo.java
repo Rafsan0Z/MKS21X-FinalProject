@@ -41,9 +41,15 @@ public class TerminalDemo {
 	public static String TwelvePrint(String[][] puzzle){
     String result = "-------------------" + "\n";
     for(int i = 0; i < 12; i++){
+			if((i+3) % 3 == 0){
+				result += "-----------------------" + "\n";
+			}
       result += "|";
       for(int j = 0; j < 12; j++){
         result += puzzle[i][j];
+				if((j+1) % 3 == 0){
+					result += "|";
+				}
         if(j == 11){result += "\n";}
       }
     }
