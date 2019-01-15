@@ -122,7 +122,6 @@ public class TerminalDemo {
 					question.add(row,col,num);
 					in.close();
 					inputmode = 0;
-					continue;
 				}
 				if(inputmode == 2){
 					Scanner in = new Scanner(System.in);
@@ -132,6 +131,14 @@ public class TerminalDemo {
 					in.close();
 					inputmode = 0;
 				}
+				int x = 10;
+				int y = 10;
+
+				Terminal terminal = TerminalFacade.createTextTerminal();
+				terminal.enterPrivateMode();
+
+				TerminalSize size = terminal.getTerminalSize();
+				terminal.setCursorVisible(false);
 				terminal.moveCursor(x,y);
 				terminal.applyBackgroundColor(Terminal.Color.WHITE);
 				terminal.applyForegroundColor(Terminal.Color.BLACK);
