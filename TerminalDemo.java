@@ -171,9 +171,9 @@ public class TerminalDemo {
 
 	      }else if (mode == 1){
 
-					String writing = "1. Standard 9 by 9 puzzle. Press Space to play" + "\n" +
-													 "2. Custom 10 by 10 puzzle. Press Shift+Insert to play" + "\n" +
-													 "3. Custom 12 by 12 puzzle. Press '+' to play";
+					String writing = "1. Standard 9 by 9 puzzle. Press Space to play" + "\n" + "\n" +
+													 " 2. Custom 10 by 10 puzzle. Press Shift+Insert to play" + "\n" + "\n" +
+													 " 3. Custom 12 by 12 puzzle. Press '+' to play";
 
 	        terminal.applySGR(Terminal.SGR.ENTER_BOLD,Terminal.SGR.ENTER_BLINK);
 	        putString(1,3,terminal, "Please Choose A Puzzle",Terminal.Color.RED,Terminal.Color.WHITE);
