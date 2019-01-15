@@ -114,7 +114,7 @@ public class TerminalDemo {
 
 	    while(running){
 
-				while(inputmode == 1){
+				if(inputmode == 1){
 					Scanner in = new Scanner(System.in);
 					int row = in.nextInt();
 					int col = in.nextInt();
