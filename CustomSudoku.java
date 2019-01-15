@@ -19,8 +19,10 @@ public class CustomSudoku extends Sudoku{
     return puzzle;
   }
 
-  public int countfinder(int num, int num2){
-    return 0;
+  public void countfinder(int num){
+    if(num == 12){count = 26;}
+    else if(num == 16){count = 0;}
+    else{}
   }
 
   public void createpuzzle(){
