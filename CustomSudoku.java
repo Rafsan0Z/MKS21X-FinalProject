@@ -41,6 +41,10 @@ public class CustomSudoku extends Sudoku{
     }
   }
 
+  public void add(int row, int col, int num){}
+
+  public void remove(int row, int col){}
+
   public boolean checkAnswer(){
     return true;
   }
