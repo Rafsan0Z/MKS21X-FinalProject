@@ -114,6 +114,15 @@ public class TerminalDemo {
 
 	    while(running){
 
+				while(inputmode == 1){
+					Scanner in = new Scanner(System.in);
+					String row = in.nextLine();
+					String col = in.nextLine();
+					String num = in.nextLine();
+					in.close();
+					inputmode = 0;
+				}
+
 				terminal.moveCursor(x,y);
 				terminal.applyBackgroundColor(Terminal.Color.WHITE);
 				terminal.applyForegroundColor(Terminal.Color.BLACK);
@@ -124,15 +133,6 @@ public class TerminalDemo {
 				terminal.applyBackgroundColor(Terminal.Color.DEFAULT);
 				terminal.applyForegroundColor(Terminal.Color.DEFAULT);
 				terminal.applySGR(Terminal.SGR.RESET_ALL);
-
-				while(inputmode == 1){
-					Scanner in = new Scanner(System.in);
-					String row = in.nextLine();
-				 	String col = in.nextLine();
-					String num = in.nextLine();
-					in.close();
-					inputmode = 0;
-				}
 
 	      Key key = terminal.readInput();
 	      if (key != null)
