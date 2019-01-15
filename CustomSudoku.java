@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 public class CustomSudoku extends Sudoku{
 
-  private ArrayList<Integer> break = new ArrayList<Integer>();
+  private ArrayList<Integer> division;
   private int length;
   private int width;
   private int count;
@@ -10,6 +10,7 @@ public class CustomSudoku extends Sudoku{
   public CustomSudoku(int num, int num2){
     length = num;
     width = num2;
+    division = new ArrayList<Integer>();
     puzzle = new String[length][width];
     createpuzzle();
     countfinder(length,width);
@@ -56,8 +57,8 @@ public class CustomSudoku extends Sudoku{
         second = second*2;
         counter = counter / 2;
       }
-      break.add(second);
-      break.add((int)counter);
+      division.add(second);
+      division.add((int)counter);
     }
     else{
 
