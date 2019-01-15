@@ -2,14 +2,12 @@ import java.util.ArrayList;
 public class CustomSudoku extends Sudoku{
 
   private ArrayList<Integer> division;
-  private int length;
-  private int width;
+  private int size;
   private int count;
   private String[][] puzzle;
 
-  public CustomSudoku(int num, int num2){
-    length = num;
-    width = num2;
+  public CustomSudoku(int num){
+    size = num;
     division = new ArrayList<Integer>();
     puzzle = new String[length][width];
     createpuzzle();
