@@ -215,9 +215,7 @@ public class TerminalDemo {
 	        terminal.applySGR(Terminal.SGR.RESET_ALL);
 
 	      }else if(mode == 2){
-					terminal.applySGR(Terminal.SGR.ENTER_BOLD,Terminal.SGR.ENTER_BLINK);
 	        putPuzzle(terminal,StandardPrint(puzzle),Terminal.Color.WHITE,Terminal.Color.WHITE);
-	        terminal.applySGR(Terminal.SGR.RESET_ALL);
 					putString(1,3,terminal, "x position:" +x,Terminal.Color.WHITE,Terminal.Color.GREEN);
 				  putString(3,5,terminal, "inputmode "+inputmode,Terminal.Color.WHITE,Terminal.Color.RED);
 				}else if(mode == 3){
