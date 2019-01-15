@@ -90,9 +90,6 @@ public class TerminalDemo {
 	 }
 	  public static void main(String[] args) {
 
-			int x = 10;
-			int y = 10;
-
 	    Terminal terminal = TerminalFacade.createTextTerminal();
 	    terminal.enterPrivateMode();
 
@@ -132,7 +129,6 @@ public class TerminalDemo {
 					inputmode = 0;
 				}
 				else{
-				terminal.moveCursor(x,y);
 				terminal.applyBackgroundColor(Terminal.Color.WHITE);
 				terminal.applyForegroundColor(Terminal.Color.BLACK);
 				//applySGR(a,b) for multiple modifiers (bold,blink) etc.
@@ -147,7 +143,7 @@ public class TerminalDemo {
 	      if (key != null)
 	      {
 
-					if (key.getKind() == Key.Kind.ArrowLeft) {
+		/*			if (key.getKind() == Key.Kind.ArrowLeft) {
 						terminal.moveCursor(x,y);
 						terminal.putCharacter(' ');
 						x--;
@@ -169,7 +165,7 @@ public class TerminalDemo {
 						terminal.moveCursor(x,y);
 						terminal.putCharacter(' ');
 						y++;
-					}
+					} */
 
 	        //YOU CAN PUT DIFFERENT SETS OF BUTTONS FOR DIFFERENT MODES!!!
 
@@ -240,7 +236,7 @@ public class TerminalDemo {
 					terminal.applySGR(Terminal.SGR.ENTER_BOLD,Terminal.SGR.ENTER_BLINK);
 	        putPuzzle(terminal,TwelvePrint(Puzzle),Terminal.Color.WHITE,Terminal.Color.WHITE);
 	        terminal.applySGR(Terminal.SGR.RESET_ALL);
-					putString(1,3,terminal, "x position:" +x,Terminal.Color.WHITE,Terminal.Color.GREEN);
+					putString(1,3,terminal, "timer:" +timer,Terminal.Color.WHITE,Terminal.Color.GREEN);
 				  putString(3,5,terminal, "inputmode "+inputmode,Terminal.Color.WHITE,Terminal.Color.RED);
 				}
 
