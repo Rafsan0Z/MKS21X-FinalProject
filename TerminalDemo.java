@@ -127,9 +127,9 @@ public class TerminalDemo {
 
 				while(inputmode == 1){
 					Scanner in = new Scanner(System.in);
-					int row = in.nextInt();
-					int col = in.nextInt();
-					int num = in.nextInt();
+					String row = in.nextLine();
+				 	String col = in.nextLine();
+					String num = in.nextLine();
 					in.close();
 					inputmode = 0;
 				}
