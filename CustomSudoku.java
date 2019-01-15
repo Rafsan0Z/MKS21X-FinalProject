@@ -9,7 +9,7 @@ public class CustomSudoku extends Sudoku{
   public CustomSudoku(int num){
     size = num;
     division = new ArrayList<Integer>();
-    puzzle = new String[length][width];
+    puzzle = new String[size][size];
     createpuzzle();
     countfinder(size);
     InputNums();
@@ -63,8 +63,8 @@ public class CustomSudoku extends Sudoku{
   }
 
   public void Partitions(){
-    if(length == width){
-      double counter = (double)length;
+    if(size == size){
+      double counter = (double)size;
       int second = 1;
       while(counter % 2 == 0.0){
         second = second*2;

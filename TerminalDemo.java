@@ -109,7 +109,7 @@ public class TerminalDemo {
 			StandardSudoku question = new StandardSudoku(17);
 			String[][] puzzle = question.getPuzzle();
 
-			CustomSudoku newQues = new CustomSudoku(12,12);
+			CustomSudoku newQues = new CustomSudoku(12);
 			String[][] Puzzle = newQues.getPuzzle();
 
 	    while(running){
