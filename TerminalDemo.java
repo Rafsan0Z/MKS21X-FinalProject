@@ -117,6 +117,9 @@ public class TerminalDemo {
 				while(inputmode == 1){
 					Scanner in = new Scanner(System.in);
 					int row = in.nextInt();
+					int col = in.nextInt();
+					int num = in.nextInt();
+					question.add(row,col,num);
 					in.close();
 					inputmode = 0;
 				}
