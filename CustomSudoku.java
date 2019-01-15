@@ -111,11 +111,23 @@ public class CustomSudoku extends Sudoku{
 
   public ArrayList<Integer> rowdir(int row){
     ArrayList<Integer> dir = new ArrayList<Integer>();
+    for(int i = 0; i < size; i++){
+      if(puzzle[row][i] != "__"){
+      int num = Integer.parseInt(puzzle[row][i].substring(1));
+      dir.add(num);
+    }
+    }
     return dir;
   }
 
   public ArrayList<Integer> coldir(int col){
     ArrayList<Integer> dir = new ArrayList<Integer>();
+    for(int i = 0; i < size; i++){
+      if(puzzle[i][col] != "__"){
+      int num = Integer.parseInt(puzzle[i][col].substring(1));
+      dir.add(num);
+    }
+    }
     return dir;
   }
 
