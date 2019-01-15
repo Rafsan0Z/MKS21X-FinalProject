@@ -170,7 +170,7 @@ public class TerminalDemo {
 	        //for all modes
 	        if (key.getCharacter() == ' ') {
 	          mode++;
-	          mode%=3;//2 modes
+	          mode%=5;//2 modes
 	          terminal.clearScreen();
 	          lastTime = System.currentTimeMillis();
 	          currentTime = System.currentTimeMillis();
