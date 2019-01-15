@@ -207,6 +207,14 @@ public class TerminalDemo {
 	        terminal.applySGR(Terminal.SGR.RESET_ALL);
 					putString(1,3,terminal, "x position:" +x,Terminal.Color.WHITE,Terminal.Color.GREEN);
 				  putString(3,5,terminal, "mode "+mode,Terminal.Color.WHITE,Terminal.Color.RED);
+				}else if(mode == 3){
+
+				}else if(mode == 4){
+					terminal.applySGR(Terminal.SGR.ENTER_BOLD,Terminal.SGR.ENTER_BLINK);
+	        putPuzzle(terminal,TwelvePrint(Puzzle),Terminal.Color.WHITE,Terminal.Color.WHITE);
+	        terminal.applySGR(Terminal.SGR.RESET_ALL);
+					putString(1,3,terminal, "x position:" +x,Terminal.Color.WHITE,Terminal.Color.GREEN);
+				  putString(3,5,terminal, "mode "+mode,Terminal.Color.WHITE,Terminal.Color.RED);
 				}
 
 	    }
