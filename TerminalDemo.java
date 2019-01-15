@@ -38,13 +38,13 @@ public class TerminalDemo {
 		return result;
 	}
 
-	public static String CustomPrint(int length, int width, String[][] puzzle){
+	public static String TwelvePrint(String[][] puzzle){
     String result = "-------------------" + "\n";
-    for(int i = 0; i < width; i++){
+    for(int i = 0; i < 12; i++){
       result += "|";
-      for(int j = 0; j < length; j++){
+      for(int j = 0; j < 12; j++){
         result += puzzle[i][j];
-        if(j == length - 1){result += "\n";}
+        if(j == 11){result += "\n";}
       }
     }
     return result;
