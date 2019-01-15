@@ -228,8 +228,11 @@ public class TerminalDemo {
 	        terminal.applySGR(Terminal.SGR.RESET_ALL);
 
 	      }else if(mode == 2){
+					lastTime = currentTime;
+	        currentTime = System.currentTimeMillis();
+	        timer += (currentTime -lastTime);//add the amount of time since the last frame.
 	        putPuzzle(terminal,StandardPrint(puzzle),Terminal.Color.WHITE,Terminal.Color.WHITE);
-					putString(1,3,terminal, "x position:" +x,Terminal.Color.WHITE,Terminal.Color.GREEN);
+					putString(1,3,terminal, "timer:" +timer,Terminal.Color.WHITE,Terminal.Color.GREEN);
 				  putString(3,5,terminal, "inputmode "+inputmode,Terminal.Color.WHITE,Terminal.Color.RED);
 				}else if(mode == 3){
 
