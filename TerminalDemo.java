@@ -47,6 +47,7 @@ public class TerminalDemo {
 		for(int i = 0; i < error.size(); i++){
 			int num1 = error.get(i).charAt(0);
 			int num2 = error.get(i).charAt(2);
+			putString(42,3+i,terminal, error.get(i) ,Terminal.Color.WHITE,Terminal.Color.GREEN);
 		}
 	}
 
