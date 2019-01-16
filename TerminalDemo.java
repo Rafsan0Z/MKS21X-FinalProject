@@ -138,8 +138,8 @@ public class TerminalDemo {
 					Scanner in = new Scanner(System.in);
 					int row = in.nextInt();
 					int col = in.nextInt();
-					if(list[row][col] == true){
-						putString(50,3,terminal, "A number already exists there",Terminal.Color.WHITE,Terminal.Color.GREEN);
+					if(list[row][col]){
+						putString(50,3,terminal, "This number cannot be changed!",Terminal.Color.WHITE,Terminal.Color.GREEN);
 					}
 					else{
 					question.remove(row,col);
