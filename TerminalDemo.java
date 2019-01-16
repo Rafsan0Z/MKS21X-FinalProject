@@ -202,16 +202,16 @@ public class TerminalDemo {
 						if(key.getCharacter() == 'a'){
 							inputmode = 1;
 						}
-						if(key.getCharacter() == 'r'){
+						else if(key.getCharacter() == 'r'){
 							inputmode = 2;
 						}
-						if(key.getCharacter() == 'm'){
+						else if(key.getCharacter() == 'm'){
 							inputmode = 3;
 						}
-						if(key.getCharacter() == 'l'){
+						else if(key.getCharacter() == 'l'){
 							inputmode == 4;
 						}
-						if(key.getCharacter() == "g" ){
+						else if(key.getCharacter() == "g" ){
 							inputmode == 5;
 						}
 					}
