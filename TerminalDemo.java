@@ -231,9 +231,6 @@ public class TerminalDemo {
 						if(key.getCharacter() == 'C'){
 							setup = true;
 						}
-						if(key.getCharacter() == 'c'){
-							setup = false;
-						}
 	        }
 
 					if(mode >= 2){
@@ -290,6 +287,7 @@ public class TerminalDemo {
 						putString(3,7,terminal, "3. Press 'm' to check if the puzzle is solved", Terminal.Color.WHITE,Terminal.Color.RED);
 						putString(3,8,terminal, "4. Press 'l' to list the number of mistakes", Terminal.Color.WHITE,Terminal.Color.RED);
 						putString(3,9,terminal, "5. Press 'g' to recieve the answer(this doesnt work yet!)", Terminal.Color.WHITE,Terminal.Color.RED);
+						setup = false;
 					}
 
 	      }else if (mode == 1){
