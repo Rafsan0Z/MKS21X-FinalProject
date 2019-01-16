@@ -130,6 +130,7 @@ public class TerminalDemo {
 	    boolean running = true;
 	    int mode = 0;
 			int inputmode = 0;
+			boolean setup = false;
 	    long lastTime =  System.currentTimeMillis();
 	    long currentTime = lastTime;
 	    long timer = 0;
@@ -219,6 +220,9 @@ public class TerminalDemo {
 	            terminal.exitPrivateMode();
 	            running = false;
 	          }
+						if(key.getCharacter() == 'C'){
+							setup == true;
+						}
 	        }
 
 					if(mode >= 2){
@@ -268,6 +272,15 @@ public class TerminalDemo {
 	        //DO GAME STUFF HERE
 	        putString(3,5,terminal, "Press Space to Play the Game!",Terminal.Color.WHITE,Terminal.Color.RED);
 					putString(3,6,terminal, "Press 'C' to view the controls", Terminal.Color.WHITE,Terminal.Color.RED);
+
+					while(setup){
+						putString(3,5,terminal, "1. Press 'a' to add number",Terminal.Color.WHITE,Terminal.Color.RED);
+						putString(3,6,terminal, "2. Press 'r' to remove number", Terminal.Color.WHITE,Terminal.Color.RED);
+						putString(3,7,terminal, "3. Press 'm' to check if the puzzle is solved", Terminal.Color.WHITE,Terminal.Color.RED);
+						putString(3,8,terminal, "4. Press 'l' to list the number of mistakes", Terminal.Color.WHITE,Terminal.Color.RED);
+						putString(3,9,terminal, "5. Press 'g' to recieve the answer(this doesnt work yet!)", Terminal.Color.WHITE,Terminal.Color.RED);
+						setup = false;
+					}
 
 	      }else if (mode == 1){
 
