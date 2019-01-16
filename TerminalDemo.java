@@ -228,10 +228,10 @@ public class TerminalDemo {
 	            terminal.exitPrivateMode();
 	            running = false;
 	          }
-						if(key.getCharacter() == 'C' && !setup){
+						if(key.getCharacter() == 'C'){
 							setup = true;
 						}
-						if(key.getCharacter() == 'c' && setup){
+						if(key.getCharacter() == 'c'){
 							setup = false;
 						}
 	        }
@@ -285,7 +285,6 @@ public class TerminalDemo {
 					putString(3,4,terminal, "Press 'C' to view the controls", Terminal.Color.WHITE,Terminal.Color.RED);
 
 					while(setup){
-						terminal.applySGR(Terminal.SGR.RESET_ALL);
 						putString(3,5,terminal, "1. Press 'a' to add number",Terminal.Color.WHITE,Terminal.Color.RED);
 						putString(3,6,terminal, "2. Press 'r' to remove number", Terminal.Color.WHITE,Terminal.Color.RED);
 						putString(3,7,terminal, "3. Press 'm' to check if the puzzle is solved", Terminal.Color.WHITE,Terminal.Color.RED);
