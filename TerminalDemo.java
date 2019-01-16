@@ -15,6 +15,7 @@ import com.googlecode.lanterna.input.InputProvider;
 import com.googlecode.lanterna.input.Key;
 import com.googlecode.lanterna.input.KeyMappingProfile;
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class TerminalDemo {
 
@@ -30,10 +31,10 @@ public class TerminalDemo {
 		return untouchables;
 	}
 
-	public static ArrayList<String> ListMistakes(String[][] list){
+	public static ArrayList<String> ListMistakes(StandardSudoku list){
 		ArrayList<String> error = new ArrayList<String>();
-		for(int i = 0; i < list.length; i++){
-			for(int j = 0; j < list.length; j++){
+		for(int i = 0; i < list.getSize(); i++){
+			for(int j = 0; j < list.getSize(); j++){
 				if(list.Mistake(i,j)){
 					error.add("" + i + "," + j);
 				}
@@ -173,7 +174,7 @@ public class TerminalDemo {
 					inputmode = 0;
 				}
 				while(inputmode == 4){
-					ArrayList<String> data = ListMistakes(puzzle);
+					ArrayList<String> data = ListMistakes(question);
 					printMistakes(data);
 				}
 				while(inputmode == 5){
