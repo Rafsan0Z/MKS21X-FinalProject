@@ -231,7 +231,7 @@ public class TerminalDemo {
 						if(key.getCharacter() == 'C' && !setup){
 							setup = true;
 						}
-						if(key.getCharacter() == 'C' && setup){
+						if(key.getCharacter() == 'c' && setup){
 							setup = false;
 						}
 	        }
