@@ -42,6 +42,13 @@ public class TerminalDemo {
 		return error;
 	}
 
+	public static void printMistakes(ArrayList<String> error){
+		for(int i = 0; i < error.size(); i++){
+			int num1 = error.get(i).charAt(0);
+			int num2 = error.get(i).charAt(2);
+		}
+	}
+
 	public static String StandardPrint(String[][] puzzle){
 		String result = "";
 		for(int i = 0; i < 9; i++){
