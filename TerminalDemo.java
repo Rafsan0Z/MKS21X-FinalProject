@@ -282,7 +282,7 @@ public class TerminalDemo {
 					putString(3,6,terminal, "Press 'C' to view the controls", Terminal.Color.WHITE,Terminal.Color.RED);
 
 					while(setup){
-						terminal.applySGR(Terminal.SRG.RESET_ALL);
+						terminal.applySGR(Terminal.SGR.RESET_ALL);
 						putString(3,5,terminal, "1. Press 'a' to add number",Terminal.Color.WHITE,Terminal.Color.RED);
 						putString(3,6,terminal, "2. Press 'r' to remove number", Terminal.Color.WHITE,Terminal.Color.RED);
 						putString(3,7,terminal, "3. Press 'm' to check if the puzzle is solved", Terminal.Color.WHITE,Terminal.Color.RED);
