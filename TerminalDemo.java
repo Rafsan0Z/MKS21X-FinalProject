@@ -35,7 +35,7 @@ public class TerminalDemo {
 		ArrayList<String> error = new ArrayList<String>();
 		for(int i = 0; i < list.getSize(); i++){
 			for(int j = 0; j < list.getSize(); j++){
-				if(!list.Mistake(i,j)){
+				if(list.Mistake(i,j)){
 					error.add("" + i + "," + j);
 				}
 			}
