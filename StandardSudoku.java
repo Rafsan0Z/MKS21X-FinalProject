@@ -13,6 +13,10 @@ public class StandardSudoku extends Sudoku{
     count = dif;
   }
 
+  public int getSize(){
+    return size;
+  }
+
   public void add(int row, int col, int num){
     if(puzzle[row][col] != "__"){
       System.out.println("Error! A number exists! Please Remove first!");
