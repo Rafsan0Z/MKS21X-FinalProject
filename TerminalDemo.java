@@ -293,8 +293,8 @@ public class TerminalDemo {
 	      }else if (mode == 1){
 
 					String writing = "1. Standard 9 by 9 puzzle. Press Space to play" + "\n" + "\n" +
-													 " 2. Custom 10 by 10 puzzle. Press Space twice to play" + "\n" + "\n" +
-													 " 3. Custom 12 by 12 puzzle. Press Space three times to play";
+													 " 2. Custom 12 by 12 puzzle. Press Space twice to play" + "\n" + "\n" +
+													 " 3. Custom 16 by 16 puzzle. Press Space three times to play";
 
 	        terminal.applySGR(Terminal.SGR.ENTER_BOLD,Terminal.SGR.ENTER_BLINK);
 	        putString(1,3,terminal, "Please Choose A Puzzle",Terminal.Color.RED,Terminal.Color.WHITE);
