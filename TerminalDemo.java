@@ -247,19 +247,7 @@ public class TerminalDemo {
 	        currentTime = System.currentTimeMillis();
 	        timer += (currentTime -lastTime);//add the amount of time since the last frame.
 	        //DO GAME STUFF HERE
-					System.out.println(logo1);
-					System.out.println(logo2);
-					System.out.println(logo3);
-					System.out.println(logo4);
-					System.out.println(logo5);
-					System.out.println(logo6);
-	/*        putString(500,100,terminal, logo1,Terminal.Color.YELLOW,Terminal.Color.RED);
-					putString(500,26,terminal, logo2,Terminal.Color.YELLOW,Terminal.Color.RED);
-					putString(500,27,terminal, logo3,Terminal.Color.YELLOW,Terminal.Color.RED);
-					putString(500,28,terminal, logo4,Terminal.Color.YELLOW,Terminal.Color.RED);
-					putString(500,29,terminal, logo5,Terminal.Color.YELLOW,Terminal.Color.RED);
-					putString(500,30,terminal, logo6,Terminal.Color.YELLOW,Terminal.Color.RED);
-	        putString(3,5,terminal, "Press Space to Play the Game!",Terminal.Color.WHITE,Terminal.Color.RED); */
+	        putString(3,5,terminal, "Press Space to Play the Game!",Terminal.Color.WHITE,Terminal.Color.RED);
 
 	      }else if (mode == 1){
 
@@ -279,14 +267,15 @@ public class TerminalDemo {
 	        putPuzzle(terminal,StandardPrint(puzzle),Terminal.Color.WHITE,Terminal.Color.WHITE);
 					putString(1,3,terminal, "timer:" +timer,Terminal.Color.WHITE,Terminal.Color.GREEN);
 				  putString(3,5,terminal, "inputmode "+inputmode,Terminal.Color.WHITE,Terminal.Color.RED);
-				}else if(mode == 3){
-					putString(1,3,terminal, "Intermediate mode",Terminal.Color.WHITE,Terminal.Color.GREEN);
-				}else if(mode == 4){
+			  }else if(mode == 3){
 					terminal.applySGR(Terminal.SGR.ENTER_BOLD,Terminal.SGR.ENTER_BLINK);
 	        putPuzzle(terminal,TwelvePrint(Puzzle),Terminal.Color.WHITE,Terminal.Color.WHITE);
 	        terminal.applySGR(Terminal.SGR.RESET_ALL);
 					putString(1,3,terminal, "timer:" +timer,Terminal.Color.WHITE,Terminal.Color.GREEN);
 				  putString(3,5,terminal, "inputmode "+inputmode,Terminal.Color.WHITE,Terminal.Color.RED);
+				}else if(mode == 4){
+					putString(1,3,terminal,"This is the 16 by 16 Sudoku puzzle", Terminal.Color.WHITE,Terminal.Color.GREEN);
+					putString(3,5,terminal, "This is still in development!,Terminal.Color.WHITE,Terminal.Color.RED);
 				}
 
 	    }
