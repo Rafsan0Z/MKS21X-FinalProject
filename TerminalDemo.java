@@ -30,6 +30,18 @@ public class TerminalDemo {
 		return untouchables;
 	}
 
+	public static ArrayList<String> ListMistakes(String[][] list){
+		ArrayList<String> error = new ArrayList<String>();
+		for(int i = 0; i < list.length; i++){
+			for(int j = 0; j < list.length; j++){
+				if(list.Mistake(i,j)){
+					error.add("" + i + "," + j);
+				}
+			}
+		}
+		return error;
+	}
+
 	public static String StandardPrint(String[][] puzzle){
 		String result = "";
 		for(int i = 0; i < 9; i++){
