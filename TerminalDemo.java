@@ -24,7 +24,7 @@ public class TerminalDemo {
 		for(int i = 0; i < list.length; i++){
 			for(int j = 0; j < list[i].length; j++){
 				if(list[i][j] != "__"){
-						boolean[i][j] = true;
+						untouchables[i][j] = true;
 				}
 			}
 		}
@@ -144,7 +144,7 @@ public class TerminalDemo {
 				}
 				else if(inputmode == 3){
 					boolean solved = question.checkAnswer();
-					putString(1,5,terminal, "Puzzle solved?: " + solved,Terminal.Color.WHITE,Terminal.Color.GREEN);					
+					putString(1,5,terminal, "Puzzle solved?: " + solved,Terminal.Color.WHITE,Terminal.Color.GREEN);
 				}
 				else{
 				terminal.applyBackgroundColor(Terminal.Color.WHITE);
