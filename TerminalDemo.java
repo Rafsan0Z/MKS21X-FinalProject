@@ -182,7 +182,7 @@ public class TerminalDemo {
 					inputmode = 0;
 				}
 				while(inputmode == 5){
-
+					putString(21,5,terminal, "Solve it yourself!",Terminal.Color.WHITE,Terminal.Color.GREEN);
 				}
 				terminal.applyBackgroundColor(Terminal.Color.WHITE);
 				terminal.applyForegroundColor(Terminal.Color.BLACK);
