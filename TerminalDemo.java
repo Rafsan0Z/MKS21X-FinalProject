@@ -18,9 +18,8 @@ import java.util.Scanner;
 
 public class TerminalDemo {
 
-	private boolean[][] untouchables;
-
-	public static void Untouched(String[][] list){
+	public static boolean[][] Untouched(String[][] list){
+		boolean[][] untouchables = new boolean[list.length][list.length];
 		for(int i = 0; i < list.length; i++){
 			for(int j = 0; j < list[i].length; j++){
 				if(list[i][j] != "__"){
@@ -28,6 +27,7 @@ public class TerminalDemo {
 				}
 			}
 		}
+		return untouchables;
 	}
 
 	public static String StandardPrint(String[][] puzzle){
@@ -117,11 +117,11 @@ public class TerminalDemo {
 
 			StandardSudoku question = new StandardSudoku(17);
 			String[][] puzzle = question.getPuzzle();
-			untouchables = new boolean[9][9];
 			boolean[][] list = Untouched(puzzle);
 
 			CustomSudoku newQues = new CustomSudoku(12);
 			String[][] Puzzle = newQues.getPuzzle();
+			boolean[][] list2 = Untouched(Puzzle);
 
 	    while(running){
 
