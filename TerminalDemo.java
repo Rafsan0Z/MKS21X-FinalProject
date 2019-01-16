@@ -138,10 +138,15 @@ public class TerminalDemo {
 					Scanner in = new Scanner(System.in);
 					int row = in.nextInt();
 					int col = in.nextInt();
+					if(list[row][col] == true;){
+						putString(50,3,terminal, "A number already exists there",Terminal.Color.WHITE,Terminal.Color.GREEN);
+					}
+					else{
 					question.remove(row,col);
 					in.close();
 					inputmode = 0;
 				}
+			}
 				while(inputmode == 3){
 					boolean solved = question.checkAnswer();
 					putString(1,5,terminal, "Puzzle solved?: " + solved,Terminal.Color.WHITE,Terminal.Color.GREEN);
