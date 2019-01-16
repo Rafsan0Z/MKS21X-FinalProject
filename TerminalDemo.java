@@ -209,10 +209,10 @@ public class TerminalDemo {
 							inputmode = 3;
 						}
 						else if(key.getCharacter() == 'l'){
-							inputmode == 4;
+							inputmode = 4;
 						}
 						else if(key.getCharacter() == "g" ){
-							inputmode == 5;
+							inputmode = 5;
 						}
 					}
 
