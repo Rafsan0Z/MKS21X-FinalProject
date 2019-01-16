@@ -237,12 +237,12 @@ public class TerminalDemo {
 
 
 	      if(mode==0){
-					String logo = "         ##########
-					           								  ###
-																			###
-																			###
-																			###
-																	###########    ";
+					String logo = "         ##########        " + "\n" +
+					           		"						  ###           " + "\n" +
+												"							###           " + "\n" +
+												"							###           " + "\n" +
+												"							###           " + "\n" +
+												"					###########       ";
 	        lastTime = currentTime;
 	        currentTime = System.currentTimeMillis();
 	        timer += (currentTime -lastTime);//add the amount of time since the last frame.
