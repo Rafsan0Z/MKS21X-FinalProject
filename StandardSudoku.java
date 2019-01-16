@@ -56,7 +56,7 @@ public class StandardSudoku extends Sudoku{
 
   public boolean Mistake(int row, int col){
     ArrayList<Integer> mistakes = new ArrayList<Integer>();
-    if(puzzle[row][col] == "__"){return false;}
+    if(puzzle[row][col] == "__"){return true;}
     if(Integer.parseInt(puzzle[row][col].substring(1)) > 9 || Integer.parseInt(puzzle[row][col].substring(1)) < 0){return false;}
     int num = Integer.parseInt(puzzle[row][col].substring(1));
     ArrayList<Integer> groups = groupdir(groupNum(row,col));
@@ -67,11 +67,11 @@ public class StandardSudoku extends Sudoku{
         if(rows.contains(num) || groups.contains(num)){
           mistakes.add(row);
           mistakes.add(col);
-          return false;
+          return true;
         }
       }
     }
-    return true;
+    return false;
   }
 
   public void Markup(){
