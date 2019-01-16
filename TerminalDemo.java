@@ -237,11 +237,17 @@ public class TerminalDemo {
 
 
 	      if(mode==0){
+					String logo = "         ##########
+					           								  ###
+																			###
+																			###
+																			###
+																	###########    ";
 	        lastTime = currentTime;
 	        currentTime = System.currentTimeMillis();
 	        timer += (currentTime -lastTime);//add the amount of time since the last frame.
 	        //DO GAME STUFF HERE
-	        putString(1,3,terminal, "Welcome to Sudoku",Terminal.Color.WHITE,Terminal.Color.GREEN);
+	        putString(1,3,terminal, logo,Terminal.Color.WHITE,Terminal.Color.GREEN);
 	        putString(3,5,terminal, "Press Space to Play the Game!",Terminal.Color.WHITE,Terminal.Color.RED);
 
 	      }else if (mode == 1){
