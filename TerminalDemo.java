@@ -160,10 +160,11 @@ public class TerminalDemo {
 					int row = in.nextInt();
 					int col = in.nextInt();
 					if(list[row][col]){
-						putString(21,3,terminal, "This number cannot be changed!",Terminal.Color.WHITE,Terminal.Color.GREEN);
+						putString(25,3,terminal, "This number cannot be changed!",Terminal.Color.WHITE,Terminal.Color.GREEN);
 					}
 					else{
 					question.remove(row,col);
+					putString(25,3,terminal, "",Terminal.Color.WHITE,Terminal.Color.GREEN);					
 					in.close();
 					inputmode = 0;
 				}
