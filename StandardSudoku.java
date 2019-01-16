@@ -59,11 +59,12 @@ public class StandardSudoku extends Sudoku{
     if(puzzle[row][col] == "__"){return false;}
     if(Integer.parseInt(puzzle[row][col].substring(1)) > 9 || Integer.parseInt(puzzle[row][col].substring(1)) < 0){return false;}
     int num = Integer.parseInt(puzzle[row][col].substring(1));
+    ArrayList<Integer> groups = groupdir(groupNum(row,col));
     for(int i = 0; i < 9; i++){
       ArrayList<Integer> rows = new ArrayList<Integer>();
       for(int j = 0; j < 9; j++){
         if(i != row && j != col && !puzzle[i][j].equals("__")){rows.add(Integer.parseInt(puzzle[i][j].substring(1)));}
-        if(rows.contains(num)){
+        if(rows.contains(num) || groups.contains(num)){
           mistakes.add(row);
           mistakes.add(col);
           return false;
