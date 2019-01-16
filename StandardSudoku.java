@@ -48,7 +48,7 @@ public class StandardSudoku extends Sudoku{
   public boolean checkAnswer(){
     for(int i = 0; i < 9; i++){
       for(int j = 0; j < 9; j++){
-        if(!Mistake(i,j)){return false;}
+        if(Mistake(i,j)){return false;}
       }
     }
     return true;
