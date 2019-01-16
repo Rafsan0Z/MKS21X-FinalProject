@@ -166,7 +166,6 @@ public class TerminalDemo {
 					else{
 					question.remove(row,col);
 					putString(31,3,terminal, "",Terminal.Color.WHITE,Terminal.Color.GREEN);
-					in.close();
 					inputmode = 0;
 				}
 			}
