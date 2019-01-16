@@ -308,10 +308,11 @@ public class TerminalDemo {
 				  putString(3,5,terminal, "",Terminal.Color.WHITE,Terminal.Color.RED);
 				}else if(mode == 4){
 					putString(1,3,terminal,"This is the 16 by 16 Sudoku puzzle", Terminal.Color.WHITE,Terminal.Color.GREEN);
-					putString(3,5,terminal, "This is still in development!,Terminal.Color.WHITE,Terminal.Color.RED);
+					putString(3,5,terminal, "This is still in development!",Terminal.Color.WHITE,Terminal.Color.RED);
 				}
 
 	    }
 		}
 
+}
 }
