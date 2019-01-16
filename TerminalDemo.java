@@ -142,6 +142,10 @@ public class TerminalDemo {
 					in.close();
 					inputmode = 0;
 				}
+				else if(inputmode == 3){
+					boolean solved = question.checkAnswer();
+					putString(1,5,terminal, "Puzzle solved?: " + solved,Terminal.Color.WHITE,Terminal.Color.GREEN);					
+				}
 				else{
 				terminal.applyBackgroundColor(Terminal.Color.WHITE);
 				terminal.applyForegroundColor(Terminal.Color.BLACK);
