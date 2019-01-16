@@ -237,17 +237,17 @@ public class TerminalDemo {
 
 
 	      if(mode==0){
-					String logo = "         ##########        " + "\n" +
-					           		"						  ###           " + "\n" +
-												"							###           " + "\n" +
-												"							###           " + "\n" +
-												"							###           " + "\n" +
-												"					###########       ";
+					String logo1 = "          ##########        " + "\n";
+					String logo2 = "						  ###           " + "\n";
+					String logo3 = "							###           " + "\n";
+					String logo4 = "							###           " + "\n";
+					String logo5 = "							###           " + "\n";
+					String logo6 = "					###########       ";
 	        lastTime = currentTime;
 	        currentTime = System.currentTimeMillis();
 	        timer += (currentTime -lastTime);//add the amount of time since the last frame.
 	        //DO GAME STUFF HERE
-	        putString(500,25,terminal, logo,Terminal.Color.YELLOW,Terminal.Color.RED);
+	        putString(500,25,terminal, logo1+logo2+logo3+logo4+logo5+logo6,Terminal.Color.YELLOW,Terminal.Color.RED);
 	        putString(3,5,terminal, "Press Space to Play the Game!",Terminal.Color.WHITE,Terminal.Color.RED);
 
 	      }else if (mode == 1){
