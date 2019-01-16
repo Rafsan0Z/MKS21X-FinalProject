@@ -132,8 +132,8 @@ public class TerminalDemo {
 					int num = in.nextInt();
 					question.add(row,col,num);
 					in.close();
-					mode = 3;
 					inputmode = 0;
+					mode = 3;
 				}
 				else if(inputmode == 2){
 					Scanner in = new Scanner(System.in);
