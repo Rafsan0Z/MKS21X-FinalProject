@@ -18,6 +18,8 @@ import java.util.Scanner;
 
 public class TerminalDemo {
 
+	private ArrayList<Integer> untouchables = new ArrayList<Integer>();
+
 	public static String StandardPrint(String[][] puzzle){
 		String result = "";
 		for(int i = 0; i < 9; i++){
@@ -185,6 +187,9 @@ public class TerminalDemo {
 						}
 						if(key.getCharacter() == 'r'){
 							inputmode = 2;
+						}
+						if(key.getCharacter() == 'm'){
+							inputmode = 3;
 						}
 					}
 
