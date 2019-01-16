@@ -132,6 +132,7 @@ public class TerminalDemo {
 					int num = in.nextInt();
 					question.add(row,col,num);
 					in.close();
+					mode = 1;
 					inputmode = 0;
 				}
 				else if(inputmode == 2){
