@@ -170,7 +170,7 @@ public class TerminalDemo {
 			}
 				while(inputmode == 3){
 					boolean solved = question.checkAnswer();
-					putString(1,5,terminal, "Puzzle solved?: " + solved,Terminal.Color.WHITE,Terminal.Color.GREEN);
+					putString(21,5,terminal, "Puzzle solved?: " + solved,Terminal.Color.WHITE,Terminal.Color.GREEN);
 					inputmode = 0;
 				}
 				while(inputmode == 4){
