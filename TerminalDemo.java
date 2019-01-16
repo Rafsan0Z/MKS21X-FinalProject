@@ -145,6 +145,7 @@ public class TerminalDemo {
 				else if(inputmode == 3){
 					boolean solved = question.checkAnswer();
 					putString(1,5,terminal, "Puzzle solved?: " + solved,Terminal.Color.WHITE,Terminal.Color.GREEN);
+					inputmode = 0;
 				}
 				else{
 				terminal.applyBackgroundColor(Terminal.Color.WHITE);
@@ -206,6 +207,12 @@ public class TerminalDemo {
 						}
 						if(key.getCharacter() == 'm'){
 							inputmode = 3;
+						}
+						if(key.getCharacter() == 'l'){
+							inputmode == 4;
+						}
+						if(key.getCharacter() == "g" ){
+							inputmode == 5;
 						}
 					}
 
