@@ -145,10 +145,11 @@ public class TerminalDemo {
 			String[][] Puzzle = newQues.getPuzzle();
 			boolean[][] list2 = Untouched(Puzzle);
 
+			Scanner in = new Scanner(System.in);
+
 	    while(running){
 
 				while(inputmode == 1){
-					Scanner in = new Scanner(System.in);
 					int row = in.nextInt();
 					int col = in.nextInt();
 					int num = in.nextInt();
