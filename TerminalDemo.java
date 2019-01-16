@@ -132,7 +132,7 @@ public class TerminalDemo {
 					int num = in.nextInt();
 					question.add(row,col,num);
 					in.close();
-					mode = 1;
+					mode = 3;
 					inputmode = 0;
 				}
 				else if(inputmode == 2){
@@ -211,7 +211,7 @@ public class TerminalDemo {
 						else if(key.getCharacter() == 'l'){
 							inputmode = 4;
 						}
-						else if(key.getCharacter() == "g" ){
+						else if(key.getCharacter() == 'g' ){
 							inputmode = 5;
 						}
 					}
@@ -259,7 +259,7 @@ public class TerminalDemo {
 					putString(1,3,terminal, "timer:" +timer,Terminal.Color.WHITE,Terminal.Color.GREEN);
 				  putString(3,5,terminal, "inputmode "+inputmode,Terminal.Color.WHITE,Terminal.Color.RED);
 				}else if(mode == 3){
-
+					putString(1,3,terminal, "Intermediate mode",Terminal.Color.WHITE,Terminal.Color.GREEN);
 				}else if(mode == 4){
 					terminal.applySGR(Terminal.SGR.ENTER_BOLD,Terminal.SGR.ENTER_BLINK);
 	        putPuzzle(terminal,TwelvePrint(Puzzle),Terminal.Color.WHITE,Terminal.Color.WHITE);
