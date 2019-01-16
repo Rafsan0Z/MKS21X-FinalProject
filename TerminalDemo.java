@@ -153,11 +153,9 @@ public class TerminalDemo {
 					int col = in.nextInt();
 					int num = in.nextInt();
 					question.add(row,col,num);
-					in.close();
 					inputmode = 0;
 				}
 				while(inputmode == 2){
-					Scanner in = new Scanner(System.in);
 					int row = in.nextInt();
 					int col = in.nextInt();
 					if(list[row][col]){
