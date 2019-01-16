@@ -125,7 +125,7 @@ public class TerminalDemo {
 
 	    while(running){
 
-				if(inputmode == 1){
+				while(inputmode == 1){
 					Scanner in = new Scanner(System.in);
 					int row = in.nextInt();
 					int col = in.nextInt();
@@ -135,7 +135,7 @@ public class TerminalDemo {
 					inputmode = 0;
 					mode = 3;
 				}
-				else if(inputmode == 2){
+				while(inputmode == 2){
 					Scanner in = new Scanner(System.in);
 					int row = in.nextInt();
 					int col = in.nextInt();
@@ -143,7 +143,7 @@ public class TerminalDemo {
 					in.close();
 					inputmode = 0;
 				}
-				else if(inputmode == 3){
+				while(inputmode == 3){
 					boolean solved = question.checkAnswer();
 					putString(1,5,terminal, "Puzzle solved?: " + solved,Terminal.Color.WHITE,Terminal.Color.GREEN);
 					inputmode = 0;
