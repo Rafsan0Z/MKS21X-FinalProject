@@ -133,7 +133,6 @@ public class TerminalDemo {
 					question.add(row,col,num);
 					in.close();
 					inputmode = 0;
-					mode = 3;
 				}
 				while(inputmode == 2){
 					Scanner in = new Scanner(System.in);
