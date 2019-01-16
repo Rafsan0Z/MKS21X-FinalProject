@@ -247,7 +247,7 @@ public class TerminalDemo {
 	        currentTime = System.currentTimeMillis();
 	        timer += (currentTime -lastTime);//add the amount of time since the last frame.
 	        //DO GAME STUFF HERE
-	        putString(500,25,terminal, logo,Terminal.Color.BLACK,Terminal.Color.YELLOW);
+	        putString(500,25,terminal, logo,Terminal.Color.YELLOW,Terminal.Color.RED);
 	        putString(3,5,terminal, "Press Space to Play the Game!",Terminal.Color.WHITE,Terminal.Color.RED);
 
 	      }else if (mode == 1){
