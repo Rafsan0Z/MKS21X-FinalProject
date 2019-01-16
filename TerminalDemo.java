@@ -228,8 +228,11 @@ public class TerminalDemo {
 	            terminal.exitPrivateMode();
 	            running = false;
 	          }
-						if(key.getCharacter() == 'C'){
+						if(key.getCharacter() == 'C' && !setup){
 							setup = true;
+						}
+						if(key.getCharacter() == 'C' && setup){
+							setup = false;
 						}
 	        }
 
@@ -278,8 +281,8 @@ public class TerminalDemo {
 	        currentTime = System.currentTimeMillis();
 	        timer += (currentTime -lastTime);//add the amount of time since the last frame.
 	        //DO GAME STUFF HERE
-	        putString(3,5,terminal, "Press Space to Play the Game!",Terminal.Color.WHITE,Terminal.Color.RED);
-					putString(3,6,terminal, "Press 'C' to view the controls", Terminal.Color.WHITE,Terminal.Color.RED);
+	        putString(3,3,terminal, "Press Space to Play the Game!",Terminal.Color.WHITE,Terminal.Color.RED);
+					putString(3,4,terminal, "Press 'C' to view the controls", Terminal.Color.WHITE,Terminal.Color.RED);
 
 					while(setup){
 						terminal.applySGR(Terminal.SGR.RESET_ALL);
@@ -288,7 +291,6 @@ public class TerminalDemo {
 						putString(3,7,terminal, "3. Press 'm' to check if the puzzle is solved", Terminal.Color.WHITE,Terminal.Color.RED);
 						putString(3,8,terminal, "4. Press 'l' to list the number of mistakes", Terminal.Color.WHITE,Terminal.Color.RED);
 						putString(3,9,terminal, "5. Press 'g' to recieve the answer(this doesnt work yet!)", Terminal.Color.WHITE,Terminal.Color.RED);
-						setup = false;
 					}
 
 	      }else if (mode == 1){
