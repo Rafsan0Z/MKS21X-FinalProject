@@ -172,6 +172,13 @@ public class TerminalDemo {
 					putString(1,5,terminal, "Puzzle solved?: " + solved,Terminal.Color.WHITE,Terminal.Color.GREEN);
 					inputmode = 0;
 				}
+				while(inputmode == 4){
+					ArrayList<String> data = ListMistakes(puzzle);
+					printMistakes(data);
+				}
+				while(inputmode == 5){
+
+				}
 				terminal.applyBackgroundColor(Terminal.Color.WHITE);
 				terminal.applyForegroundColor(Terminal.Color.BLACK);
 				//applySGR(a,b) for multiple modifiers (bold,blink) etc.
@@ -221,7 +228,7 @@ public class TerminalDemo {
 	            running = false;
 	          }
 						if(key.getCharacter() == 'C'){
-							setup == true;
+							setup = true;
 						}
 	        }
 
@@ -314,5 +321,4 @@ public class TerminalDemo {
 	    }
 		}
 
-}
 }
