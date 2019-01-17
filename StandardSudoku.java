@@ -62,7 +62,7 @@ public class StandardSudoku extends Sudoku{
     ArrayList<Integer> rows = rowdir(row);
     ArrayList<Integer> cols = coldir(col);
     ArrayList<Integer> groups = groupdir(groupNum(row,col));
-    if(rows.contains(num) || cols.contains(num) || groups.constain(num)){return true;}
+    if(rows.contains(num) || cols.contains(num) || groups.contains(num)){return true;}
     else{return true;}
   }
 
