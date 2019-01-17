@@ -137,6 +137,8 @@ public class TerminalDemo {
 	    long currentTime = lastTime;
 	    long timer = 0;
 
+			String modemessage = "";
+
 			StandardSudoku question = new StandardSudoku(17);
 			String[][] puzzle = question.getPuzzle();
 			boolean[][] list = Untouched(puzzle);
@@ -241,22 +243,30 @@ public class TerminalDemo {
 
 					if(mode >= 2){
 						if(key.getCharacter() == 'a'){
+							modemessage = "Adding";
 							inputmode = 1;
 						}
 						else if(key.getCharacter() == 'r'){
+							modemessage = "Removing";
 							inputmode = 2;
 						}
 						else if(key.getCharacter() == 'm'){
+							modemessage = "Checking Puzzle";
 							inputmode = 3;
 						}
 						else if(key.getCharacter() == 'l'){
+							modemessage = "Listing Mistakes";
 							inputmode = 4;
 						}
 						else if(key.getCharacter() == 'g' ){
+							modemessage = "Outputing answer";
 							inputmode = 5;
 						}
 					}
 
+					if(inputmode == 0){
+						modemessage = "Playing";
+					}
 
 	        //for all modes
 	        if (key.getCharacter() == ' ') {
@@ -312,7 +322,7 @@ public class TerminalDemo {
 	        timer += (currentTime -lastTime);//add the amount of time since the last frame.
 	        putPuzzle(terminal,StandardPrint(puzzle),Terminal.Color.WHITE,Terminal.Color.WHITE);
 					putString(1,3,terminal, "This is the 9 by 9 Sudoku Puzzle",Terminal.Color.WHITE,Terminal.Color.GREEN);
-				  putString(3,5,terminal, "inputmode "+inputmode,Terminal.Color.WHITE,Terminal.Color.RED);
+				  putString(3,5,terminal, "Now: "+ modemessage,Terminal.Color.WHITE,Terminal.Color.RED);
 			  }else if(mode == 3){
 	        putPuzzle(terminal,TwelvePrint(Puzzle),Terminal.Color.WHITE,Terminal.Color.WHITE);
 	        terminal.applySGR(Terminal.SGR.RESET_ALL);
