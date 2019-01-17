@@ -29,4 +29,12 @@ extends Sudoku. Constructors and abstract class were added for each subclass but
 
 01/14/19:
 
+01/15/19:
+
+01/16/19:
+
+01/17/19:
+
+01/18:19:
+
 
