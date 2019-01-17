@@ -160,7 +160,7 @@ public class TerminalDemo {
 					int row = in.nextInt();
 					int col = in.nextInt();
 					if(list[row][col]){
-						putString(31,3,terminal, "This number cannot be changed!",Terminal.Color.WHITE,Terminal.Color.GREEN);
+						putString(33,3,terminal, "This number cannot be changed!",Terminal.Color.WHITE,Terminal.Color.GREEN);
 						inputmode = 0;
 					}
 					else{
@@ -234,6 +234,9 @@ public class TerminalDemo {
 						if(key.getCharacter() == 'C'){
 							setup = true;
 						}
+						if(key.getCharacter() == 'X'){
+							setup = false;
+						}
 	        }
 
 					if(mode >= 2){
@@ -299,7 +302,6 @@ public class TerminalDemo {
 													 " 2. Custom 12 by 12 puzzle. Press Space twice to play" + "\n" + "\n" +
 													 " 3. Custom 16 by 16 puzzle. Press Space three times to play";
 
-	        terminal.applySGR(Terminal.SGR.ENTER_BOLD,Terminal.SGR.ENTER_BLINK);
 	        putString(1,3,terminal, "Please Choose A Puzzle",Terminal.Color.RED,Terminal.Color.WHITE);
 					putString(1,5,terminal, writing,Terminal.Color.RED,Terminal.Color.WHITE);
 	        terminal.applySGR(Terminal.SGR.RESET_ALL);
@@ -312,7 +314,6 @@ public class TerminalDemo {
 					putString(1,3,terminal, "This is the 9 by 9 Sudoku Puzzle",Terminal.Color.WHITE,Terminal.Color.GREEN);
 				  putString(3,5,terminal, "inputmode "+inputmode,Terminal.Color.WHITE,Terminal.Color.RED);
 			  }else if(mode == 3){
-					terminal.applySGR(Terminal.SGR.ENTER_BOLD,Terminal.SGR.ENTER_BLINK);
 	        putPuzzle(terminal,TwelvePrint(Puzzle),Terminal.Color.WHITE,Terminal.Color.WHITE);
 	        terminal.applySGR(Terminal.SGR.RESET_ALL);
 					putString(1,3,terminal, "This is the 12 by 12 Sudoku puzzle",Terminal.Color.WHITE,Terminal.Color.GREEN);
