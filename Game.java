@@ -324,7 +324,7 @@ public class Game {
 					putString(1,3,terminal, "This is the 9 by 9 Sudoku Puzzle",Terminal.Color.WHITE,Terminal.Color.GREEN);
 				  putString(3,5,terminal, "Now: "+ modemessage,Terminal.Color.WHITE,Terminal.Color.RED);
 			  }else if(mode == 3){
-	        putPuzzle(terminal,TwelvePrint(Puzzle),Terminal.Color.WHITE,Terminal.Color.WHITE);
+	        putPuzzle(terminal,CustomPrint(Puzzle),Terminal.Color.WHITE,Terminal.Color.WHITE);
 	        terminal.applySGR(Terminal.SGR.RESET_ALL);
 					putString(1,3,terminal, "This is the 12 by 12 Sudoku puzzle",Terminal.Color.WHITE,Terminal.Color.GREEN);
 				  putString(3,5,terminal, "",Terminal.Color.WHITE,Terminal.Color.RED);
