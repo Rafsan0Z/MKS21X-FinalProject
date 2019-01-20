@@ -63,7 +63,7 @@ public class StandardSudoku extends Sudoku{
     ArrayList<Integer> cols = coldir(col);       // create three list to keep track of row, column and group
     ArrayList<Integer> groups = groupdir(groupNum(row,col));
     if(rows.contains(num) || cols.contains(num) || groups.contains(num)){return true;} // check if there is a similarity
-    else{return true;}
+    else{return false;}
   }
 
   public void Markup(){
