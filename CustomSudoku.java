@@ -116,8 +116,8 @@ public class CustomSudoku extends Sudoku{
   }
 
   public int groupNum(int row, int col){
-    int horz = Math.ceil((row+1)/(division.get(1)));
-    int vert = Math.ceil((col+1)/(division.get(1)));
+    int horz = (int)Math.ceil((row+1)/(division.get(1)));
+    int vert = (int)Math.ceil((col+1)/(division.get(1)));
     return division.get(0)*(vert - 1) + horz;
   }
 
@@ -132,7 +132,7 @@ public class CustomSudoku extends Sudoku{
     }
     else{
       String letter = puzzle[row][i];
-      int position = alphabet.index(letter);
+      int position = alphabet.indexOf(letter);
       dir.add(position+1);
     }
     }
@@ -151,7 +151,7 @@ public class CustomSudoku extends Sudoku{
     }
     else{
       String letter = puzzle[i][col];
-      int position = alphabet.index(letter);
+      int position = alphabet.indexOf(letter);
       dir.add(position+1);
     }
     }
