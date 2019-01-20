@@ -12,6 +12,7 @@ public class CustomSudoku extends Sudoku{
     division = new ArrayList<Integer>();
     puzzle = new String[size][size];
     createpuzzle();
+    Partitions();
     countfinder(size);
     InputNums();
   }
