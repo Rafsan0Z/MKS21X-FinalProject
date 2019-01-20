@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Random;
 public class CustomSudoku extends Sudoku{
 
   private ArrayList<Integer> division;
