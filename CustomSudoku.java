@@ -50,10 +50,14 @@ public class CustomSudoku extends Sudoku{
           ArrayList<Integer> group = groupdir(location);
           if(RandInt() < 5 && !down.contains(num) && !up.contains(num) && !group.contains(num)) {
             if(num > 9){
-              int position = num - 9;
+              int position = num - 10;
+              String letter = alphabet.substring(position,position + 1);
+              puzzle[i][j] = letter;
             }
+            else{
             puzzle[i][j] = " " + num;
             count--;
+          }
           }
           if(count == 0){break;}
       }
