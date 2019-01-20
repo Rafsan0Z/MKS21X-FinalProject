@@ -116,7 +116,9 @@ public class CustomSudoku extends Sudoku{
   }
 
   public int groupNum(int row, int col){
-    return 0;
+    int horz = Math.ceil((row+1)/(division.get(1)));
+    int vert = Math.ceil((col+1)/(division.get(1)));
+    return division.get(0)*(vert - 1) + horz;
   }
 
   public ArrayList<Integer> rowdir(int row){
