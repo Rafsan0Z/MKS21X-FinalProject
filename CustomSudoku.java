@@ -54,7 +54,7 @@ public class CustomSudoku extends Sudoku{
             if(num > 9){
               int position = num - 10;
               String letter = alphabet.substring(position,position + 1);
-              puzzle[i][j] = letter;
+              puzzle[i][j] = " " + letter;
             }
             else{
             puzzle[i][j] = " " + num;
