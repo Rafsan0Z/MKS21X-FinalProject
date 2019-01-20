@@ -120,11 +120,19 @@ public class CustomSudoku extends Sudoku{
   }
 
   public ArrayList<Integer> rowdir(int row){
+    String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     ArrayList<Integer> dir = new ArrayList<Integer>();
     for(int i = 0; i < size; i++){
       if(puzzle[row][i] != "__"){
+      if(size <= 9){
       int num = Integer.parseInt(puzzle[row][i].substring(1));
       dir.add(num);
+    }
+    else{
+      String letter = puzzle[row][i];
+      int position = alphabet.index(letter);
+      dir.add(position+1);
+    }
     }
     }
     return dir;
