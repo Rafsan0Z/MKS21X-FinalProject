@@ -40,6 +40,7 @@ public class CustomSudoku extends Sudoku{
   }
 
   public void InputNums(){
+    String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     for(int i = 0; i < size; i++){
       for(int j = 0; j < size; j++){
           int num = RandInt();
@@ -48,6 +49,9 @@ public class CustomSudoku extends Sudoku{
           ArrayList<Integer> up = coldir(j);
           ArrayList<Integer> group = groupdir(location);
           if(RandInt() < 5 && !down.contains(num) && !up.contains(num) && !group.contains(num)) {
+            if(num > 9){
+              int position = num - 9;
+            }
             puzzle[i][j] = " " + num;
             count--;
           }
