@@ -15,6 +15,12 @@ public class CustomSudoku extends Sudoku{
     InputNums();
   }
 
+// RandInt override
+  public int RandInt(){
+    Random randgen = new Random();
+    return (Math.abs(randgen.nextInt()) % size) + 1;
+  }
+
   public String[][] getPuzzle(){
     return puzzle;
   }
