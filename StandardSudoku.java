@@ -15,7 +15,7 @@ public class StandardSudoku extends Sudoku{
   }
 
   public int getSize(){
-    return size;
+    return size;        // returns the size of the puzzle
   }
 
   public void add(int row, int col, int num){
@@ -55,14 +55,14 @@ public class StandardSudoku extends Sudoku{
   }
 
   public boolean Mistake(int row, int col){
-    ArrayList<Integer> mistakes = new ArrayList<Integer>();
-    if(puzzle[row][col] == "__"){return true;}
+    ArrayList<Integer> mistakes = new ArrayList<Integer>();   // a list of mistakes
+    if(puzzle[row][col] == "__"){return true;} // is empty we know its a mistake
     if(Integer.parseInt(puzzle[row][col].substring(1)) > 9 || Integer.parseInt(puzzle[row][col].substring(1)) < 0){return false;}
     int num = Integer.parseInt(puzzle[row][col].substring(1));
     ArrayList<Integer> rows = rowdir(row);
-    ArrayList<Integer> cols = coldir(col);
+    ArrayList<Integer> cols = coldir(col);       // create three list to keep track of row, column and group
     ArrayList<Integer> groups = groupdir(groupNum(row,col));
-    if(rows.contains(num) || cols.contains(num) || groups.contains(num)){return true;}
+    if(rows.contains(num) || cols.contains(num) || groups.contains(num)){return true;} // check if there is a similarity
     else{return true;}
   }
 
@@ -93,10 +93,10 @@ public class StandardSudoku extends Sudoku{
   }
 
   public String[][] getPuzzle(){
-    return puzzle;
+    return puzzle;   // returns the puzzle to be used by Terminal
   }
 
-  public ArrayList<Integer> rowdir(int row){
+  public ArrayList<Integer> rowdir(int row){ // creates a list of number in a given row
     ArrayList<Integer> dir = new ArrayList<Integer>();
     for(int i = 0; i < 9; i++){
       if(puzzle[row][i] != "__"){
@@ -107,7 +107,7 @@ public class StandardSudoku extends Sudoku{
     return dir;
   }
 
-  public ArrayList<Integer> coldir(int col){
+  public ArrayList<Integer> coldir(int col){ // creates a list of number in a given column
     ArrayList<Integer> dir = new ArrayList<Integer>();
     for(int i = 0; i < 9; i++){
       if(puzzle[i][col] != "__"){
@@ -118,7 +118,7 @@ public class StandardSudoku extends Sudoku{
     return dir;
   }
 
-  public ArrayList<Integer> groupdir(int groupnum){
+  public ArrayList<Integer> groupdir(int groupnum){ // creates a list of number in a given group
     ArrayList<Integer> dir = new ArrayList<Integer>();
     if(groupnum >= 1 && groupnum <= 3){
     for(int i = 0; i < 3; i++){
@@ -198,7 +198,7 @@ for(int j = 6; j < 9; j++){
 return dir;
   }
 
-  public int groupNum(int row, int col){
+  public int groupNum(int row, int col){ // returns the group number given a row and column
     if(row >= 0 && row <= 2){
       if(col >= 0 && col <= 2){return 1;}
       if(col >= 3 && col <= 5){return 2;}
@@ -237,7 +237,7 @@ return dir;
     for(int i = 0; i < 9; i++){
       for(int j = 0; j < 9; j++){
           if(puzzle[i][j] == "__"){
-              puzzle[i][j] = " " + RandInt();
+              puzzle[i][j] = " " + RandInt(); // produces an answer to the puzzle
           }
       }
     }
