@@ -147,6 +147,10 @@ public class Game {
 			String[][] Puzzle = newQues.getPuzzle();
 			boolean[][] list2 = Untouched(Puzzle);
 
+			CustomSudoku puzz3 = new CustomSudoku(16);
+			String[][] Puzz3 = puzz3.getPuzzle();
+			boolean[][] list3 = Untouched(Puzz3);
+
 			Scanner in = new Scanner(System.in);
 
 	    while(running){
@@ -329,6 +333,7 @@ public class Game {
 					putString(1,3,terminal, "This is the 12 by 12 Sudoku puzzle",Terminal.Color.WHITE,Terminal.Color.GREEN);
 				  putString(3,5,terminal, "",Terminal.Color.WHITE,Terminal.Color.RED);
 				}else if(mode == 4){
+					putPuzzle(terminal,CustomPrint(Puzz3),Terminal.Color.WHITE,Terminal.Color.WHITE);
 					putString(1,3,terminal,"This is the 16 by 16 Sudoku puzzle", Terminal.Color.WHITE,Terminal.Color.GREEN);
 					putString(3,5,terminal, "This is still in development!",Terminal.Color.WHITE,Terminal.Color.RED);
 				}
