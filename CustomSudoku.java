@@ -78,7 +78,9 @@ public class CustomSudoku extends Sudoku{
     }
   }
 
-  public void remove(int row, int col){}
+  public void remove(int row, int col){
+    puzzle[row][col] = "__";
+  }
 
   public boolean checkAnswer(){
     return true;
