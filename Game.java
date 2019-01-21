@@ -253,9 +253,26 @@ public class Game {
 			}
 			}
 				while(inputmode == 3){
+					if(mode == 2){
 					boolean solved = question.checkAnswer();
 					putString(21,5,terminal, "Puzzle solved?: " + solved,Terminal.Color.WHITE,Terminal.Color.GREEN);
 					inputmode = 0;
+				}
+				if(mode == 3){
+				boolean solved = newQues.checkAnswer();
+				putString(21,5,terminal, "Puzzle solved?: " + solved,Terminal.Color.WHITE,Terminal.Color.GREEN);
+				inputmode = 0;
+				}
+				if(mode == 4){
+				boolean solved = puzz3.checkAnswer();
+				putString(21,5,terminal, "Puzzle solved?: " + solved,Terminal.Color.WHITE,Terminal.Color.GREEN);
+				inputmode = 0;
+				}
+				if(mode == 5){
+				boolean solved = list4.checkAnswer();
+				putString(21,5,terminal, "Puzzle solved?: " + solved,Terminal.Color.WHITE,Terminal.Color.GREEN);
+				inputmode = 0;
+				}
 				}
 				while(inputmode == 4){
 					ArrayList<String> data = ListMistakes(question);
