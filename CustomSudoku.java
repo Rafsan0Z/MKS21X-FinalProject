@@ -95,7 +95,14 @@ public class CustomSudoku extends Sudoku{
   }
 
   public boolean Mistake(int row, int col){
-    return true;
+    ArrayList<Integer> mistakes = new ArrayList<Integer>();   // a list of mistakes
+    if(puzzle[row][col] == "__"){return true;} // is empty we know its a mistake
+    int num = Integer.parseInt(puzzle[row][col].substring(1));
+    ArrayList<Integer> rows = rowdir(row,col);
+    ArrayList<Integer> cols = coldir(col,row);       // create three list to keep track of row, column and group
+    ArrayList<Integer> groups = groupdir(groupNum(row,col),row,col);
+    if(rows.contains(num) || cols.contains(num) || groups.contains(num)){return true;} // check if there is a similarity
+    else{return false;}
   }
 
   public void Partitions(){
