@@ -389,6 +389,9 @@ public class Game {
 							modemessage = "Outputing answer";
 							inputmode = 5;
 						}
+						else if(key.getCharacter() == 'n'){
+							inputmode = 6;
+						}
 					}
 
 					if(inputmode == 0){
