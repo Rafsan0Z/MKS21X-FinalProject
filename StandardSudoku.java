@@ -222,7 +222,7 @@ return dir;
         int location = groupNum(i,j);
         ArrayList<Integer> down = rowdir(i,j);
         ArrayList<Integer> up = coldir(j,i);
-        ArrayList<Integer> group = groupdir(location,row,col);
+        ArrayList<Integer> group = groupdir(location,i,j);
         if(RandInt() < 5 && !down.contains(num) && !up.contains(num) && !group.contains(num)) {
           puzzle[i][j] = " " + num;
           count--;
