@@ -275,9 +275,26 @@ public class Game {
 				}
 				}
 				while(inputmode == 4){
+					if(mode == 2){
 					ArrayList<String> data = ListMistakes(question);
 					printMistakes(data,terminal);
 					inputmode = 0;
+				}
+				if(mode == 3){
+				ArrayList<String> data = ListMistakes(newQues);
+				printMistakes(data,terminal);
+				inputmode = 0;
+				}
+				if(mode == 4){
+				ArrayList<String> data = ListMistakes(list3);
+				printMistakes(data,terminal);
+				inputmode = 0;
+				}
+				if(mode == 5){
+				ArrayList<String> data = ListMistakes(list4);
+				printMistakes(data,terminal);
+				inputmode = 0;
+				}
 				}
 				while(inputmode == 5){
 					putString(21,5,terminal, "Did you really think I would give you the answer?",Terminal.Color.WHITE,Terminal.Color.GREEN);
