@@ -91,6 +91,11 @@ public class CustomSudoku extends Sudoku{
   }
 
   public boolean checkAnswer(){
+    for(int i = 0; i < size; i++){
+      for(int j = 0; j < size; j++){
+        if(Mistake(i,j)){return false;}
+      }
+    }
     return true;
   }
 
