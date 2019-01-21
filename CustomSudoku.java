@@ -31,6 +31,10 @@ public class CustomSudoku extends Sudoku{
     return size;
   }
 
+  public ArrayList<Integer> getdims(){
+    return division;
+  }
+
   public void countfinder(int num){
     if(num == 12){count = 26;}
     else if(num == 16){count = 0;}
