@@ -98,8 +98,8 @@ public class StandardSudoku extends Sudoku{
   public ArrayList<Integer> rowdir(int row){ // creates a list of number in a given row
     ArrayList<Integer> dir = new ArrayList<Integer>();
     for(int i = 0; i < 9; i++){
-      if(puzzle[i][row] != "__"){
-      int num = Integer.parseInt(puzzle[i][row].substring(1));
+      if(puzzle[row][i] != "__"){
+      int num = Integer.parseInt(puzzle[row][i].substring(1));
       dir.add(num);
     }
     }
@@ -109,8 +109,8 @@ public class StandardSudoku extends Sudoku{
   public ArrayList<Integer> coldir(int col){ // creates a list of number in a given column
     ArrayList<Integer> dir = new ArrayList<Integer>();
     for(int i = 0; i < 9; i++){
-      if(puzzle[col][i] != "__"){
-      int num = Integer.parseInt(puzzle[col][i].substring(1));
+      if(puzzle[i][col] != "__"){
+      int num = Integer.parseInt(puzzle[i][col].substring(1));
       dir.add(num);
     }
     }
