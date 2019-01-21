@@ -483,5 +483,3 @@ public class Game {
 				}
 	    }
 		}
-
-}
