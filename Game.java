@@ -169,11 +169,34 @@ public class Game {
 	    while(running){
 
 				while(inputmode == 1){
+					if(mode = 2){
 					int row = in.nextInt();
 					int col = in.nextInt();
 					int num = in.nextInt();
 					question.add(row,col,num);
 					inputmode = 0;
+				}
+				else if(mode == 3){
+					int row = in.nextInt();
+					int col = in.nextInt();
+					int num = in.nextInt();
+					newQues.add(row,col,num);
+					inputmode = 0;
+				}
+				else if(mode == 4){
+					int row = in.nextInt();
+					int col = in.nextInt();
+					int num = in.nextInt();
+					puzz3.add(row,col,num);
+					inputmode = 0;
+				}
+				else if(mode == 3){
+					int row = in.nextInt();
+					int col = in.nextInt();
+					int num = in.nextInt();
+					puzz4.add(row,col,num);
+					inputmode = 0;
+				}
 				}
 				while(inputmode == 2){
 					int row = in.nextInt();
