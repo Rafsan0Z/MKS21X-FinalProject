@@ -341,7 +341,7 @@ public class Game {
 					putString(1,3,terminal, "This is the 9 by 9 Sudoku Puzzle",Terminal.Color.WHITE,Terminal.Color.GREEN);
 				  putString(3,5,terminal, "Now: "+ modemessage,Terminal.Color.WHITE,Terminal.Color.RED);
 			  }else if(mode == 3){
-	      //  putPuzzle(terminal,CustomPrint(Puzzle,size2),Terminal.Color.WHITE,Terminal.Color.WHITE);
+	        putPuzzle(terminal,CustomPrint(Puzzle,size2,dimension2),Terminal.Color.WHITE,Terminal.Color.WHITE);
 	        terminal.applySGR(Terminal.SGR.RESET_ALL);
 					putString(1,3,terminal, "This is the 12 by 12 Sudoku puzzle",Terminal.Color.WHITE,Terminal.Color.GREEN);
 				  putString(3,5,terminal, "",Terminal.Color.WHITE,Terminal.Color.RED);
@@ -351,6 +351,7 @@ public class Game {
 					putString(3,5,terminal, "This is still in development!",Terminal.Color.WHITE,Terminal.Color.RED);
 				}
 				else if(mode == 5){
+					putPuzzle(terminal,CustomPrint(Puzz4,size4,dimension4),Terminal.Color.WHITE,Terminal.Color.WHITE);
 					putString(1,3,terminal,"This is the 20 by 20 Sudoku puzzle", Terminal.Color.WHITE,Terminal.Color.GREEN);
 					putString(3,5,terminal, "This is still in development!",Terminal.Color.WHITE,Terminal.Color.RED);
 				}
