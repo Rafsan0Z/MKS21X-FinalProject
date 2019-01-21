@@ -199,6 +199,7 @@ public class Game {
 				}
 				}
 				while(inputmode == 2){
+					if(mode == 2){
 					int row = in.nextInt();
 					int col = in.nextInt();
 					if(list[row][col]){
@@ -210,6 +211,46 @@ public class Game {
 					putString(31,3,terminal, "",Terminal.Color.WHITE,Terminal.Color.GREEN);
 					inputmode = 0;
 				}
+			}
+			if(mode == 3){
+			int row = in.nextInt();
+			int col = in.nextInt();
+			if(list2[row][col]){
+				putString(33,3,terminal, "This number cannot be changed!",Terminal.Color.WHITE,Terminal.Color.GREEN);
+				inputmode = 0;
+			}
+			else{
+			newQues.remove(row,col);
+			putString(31,3,terminal, "",Terminal.Color.WHITE,Terminal.Color.GREEN);
+			inputmode = 0;
+			}
+			}
+			if(mode == 3){
+			int row = in.nextInt();
+			int col = in.nextInt();
+			if(list3[row][col]){
+				putString(33,3,terminal, "This number cannot be changed!",Terminal.Color.WHITE,Terminal.Color.GREEN);
+				inputmode = 0;
+			}
+			else{
+			puzz3.remove(row,col);
+			putString(31,3,terminal, "",Terminal.Color.WHITE,Terminal.Color.GREEN);
+			inputmode = 0;
+			}
+			}
+			if(mode == 4){
+			int row = in.nextInt();
+			int col = in.nextInt();
+			if(list4[row][col]){
+				putString(33,3,terminal, "This number cannot be changed!",Terminal.Color.WHITE,Terminal.Color.GREEN);
+				inputmode = 0;
+			}
+			else{
+			puzz4.remove(row,col);
+			putString(31,3,terminal, "",Terminal.Color.WHITE,Terminal.Color.GREEN);
+			inputmode = 0;
+			}
+			}
 			}
 				while(inputmode == 3){
 					boolean solved = question.checkAnswer();
