@@ -99,7 +99,7 @@ public class StandardSudoku extends Sudoku{
     ArrayList<Integer> dir = new ArrayList<Integer>();
     for(int i = 0; i < 9; i++){
       if(puzzle[i][row] != "__"){
-      int num = Integer.parseInt(puzzle[row][i].substring(1));
+      int num = Integer.parseInt(puzzle[i][row].substring(1));
       dir.add(num);
     }
     }
@@ -110,7 +110,7 @@ public class StandardSudoku extends Sudoku{
     ArrayList<Integer> dir = new ArrayList<Integer>();
     for(int i = 0; i < 9; i++){
       if(puzzle[col][i] != "__"){
-      int num = Integer.parseInt(puzzle[i][col].substring(1));
+      int num = Integer.parseInt(puzzle[col][i].substring(1));
       dir.add(num);
     }
     }
