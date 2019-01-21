@@ -148,11 +148,11 @@ public class CustomSudoku extends Sudoku{
     return division.get(0)*(vert - 1) + horz;
   }
 
-  public ArrayList<Integer> rowdir(int row){
+  public ArrayList<Integer> rowdir(int row, int col){
     String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     ArrayList<Integer> dir = new ArrayList<Integer>();
     for(int i = 0; i < size; i++){
-      if(puzzle[row][i] != "__"){
+      if(puzzle[row][i] != "__" && i != col){
       if(size <= 9){
       int num = Integer.parseInt(puzzle[row][i].substring(1));
       dir.add(num);
@@ -167,11 +167,11 @@ public class CustomSudoku extends Sudoku{
     return dir;
   }
 
-  public ArrayList<Integer> coldir(int col){
+  public ArrayList<Integer> coldir(int col, int row){
     String alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     ArrayList<Integer> dir = new ArrayList<Integer>();
     for(int i = 0; i < size; i++){
-      if(puzzle[i][col] != "__"){
+      if(puzzle[i][col] != "__" && i != row){
       if(size <= 9){
       int num = Integer.parseInt(puzzle[i][col].substring(1));
       dir.add(num);
