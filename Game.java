@@ -204,7 +204,7 @@ public class Game {
 	      if (key != null)
 	      {
 
-		/*			if (key.getKind() == Key.Kind.ArrowLeft) {
+					if (key.getKind() == Key.Kind.ArrowLeft) {
 						terminal.moveCursor(x,y);
 						terminal.putCharacter(' ');
 						x--;
@@ -226,7 +226,7 @@ public class Game {
 						terminal.moveCursor(x,y);
 						terminal.putCharacter(' ');
 						y++;
-					} */
+					} 
 
 	        //YOU CAN PUT DIFFERENT SETS OF BUTTONS FOR DIFFERENT MODES!!!
 
