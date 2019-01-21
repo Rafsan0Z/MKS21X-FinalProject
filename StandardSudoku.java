@@ -117,27 +117,27 @@ public class StandardSudoku extends Sudoku{
     return dir;
   }
 
-  public ArrayList<Integer> groupdir(int groupnum){ // creates a list of number in a given group
+  public ArrayList<Integer> groupdir(int groupnum,int row, int col){ // creates a list of number in a given group
     ArrayList<Integer> dir = new ArrayList<Integer>();
     if(groupnum >= 1 && groupnum <= 3){
     for(int i = 0; i < 3; i++){
       if(groupnum == 1){
       for(int j = 0; j < 3; j++){
-        if(puzzle[i][j] != "__"){
+        if(puzzle[i][j] != "__" && i != row && j != col){
         dir.add(Integer.parseInt(puzzle[i][j].substring(1)));
       }
       }
     }
     if(groupnum == 2){
     for(int j = 3; j < 6; j++){
-      if(puzzle[i][j] != "__"){
+      if(puzzle[i][j] != "__" && i != row && j != col){
       dir.add(Integer.parseInt(puzzle[i][j].substring(1)));
       }
     }
   }
   if(groupnum == 3){
   for(int j = 6; j < 9; j++){
-    if(puzzle[i][j] != "__"){
+    if(puzzle[i][j] != "__" && i != row && j != col){
     dir.add(Integer.parseInt(puzzle[i][j].substring(1)));
     }
   }
@@ -148,21 +148,21 @@ public class StandardSudoku extends Sudoku{
   for(int i = 3; i < 6; i++){
     if(groupnum == 4){
     for(int j = 0; j < 3; j++){
-      if(puzzle[i][j] != "__"){
+      if(puzzle[i][j] != "__" && i != row && j != col){
       dir.add(Integer.parseInt(puzzle[i][j].substring(1)));
     }
     }
   }
   if(groupnum == 5){
   for(int j = 3; j < 6; j++){
-    if(puzzle[i][j] != "__"){
+    if(puzzle[i][j] != "__" && i != row && j != col){
     dir.add(Integer.parseInt(puzzle[i][j].substring(1)));
     }
   }
 }
 if(groupnum == 6){
 for(int j = 6; j < 9; j++){
-  if(puzzle[i][j] != "__"){
+  if(puzzle[i][j] != "__" && i != row && j != col){
   dir.add(Integer.parseInt(puzzle[i][j].substring(1)));
   }
 }
@@ -173,21 +173,21 @@ else{
   for(int i = 6; i < 9; i++){
     if(groupnum == 7){
     for(int j = 0; j < 3; j++){
-      if(puzzle[i][j] != "__"){
+      if(puzzle[i][j] != "__" && i != row && j != col){
       dir.add(Integer.parseInt(puzzle[i][j].substring(1)));
       }
     }
   }
   if(groupnum == 8){
   for(int j = 3; j < 6; j++){
-    if(puzzle[i][j] != "__"){
+    if(puzzle[i][j] != "__" && i != row && j != col){
     dir.add(Integer.parseInt(puzzle[i][j].substring(1)));
     }
   }
 }
 if(groupnum == 9){
 for(int j = 6; j < 9; j++){
-  if(puzzle[i][j] != "__"){
+  if(puzzle[i][j] != "__" && i != row && j != col){
   dir.add(Integer.parseInt(puzzle[i][j].substring(1)));
   }
 }
