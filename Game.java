@@ -71,19 +71,19 @@ public class Game {
 		return result;
 	}
 
-	public static String CustomPrint(String[][] puzzle, int size){
+	public static String CustomPrint(String[][] puzzle, int size, ArrayList<Integer> dims){
     String result = "-------------------" + "\n";
     for(int i = 0; i < size; i++){
-			if((i+3) % 3 == 0){
+			if((i+1) % (dims.get(1)) == 0){
 				result += "-----------------------" + "\n";
 			}
       result += "|";
-      for(int j = 0; j < 12; j++){
+      for(int j = 0; j < size; j++){
         result += puzzle[i][j];
-				if((j+1) % 3 == 0){
+				if((j+1) % (dims.get(0)) == 0){
 					result += "|";
 				}
-        if(j == 11){result += "\n";}
+        if(j == size - 1){result += "\n";}
       }
     }
     return result;
@@ -151,6 +151,7 @@ public class Game {
 			CustomSudoku puzz3 = new CustomSudoku(16);
 			String[][] Puzz3 = puzz3.getPuzzle();
 			int size3 = puzz3.getSize();
+			ArrayList<Integer> dimension3 = puzz3.getdims();
 			boolean[][] list3 = Untouched(Puzz3);
 
 			Scanner in = new Scanner(System.in);
@@ -333,12 +334,12 @@ public class Game {
 					putString(1,3,terminal, "This is the 9 by 9 Sudoku Puzzle",Terminal.Color.WHITE,Terminal.Color.GREEN);
 				  putString(3,5,terminal, "Now: "+ modemessage,Terminal.Color.WHITE,Terminal.Color.RED);
 			  }else if(mode == 3){
-	        putPuzzle(terminal,CustomPrint(Puzzle,size2),Terminal.Color.WHITE,Terminal.Color.WHITE);
+	      //  putPuzzle(terminal,CustomPrint(Puzzle,size2),Terminal.Color.WHITE,Terminal.Color.WHITE);
 	        terminal.applySGR(Terminal.SGR.RESET_ALL);
 					putString(1,3,terminal, "This is the 12 by 12 Sudoku puzzle",Terminal.Color.WHITE,Terminal.Color.GREEN);
 				  putString(3,5,terminal, "",Terminal.Color.WHITE,Terminal.Color.RED);
 				}else if(mode == 4){
-					putPuzzle(terminal,CustomPrint(Puzz3,size3),Terminal.Color.WHITE,Terminal.Color.WHITE);
+					putPuzzle(terminal,CustomPrint(Puzz3,size3,dimension3),Terminal.Color.WHITE,Terminal.Color.WHITE);
 					putString(1,3,terminal,"This is the 16 by 16 Sudoku puzzle", Terminal.Color.WHITE,Terminal.Color.GREEN);
 					putString(3,5,terminal, "This is still in development!",Terminal.Color.WHITE,Terminal.Color.RED);
 				}
