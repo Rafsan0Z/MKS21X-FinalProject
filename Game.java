@@ -269,7 +269,7 @@ public class Game {
 				inputmode = 0;
 				}
 				if(mode == 5){
-				boolean solved = list4.checkAnswer();
+				boolean solved = puzz4.checkAnswer();
 				putString(21,5,terminal, "Puzzle solved?: " + solved,Terminal.Color.WHITE,Terminal.Color.GREEN);
 				inputmode = 0;
 				}
@@ -286,12 +286,12 @@ public class Game {
 				inputmode = 0;
 				}
 				if(mode == 4){
-				ArrayList<String> data = ListMistakes(list3);
+				ArrayList<String> data = ListMistakes(puzz3);
 				printMistakes(data,terminal);
 				inputmode = 0;
 				}
 				if(mode == 5){
-				ArrayList<String> data = ListMistakes(list4);
+				ArrayList<String> data = ListMistakes(puzz4);
 				printMistakes(data,terminal);
 				inputmode = 0;
 				}
