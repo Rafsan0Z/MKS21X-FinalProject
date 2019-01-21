@@ -145,7 +145,7 @@ public class Game {
 
 			CustomSudoku newQues = new CustomSudoku(12);
 			String[][] Puzzle = newQues.getPuzzle();
-			int size2 = Puzzle.getSize();
+			int size2 = newQues.getSize();
 			boolean[][] list2 = Untouched(Puzzle);
 
 			CustomSudoku puzz3 = new CustomSudoku(16);
