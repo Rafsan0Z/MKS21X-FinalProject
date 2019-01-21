@@ -57,12 +57,11 @@ public class StandardSudoku extends Sudoku{
   public boolean Mistake(int row, int col){
     ArrayList<Integer> mistakes = new ArrayList<Integer>();   // a list of mistakes
     if(puzzle[row][col] == "__"){return true;} // is empty we know its a mistake
-    if(Integer.parseInt(puzzle[row][col].substring(1)) > 9 || Integer.parseInt(puzzle[row][col].substring(1)) < 0){return false;}
     int num = Integer.parseInt(puzzle[row][col].substring(1));
     ArrayList<Integer> rows = rowdir(row);
     ArrayList<Integer> cols = coldir(col);       // create three list to keep track of row, column and group
     ArrayList<Integer> groups = groupdir(groupNum(row,col));
-    if(rows.contains(num) || cols.contains(num) || groups.contains(num)){return true;} // check if there is a similarity
+    else if(rows.contains(num) || cols.contains(num) || groups.contains(num)){return true;} // check if there is a similarity
     else{return false;}
   }
 
