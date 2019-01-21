@@ -317,6 +317,7 @@ public class Game {
 						question = new StandardSudoku(17);
 						puzzle = question.getPuzzle();
 						list = Untouched(puzzle);
+						inputmode = 0;
 					}
 				}
 				terminal.applyBackgroundColor(Terminal.Color.WHITE);
