@@ -80,8 +80,8 @@ public class StandardSudoku extends Sudoku{
   }
   public String Markint(int row, int col){
     String result = "";
-    ArrayList<Integer> rowInts = rowdir(row);
-    ArrayList<Integer> colInts = coldir(col);
+    ArrayList<Integer> rowInts = rowdir(row,col);
+    ArrayList<Integer> colInts = coldir(col,row);
     ArrayList<Integer> groupInts = groupdir(groupNum(row,col));
     for(int i = 1; i <= 9; i++){
       if(!rowInts.contains(i) && !colInts.contains(i) && !groupInts.contains(i)){
@@ -220,8 +220,8 @@ return dir;
       for(int j = 0; j < 9; j++){
         int num = RandInt();
         int location = groupNum(i,j);
-        ArrayList<Integer> down = rowdir(i);
-        ArrayList<Integer> up = coldir(j);
+        ArrayList<Integer> down = rowdir(i,j);
+        ArrayList<Integer> up = coldir(j,i);
         ArrayList<Integer> group = groupdir(location);
         if(RandInt() < 5 && !down.contains(num) && !up.contains(num) && !group.contains(num)) {
           puzzle[i][j] = " " + num;
