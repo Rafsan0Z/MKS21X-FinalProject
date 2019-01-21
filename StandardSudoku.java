@@ -95,10 +95,10 @@ public class StandardSudoku extends Sudoku{
     return puzzle;   // returns the puzzle to be used by Terminal
   }
 
-  public ArrayList<Integer> rowdir(int row){ // creates a list of number in a given row
+  public ArrayList<Integer> rowdir(int row, int col){ // creates a list of number in a given row
     ArrayList<Integer> dir = new ArrayList<Integer>();
     for(int i = 0; i < 9; i++){
-      if(puzzle[row][i] != "__"){
+      if(puzzle[row][i] != "__" && i != col){
       int num = Integer.parseInt(puzzle[row][i].substring(1));
       dir.add(num);
     }
@@ -106,10 +106,10 @@ public class StandardSudoku extends Sudoku{
     return dir;
   }
 
-  public ArrayList<Integer> coldir(int col){ // creates a list of number in a given column
+  public ArrayList<Integer> coldir(int col, int row){ // creates a list of number in a given column
     ArrayList<Integer> dir = new ArrayList<Integer>();
     for(int i = 0; i < 9; i++){
-      if(puzzle[i][col] != "__"){
+      if(puzzle[i][col] != "__" && i != row){
       int num = Integer.parseInt(puzzle[i][col].substring(1));
       dir.add(num);
     }
