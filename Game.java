@@ -146,6 +146,7 @@ public class Game {
 			CustomSudoku newQues = new CustomSudoku(12);
 			String[][] Puzzle = newQues.getPuzzle();
 			int size2 = newQues.getSize();
+			ArrayList<Integer> dimension2 = newQues.getdims();
 			boolean[][] list2 = Untouched(Puzzle);
 
 			CustomSudoku puzz3 = new CustomSudoku(16);
@@ -153,6 +154,12 @@ public class Game {
 			int size3 = puzz3.getSize();
 			ArrayList<Integer> dimension3 = puzz3.getdims();
 			boolean[][] list3 = Untouched(Puzz3);
+
+			CustomSudoku puzz4 = new CustomSudoku(20);
+			String[][] Puzz4 = puzz4.getPuzzle();
+			int size4 = puzz4.getSize();
+			ArrayList<Integer> dimension4 = puzz3.getdims();
+			boolean[][] list3 = Untouched(Puzz4);
 
 			Scanner in = new Scanner(System.in);
 
