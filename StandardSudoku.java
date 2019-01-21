@@ -58,9 +58,9 @@ public class StandardSudoku extends Sudoku{
     ArrayList<Integer> mistakes = new ArrayList<Integer>();   // a list of mistakes
     if(puzzle[row][col] == "__"){return true;} // is empty we know its a mistake
     int num = Integer.parseInt(puzzle[row][col].substring(1));
-    ArrayList<Integer> rows = rowdir(row);
-    ArrayList<Integer> cols = coldir(col);       // create three list to keep track of row, column and group
-    ArrayList<Integer> groups = groupdir(groupNum(row,col));
+    ArrayList<Integer> rows = rowdir(row,col);
+    ArrayList<Integer> cols = coldir(col,row);       // create three list to keep track of row, column and group
+    ArrayList<Integer> groups = groupdir(groupNum(row,col),row,col);
     if(rows.contains(num) || cols.contains(num) || groups.contains(num)){return true;} // check if there is a similarity
     else{return false;}
   }
@@ -82,7 +82,7 @@ public class StandardSudoku extends Sudoku{
     String result = "";
     ArrayList<Integer> rowInts = rowdir(row,col);
     ArrayList<Integer> colInts = coldir(col,row);
-    ArrayList<Integer> groupInts = groupdir(groupNum(row,col));
+    ArrayList<Integer> groupInts = groupdir(groupNum(row,col),row,col);
     for(int i = 1; i <= 9; i++){
       if(!rowInts.contains(i) && !colInts.contains(i) && !groupInts.contains(i)){
         result += "" + i;
@@ -222,7 +222,7 @@ return dir;
         int location = groupNum(i,j);
         ArrayList<Integer> down = rowdir(i,j);
         ArrayList<Integer> up = coldir(j,i);
-        ArrayList<Integer> group = groupdir(location);
+        ArrayList<Integer> group = groupdir(location,row,col);
         if(RandInt() < 5 && !down.contains(num) && !up.contains(num) && !group.contains(num)) {
           puzzle[i][j] = " " + num;
           count--;
