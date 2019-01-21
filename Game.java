@@ -154,6 +154,9 @@ public class Game {
 
 			Scanner in = new Scanner(System.in);
 
+			int x = 10;
+			int y = 10;
+
 	    while(running){
 
 				while(inputmode == 1){
@@ -226,7 +229,7 @@ public class Game {
 						terminal.moveCursor(x,y);
 						terminal.putCharacter(' ');
 						y++;
-					} 
+					}
 
 	        //YOU CAN PUT DIFFERENT SETS OF BUTTONS FOR DIFFERENT MODES!!!
 
