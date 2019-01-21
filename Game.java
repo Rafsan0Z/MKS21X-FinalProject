@@ -312,6 +312,13 @@ public class Game {
 					putString(21,5,terminal, "Did you really think I would give you the answer?",Terminal.Color.WHITE,Terminal.Color.GREEN);
 					inputmode = 0;
 				}
+				while(inputmode == 6){
+					if(mode == 2){
+						question = new StandardSudoku(17);
+						puzzle = question.getPuzzle();
+						list = Untouched(puzzle);
+					}
+				}
 				terminal.applyBackgroundColor(Terminal.Color.WHITE);
 				terminal.applyForegroundColor(Terminal.Color.BLACK);
 				//applySGR(a,b) for multiple modifiers (bold,blink) etc.
