@@ -74,7 +74,7 @@ public class Game {
 	public static String CustomPrint(String[][] puzzle, int size, ArrayList<Integer> dims){
     String result = "-------------------" + "\n";
     for(int i = 0; i < size; i++){
-			if((i+4) % (dims.get(0)) == 0){
+			if((i+(dims.get(0))) % (dims.get(0)) == 0){
 				result += "-----------------------" + "\n";
 			}
       result += "|";
