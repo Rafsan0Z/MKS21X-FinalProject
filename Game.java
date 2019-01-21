@@ -71,9 +71,9 @@ public class Game {
 		return result;
 	}
 
-	public static String CustomPrint(String[][] puzzle){
+	public static String CustomPrint(String[][] puzzle, int size){
     String result = "-------------------" + "\n";
-    for(int i = 0; i < 12; i++){
+    for(int i = 0; i < size; i++){
 			if((i+3) % 3 == 0){
 				result += "-----------------------" + "\n";
 			}
@@ -149,6 +149,7 @@ public class Game {
 
 			CustomSudoku puzz3 = new CustomSudoku(16);
 			String[][] Puzz3 = puzz3.getPuzzle();
+			int size3 = puzz3.getSize();
 			boolean[][] list3 = Untouched(Puzz3);
 
 			Scanner in = new Scanner(System.in);
@@ -275,7 +276,7 @@ public class Game {
 	        //for all modes
 	        if (key.getCharacter() == ' ') {
 	          mode++;
-	          mode%=5;//2 modes
+	          mode%=6;//6 modes
 	          terminal.clearScreen();
 	          lastTime = System.currentTimeMillis();
 	          currentTime = System.currentTimeMillis();
@@ -337,7 +338,10 @@ public class Game {
 					putString(1,3,terminal,"This is the 16 by 16 Sudoku puzzle", Terminal.Color.WHITE,Terminal.Color.GREEN);
 					putString(3,5,terminal, "This is still in development!",Terminal.Color.WHITE,Terminal.Color.RED);
 				}
-
+				else if(mode == 5){
+					putString(1,3,terminal,"This is the 20 by 20 Sudoku puzzle", Terminal.Color.WHITE,Terminal.Color.GREEN);
+					putString(3,5,terminal, "This is still in development!",Terminal.Color.WHITE,Terminal.Color.RED);
+				}
 	    }
 		}
 
