@@ -159,7 +159,7 @@ public class Game {
 			String[][] Puzz4 = puzz4.getPuzzle();
 			int size4 = puzz4.getSize();
 			ArrayList<Integer> dimension4 = puzz3.getdims();
-			boolean[][] list3 = Untouched(Puzz4);
+			boolean[][] list4 = Untouched(Puzz4);
 
 			Scanner in = new Scanner(System.in);
 
