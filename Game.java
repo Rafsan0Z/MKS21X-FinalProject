@@ -303,7 +303,7 @@ public class Game {
 	        currentTime = System.currentTimeMillis();
 	        timer += (currentTime -lastTime);//add the amount of time since the last frame.
 	        //DO GAME STUFF HERE
-	        putString(3,3,terminal, "Press Space to Play the Game!",Terminal.Color.WHITE,Terminal.Color.RED);
+	        putString(3,3,terminal, "point: "+ x + "," + y,Terminal.Color.WHITE,Terminal.Color.RED);
 					putString(3,4,terminal, "Press 'C' to view the controls", Terminal.Color.WHITE,Terminal.Color.RED);
 
 					while(setup){
