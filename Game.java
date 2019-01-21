@@ -215,12 +215,11 @@ public class Game {
 					int row = in.nextInt();
 					int col = in.nextInt();
 					if(list[row][col]){
-						putString(33,3,terminal, "This number cannot be changed!",Terminal.Color.WHITE,Terminal.Color.GREEN);
+						putString(35,3,terminal, "This number cannot be changed!",Terminal.Color.WHITE,Terminal.Color.GREEN);
 						inputmode = 0;
 					}
 					else{
 					question.remove(row,col);
-					putString(31,3,terminal, "",Terminal.Color.WHITE,Terminal.Color.GREEN);
 					inputmode = 0;
 				}
 			}
@@ -228,7 +227,7 @@ public class Game {
 			int row = in.nextInt();
 			int col = in.nextInt();
 			if(list2[row][col]){
-				putString(33,3,terminal, "This number cannot be changed!",Terminal.Color.WHITE,Terminal.Color.GREEN);
+				putString(35,3,terminal, "This number cannot be changed!",Terminal.Color.WHITE,Terminal.Color.GREEN);
 				inputmode = 0;
 			}
 			else{
@@ -241,12 +240,12 @@ public class Game {
 			int row = in.nextInt();
 			int col = in.nextInt();
 			if(list3[row][col]){
-				putString(33,3,terminal, "This number cannot be changed!",Terminal.Color.WHITE,Terminal.Color.GREEN);
+				putString(35,3,terminal, "This number cannot be changed!",Terminal.Color.WHITE,Terminal.Color.GREEN);
 				inputmode = 0;
 			}
 			else{
 			puzz3.remove(row,col);
-			putString(31,3,terminal, "",Terminal.Color.WHITE,Terminal.Color.GREEN);
+			putString(35,3,terminal, "",Terminal.Color.WHITE,Terminal.Color.GREEN);
 			inputmode = 0;
 			}
 			}
@@ -254,12 +253,12 @@ public class Game {
 			int row = in.nextInt();
 			int col = in.nextInt();
 			if(list4[row][col]){
-				putString(33,3,terminal, "This number cannot be changed!",Terminal.Color.WHITE,Terminal.Color.GREEN);
+				putString(35,3,terminal, "This number cannot be changed!",Terminal.Color.WHITE,Terminal.Color.GREEN);
 				inputmode = 0;
 			}
 			else{
 			puzz4.remove(row,col);
-			putString(31,3,terminal, "",Terminal.Color.WHITE,Terminal.Color.GREEN);
+			putString(35,3,terminal, "",Terminal.Color.WHITE,Terminal.Color.GREEN);
 			inputmode = 0;
 			}
 			}
@@ -267,22 +266,22 @@ public class Game {
 				while(inputmode == 3){
 					if(mode == 2){
 					boolean solved = question.checkAnswer();
-					putString(21,5,terminal, "Puzzle solved?: " + solved,Terminal.Color.WHITE,Terminal.Color.GREEN);
+					putString(35,3,terminal, "Puzzle solved?: " + solved,Terminal.Color.WHITE,Terminal.Color.GREEN);
 					inputmode = 0;
 				}
 				if(mode == 3){
 				boolean solved = newQues.checkAnswer();
-				putString(21,5,terminal, "Puzzle solved?: " + solved,Terminal.Color.WHITE,Terminal.Color.GREEN);
+				putString(35,3,terminal, "Puzzle solved?: " + solved,Terminal.Color.WHITE,Terminal.Color.GREEN);
 				inputmode = 0;
 				}
 				if(mode == 4){
 				boolean solved = puzz3.checkAnswer();
-				putString(21,5,terminal, "Puzzle solved?: " + solved,Terminal.Color.WHITE,Terminal.Color.GREEN);
+				putString(35,3,terminal, "Puzzle solved?: " + solved,Terminal.Color.WHITE,Terminal.Color.GREEN);
 				inputmode = 0;
 				}
 				if(mode == 5){
 				boolean solved = puzz4.checkAnswer();
-				putString(21,5,terminal, "Puzzle solved?: " + solved,Terminal.Color.WHITE,Terminal.Color.GREEN);
+				putString(35,3,terminal, "Puzzle solved?: " + solved,Terminal.Color.WHITE,Terminal.Color.GREEN);
 				inputmode = 0;
 				}
 				}
@@ -309,7 +308,7 @@ public class Game {
 				}
 				}
 				while(inputmode == 5){
-					putString(21,5,terminal, "Did you really think I would give you the answer?",Terminal.Color.WHITE,Terminal.Color.GREEN);
+					putString(35,3,terminal, "Did you really think I would give you the answer?",Terminal.Color.WHITE,Terminal.Color.GREEN);
 					inputmode = 0;
 				}
 				while(inputmode == 6){
@@ -377,28 +376,34 @@ public class Game {
 	        }
 
 					if(mode >= 2){
-						if(key.getCharacter() == 'a'){
+						if(key.getCharacter() == 'a')
 							modemessage = "Adding";
+							putString(35,3,terminal, "",Terminal.Color.WHITE,Terminal.Color.GREEN);
 							inputmode = 1;
 						}
 						else if(key.getCharacter() == 'r'){
 							modemessage = "Removing";
+							putString(35,3,terminal, "",Terminal.Color.WHITE,Terminal.Color.GREEN);
 							inputmode = 2;
 						}
 						else if(key.getCharacter() == 'm'){
 							modemessage = "Checking Puzzle";
+							putString(35,3,terminal, "",Terminal.Color.WHITE,Terminal.Color.GREEN);
 							inputmode = 3;
 						}
 						else if(key.getCharacter() == 'l'){
 							modemessage = "Listing Mistakes";
+							putString(35,3,terminal, "",Terminal.Color.WHITE,Terminal.Color.GREEN);
 							inputmode = 4;
 						}
 						else if(key.getCharacter() == 'g' ){
 							modemessage = "Outputing answer";
+							putString(35,3,terminal, "",Terminal.Color.WHITE,Terminal.Color.GREEN);
 							inputmode = 5;
 						}
 						else if(key.getCharacter() == 'n'){
 							inputmode = 6;
+							putString(35,3,terminal, "",Terminal.Color.WHITE,Terminal.Color.GREEN);
 						}
 					}
 
