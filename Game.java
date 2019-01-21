@@ -145,6 +145,7 @@ public class Game {
 
 			CustomSudoku newQues = new CustomSudoku(12);
 			String[][] Puzzle = newQues.getPuzzle();
+			int size2 = Puzzle.getSize();
 			boolean[][] list2 = Untouched(Puzzle);
 
 			CustomSudoku puzz3 = new CustomSudoku(16);
@@ -332,12 +333,12 @@ public class Game {
 					putString(1,3,terminal, "This is the 9 by 9 Sudoku Puzzle",Terminal.Color.WHITE,Terminal.Color.GREEN);
 				  putString(3,5,terminal, "Now: "+ modemessage,Terminal.Color.WHITE,Terminal.Color.RED);
 			  }else if(mode == 3){
-	        putPuzzle(terminal,CustomPrint(Puzzle),Terminal.Color.WHITE,Terminal.Color.WHITE);
+	        putPuzzle(terminal,CustomPrint(Puzzle,size2),Terminal.Color.WHITE,Terminal.Color.WHITE);
 	        terminal.applySGR(Terminal.SGR.RESET_ALL);
 					putString(1,3,terminal, "This is the 12 by 12 Sudoku puzzle",Terminal.Color.WHITE,Terminal.Color.GREEN);
 				  putString(3,5,terminal, "",Terminal.Color.WHITE,Terminal.Color.RED);
 				}else if(mode == 4){
-					putPuzzle(terminal,CustomPrint(Puzz3),Terminal.Color.WHITE,Terminal.Color.WHITE);
+					putPuzzle(terminal,CustomPrint(Puzz3,size3),Terminal.Color.WHITE,Terminal.Color.WHITE);
 					putString(1,3,terminal,"This is the 16 by 16 Sudoku puzzle", Terminal.Color.WHITE,Terminal.Color.GREEN);
 					putString(3,5,terminal, "This is still in development!",Terminal.Color.WHITE,Terminal.Color.RED);
 				}
