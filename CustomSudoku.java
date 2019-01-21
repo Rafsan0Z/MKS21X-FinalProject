@@ -101,10 +101,16 @@ public class CustomSudoku extends Sudoku{
   public void Partitions(){
       double counter = (double)size;
       int second = 1;
+      if((int)Math.sqrt(size) == Math.sqrt(size)){
+        division.add((int)Math.sqrt(size));
+        division.add((int)Math.sqrt(size));
+      }
+      else{
       while(counter % 2 == 0.0){
         second = second*2;
         counter = counter / 2;
       }
+    }
       division.add(second);
       division.add((int)counter);
   }
