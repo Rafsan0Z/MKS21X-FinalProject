@@ -169,7 +169,7 @@ public class Game {
 	    while(running){
 
 				while(inputmode == 1){
-					if(mode = 2){
+					if(mode == 2){
 					int row = in.nextInt();
 					int col = in.nextInt();
 					int num = in.nextInt();
