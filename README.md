@@ -49,7 +49,7 @@ extends Sudoku. Constructors and abstract class were added for each subclass but
 
 01/19/19: Family meeting, so no coding for today
 
-01/20/19:
+01/20/19: I started to add letters to the CustomSudoku puzzles, since their size is bigger than 9. InputNums in CustomSudoku now adds letters by using a modified version of RandInt. All methods involved in updating puzzle also changed to include letters. getPuzzle also added to StandardSudoku. TwelvePrint was changed to CustomPrint and made to print any puzzle with even side length. I also added a 20 by 20 puzzle
 
 01/21/19:
 
