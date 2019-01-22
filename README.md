@@ -29,7 +29,7 @@ extends Sudoku. Constructors and abstract class were added for each subclass but
 
 01/09/19:
 
-01/10/19:
+01/10/19: groupNum method added and groupdir updated to track the numbers in a group. I made rowdir, coldir and groupdir made abstract in Sudoku file and the same methods added to CustomSudoku file alongside CheckAnswer. I have chosen Crooks algorithm for solving Sudoku so this Markup method is added to StandardSudoku
 
 01/11/19: No coding done on Friday due to Robotics meeting. I wrote some ideas for using the TerminalDemo code 
 
