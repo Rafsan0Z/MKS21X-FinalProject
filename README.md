@@ -41,7 +41,7 @@ extends Sudoku. Constructors and abstract class were added for each subclass but
 
 01/15/19:
 
-01/16/19:
+01/16/19: ListMistake and printMistake method created to find mistakes and print them on the screen. The main menu containing all controlls info created and getSize methods added to both Sudoku files. After several test, I found some mistake in the Mistake method in StandardSudoku and also solved the problem in adding (by taking away Scanner close). 
 
 01/17/19: The blinking effect corrected and messages added to indicate what action is taking place
 
