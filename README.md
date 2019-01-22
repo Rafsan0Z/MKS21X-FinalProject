@@ -6,6 +6,10 @@ How to play Sudoku:
 
 2. In the second page, it list all the puzzles available in the game. They can each be reached by pressing space
 
+3. To start add you must press a. Then you must enter the row, column and number in that order and press enter everytime a number is added
+
+4. To remove a number you only need to enter the row and column.
+
 Here are the bugs of the game:
 
 1. The game doesnt give an answer to a puzzle
