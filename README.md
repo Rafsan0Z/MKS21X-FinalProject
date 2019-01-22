@@ -33,7 +33,7 @@ extends Sudoku. Constructors and abstract class were added for each subclass but
 
 01/11/19: No coding done on Friday due to Robotics meeting. I wrote some ideas for using the TerminalDemo code 
 
-01/12/19:
+01/12/19: I added to TerminalDemo and lanterna file to the repository. I am traking x and y position to find a place to put the puzzle. Groupdir method updated StandardSudoku 
 
 01/13/19: Tomorrow is the due date for demo code. I tried to fix the add functionality to I can move onto other aspects. But the add function will not recieve inputs properly. When one number is entered, the code takes the same number to be the input for all other variables. I have asked Mr K. for an extension, which has been approved. Fix the add method and continue adding to the game mode.
 
