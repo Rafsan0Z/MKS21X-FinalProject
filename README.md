@@ -10,9 +10,13 @@ How to play Sudoku:
 
 4. To remove a number you only need to enter the row and column.
 
+5. Press n to refresh and create another puzzle. 
+
 Here are the bugs of the game:
 
 1. The game doesnt give an answer to a puzzle
+2. Border line for Custom Puzzles are not correct
+3. If you lose track of your inputs, restart the game
 
 Development Log
 
