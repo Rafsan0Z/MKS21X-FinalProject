@@ -35,7 +35,7 @@ extends Sudoku. Constructors and abstract class were added for each subclass but
 
 01/12/19:
 
-01/13/19:
+01/13/19: Tomorrow is the due date for demo code. I tried to fix the add functionality to I can move onto other aspects. But the add function will not recieve inputs properly. When one number is entered, the code takes the same number to be the input for all other variables. I have asked Mr K. for an extension, which has been approved. Fix the add method and continue adding to the game mode.
 
 01/14/19: I updated the StandardSudoku mode and introduced methods to print a CustomSudoku in Terminal. For the moment, the method only prints a 12 by 12 puzzle. I created another mode for the 12 by 12 puzzle and getpuzzle in CustomSudoku file to aid in printing. I also added remove and add method to the file. 
 
