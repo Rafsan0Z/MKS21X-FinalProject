@@ -37,7 +37,7 @@ extends Sudoku. Constructors and abstract class were added for each subclass but
 
 01/13/19:
 
-01/14/19:
+01/14/19: I updated the StandardSudoku mode and introduced methods to print a CustomSudoku in Terminal. For the moment, the method only prints a 12 by 12 puzzle. I created another mode for the 12 by 12 puzzle and getpuzzle in CustomSudoku file to aid in printing. I also added remove and add method to the file. 
 
 01/15/19:
 
