@@ -53,7 +53,7 @@ extends Sudoku. Constructors and abstract class were added for each subclass but
 
 01/21/19:
 
-01/22/19:
+01/22/19: Final additions made to ReadMe file and code.
 
 
 
