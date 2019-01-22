@@ -1,7 +1,9 @@
 # MKS21X-FinalProject
 
-How to play Sudoku
+How to play Sudoku:
 
+
+Here are the bugs of the game:
 
 
 Development Log
