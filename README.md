@@ -47,7 +47,7 @@ extends Sudoku. Constructors and abstract class were added for each subclass but
 
 01/18:19: Fixed mistakes in function and filename. Studying the algorithms needed to solve a Standard 9 by 9 Sudoku puzzle
 
-01/19/19:
+01/19/19: Family meeting, so no coding for today
 
 01/20/19:
 
