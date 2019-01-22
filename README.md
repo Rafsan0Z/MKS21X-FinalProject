@@ -8,6 +8,7 @@ How to play Sudoku:
 
 Here are the bugs of the game:
 
+1. The game doesnt give an answer to a puzzle
 
 Development Log
 
@@ -45,6 +46,10 @@ extends Sudoku. Constructors and abstract class were added for each subclass but
 01/19/19:
 
 01/20/19:
+
+01/21/19:
+
+01/22/19:
 
 
 
