@@ -45,7 +45,7 @@ extends Sudoku. Constructors and abstract class were added for each subclass but
 
 01/17/19: The blinking effect corrected and messages added to indicate what action is taking place
 
-01/18:19:
+01/18:19: Fixed mistakes in function and filename. Studying the algorithms needed to solve a Standard 9 by 9 Sudoku puzzle
 
 01/19/19:
 
