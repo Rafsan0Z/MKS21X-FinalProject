@@ -31,7 +31,7 @@ extends Sudoku. Constructors and abstract class were added for each subclass but
 
 01/10/19:
 
-01/11/19:
+01/11/19: No coding done on Friday due to Robotics meeting. I wrote some ideas for using the TerminalDemo code 
 
 01/12/19:
 
