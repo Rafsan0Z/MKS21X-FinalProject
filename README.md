@@ -2,6 +2,9 @@
 
 How to play Sudoku:
 
+1. In the main menu, if C is pressed then all the controls are shown. These are used in all the puzzles. The next page can be reached by pressing space
+
+2. In the second page, it list all the puzzles available in the game. They can each be reached by pressing space
 
 Here are the bugs of the game:
 
